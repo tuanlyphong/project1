@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="?android:attr/colorBackground">
+
+    <!-- Title -->
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Massage Controller"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
+        app:drawableStartCompat="@android:drawable/ic_menu_manage"
+        android:drawablePadding="8dp" />
+
+    <!-- Connect Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔌 Connect"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Intensity Slider -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level: 1"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sliderIntensity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:value="1"
+        android:valueFrom="1"
+        android:valueTo="5"
+        android:stepSize="1" />
+
+    <!-- Rotate Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRotate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔄 Rotate"
+        android:layout_marginTop="20dp" />
+
+    <!-- Heat Toggle -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHeat"
+        style="?attr/materialButtonTonalStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔥 Heat"
+        android:layout_marginTop="20dp" />
+
+    <!-- Assistant Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAssistant"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🤖 Assistant"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>
+
