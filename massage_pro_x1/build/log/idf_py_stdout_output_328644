@@ -1,0 +1,153 @@
+Command: /home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/phong/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/phong/massage_pro_x1/build/massage_pro_x1.elf /home/phong/massage_pro_x1/build/bootloader/bootloader.elf -m '/home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/phong/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2594-g25c40d4563-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 19 2025 23:29:08[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f36ch (127852) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=0002f394 vaddr=3ffbdb60 size=00c84h (  3204) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=74580h (476544) map[0m
+[0;32mI (309) esp_image: segment 3: paddr=000a45a8 vaddr=3ffbe7e4 size=03f8ch ( 16268) load[0m
+[0;32mI (316) esp_image: segment 4: paddr=000a853c vaddr=40080000 size=16c30h ( 93232) load[0m
+[0;32mI (354) esp_image: segment 5: paddr=000bf174 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (366) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (366) boot: Disabling RNG early entropy source...[0m
+[0;32mI (376) cpu_start: Multicore app[0m
+[0;32mI (385) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (385) cpu_start: Pro cpu start user code[0m
+[0;32mI (385) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (387) app_init: Application information:[0m
+[0;32mI (391) app_init: Project name:     massage_pro_x1[0m
+[0;32mI (395) app_init: App version:      1[0m
+[0;32mI (399) app_init: Compile time:     Nov 19 2025 23:28:24[0m
+[0;32mI (404) app_init: ELF file SHA256:  679c98b30...[0m
+[0;32mI (408) app_init: ESP-IDF:          v6.0-dev-2594-g25c40d4563-dirty[0m
+[0;32mI (414) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (418) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (422) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (426) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (432) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (437) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (442) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (447) heap_init: At 3FFC6ED8 len 00019128 (100 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (458) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 40096C30 len 000093D0 (36 KiB): IRAM[0m
+[0;32mI (470) spi_flash: detected chip: boya[0m
+[0;32mI (472) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (488) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (498) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (502) main_task: Started on CPU0[0m
+[0;32mI (512) main_task: Calling app_main()[0m
+[0;32mI (522) BTDM_INIT: BT controller compile version [7bc9d6a][0m
+[0;32mI (522) BTDM_INIT: Using main XTAL as clock source[0m
+[0;32mI (522) BTDM_INIT: Bluetooth MAC: d4:e9:f4:8a:9a:ca[0m
+[0;32mI (532) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (612) MAX30102: MAX30102 Configured[0m
+[0;32mI (942) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (942) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (952) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (952) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (952) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (962) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (962) main_task: Returned from app_main()[0m
+[0;32mI (982) MASSAGE_BLE: Advertising started[0m
+[0;32mI (982) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (982) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (982) MASSAGE_BLE: Characteristic added, status 133, attr_handle 0[0m
+[0;32mI (992) MASSAGE_BLE: SpO2 Char Handle: 0[0m
+[0;32mI (10452) MAX30102: R:25393 IR:50869 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10472) MAX30102: R:27328 IR:52632 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10492) MAX30102: R:29076 IR:54388 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10512) MAX30102: R:31831 IR:57125 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10532) MAX30102: R:37214 IR:61876 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10552) MAX30102: R:44839 IR:67469 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10572) MAX30102: R:54294 IR:72498 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10592) MAX30102: R:67014 IR:74427 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10612) MAX30102: R:68065 IR:73351 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10632) MAX30102: R:68862 IR:72826 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10652) MAX30102: R:69631 IR:72279 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10672) MAX30102: R:70671 IR:71989 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10692) MAX30102: R:72149 IR:72091 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10712) MAX30102: R:72137 IR:71420 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10732) MAX30102: R:72209 IR:71177 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10752) MAX30102: R:74127 IR:72925 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10772) MAX30102: R:77846 IR:77498 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10792) MAX30102: R:81424 IR:82418 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10812) MAX30102: R:85839 IR:87904 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10832) MAX30102: R:90108 IR:93351 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10852) MAX30102: R:94891 IR:100098 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10872) MAX30102: R:96858 IR:102606 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10892) MAX30102: R:98027 IR:104100 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10912) MAX30102: R:99804 IR:106846 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10932) MAX30102: R:101248 IR:109172 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10952) MAX30102: R:101777 IR:109741 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10972) MAX30102: R:102236 IR:110423 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (10992) MAX30102: R:102759 IR:111047 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11012) MAX30102: R:103152 IR:111614 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11032) MAX30102: R:103328 IR:111887 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11052) MAX30102: R:103415 IR:112009 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11072) MAX30102: R:103304 IR:111880 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11092) MAX30102: R:103430 IR:112072 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11112) MAX30102: R:103273 IR:111780 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11132) MAX30102: R:102900 IR:111246 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11152) MAX30102: R:31831 IR:57125 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11172) MAX30102: R:37214 IR:61876 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11192) MAX30102: R:44839 IR:67469 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11212) MAX30102: R:100800 IR:108337 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11232) MAX30102: R:99665 IR:106603 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11252) MAX30102: R:98246 IR:104440 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11272) MAX30102: R:95436 IR:100466 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11292) MAX30102: R:93766 IR:97712 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11312) MAX30102: R:93332 IR:97001 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11332) MAX30102: R:96172 IR:101397 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11352) MAX30102: R:100645 IR:108216 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11372) MAX30102: R:104476 IR:114113 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11392) MAX30102: R:108574 IR:120467 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11412) MAX30102: R:111323 IR:124746 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11432) MAX30102: R:111893 IR:125837 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11452) MAX30102: R:111431 IR:124896 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11472) MAX30102: R:111574 IR:125272 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11492) MAX30102: R:112064 IR:126260 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11512) MAX30102: R:112638 IR:127396 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11532) MAX30102: R:112693 IR:127412 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11552) MAX30102: R:111316 IR:124650 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11572) MAX30102: R:107904 IR:118455 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11592) MAX30102: R:106759 IR:116564 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11612) MAX30102: R:102872 IR:110429 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11632) MAX30102: R:90211 IR:86256 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11652) MAX30102: R:50414 IR:72479 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11672) MAX30102: R:26750 IR:54930 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11692) MAX30102: R:23738 IR:52078 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (11712) MAX30102: R:22662 IR:51056 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (12052) MAX30102: R:22012 IR:50080 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (21342) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (22222) MASSAGE_BLE: Authentication complete, status: 1[0m
+[0;33mW (33102) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x13 dev_find 1[0m
+[0;32mI (33102) MASSAGE_BLE: Device disconnected, reason: 0x13[0m
+[0;32mI (33112) MASSAGE_BLE: Advertising started[0m
+[0;32mI (36052) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (36142) MASSAGE_BLE: Security request[0m
+[0;33mW (38352) BT_SMP: FOR LE SC LTK IS USED INSTEAD OF STK[0m
+[0;32mI (38702) MASSAGE_BLE: Authentication complete, status: 1[0m

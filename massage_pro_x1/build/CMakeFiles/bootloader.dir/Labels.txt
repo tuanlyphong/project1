@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/phong/massage_pro_x1/build/CMakeFiles/bootloader
+/home/phong/massage_pro_x1/build/CMakeFiles/bootloader.rule
+/home/phong/massage_pro_x1/build/CMakeFiles/bootloader-complete.rule
+/home/phong/massage_pro_x1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/phong/massage_pro_x1/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/phong/massage_pro_x1/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/phong/massage_pro_x1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/phong/massage_pro_x1/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/phong/massage_pro_x1/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/phong/massage_pro_x1/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

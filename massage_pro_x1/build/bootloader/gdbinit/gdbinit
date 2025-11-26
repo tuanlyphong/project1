@@ -1,0 +1,2 @@
+source /home/phong/massage_pro_x1/build/bootloader/gdbinit/symbols
+source /home/phong/massage_pro_x1/build/bootloader/gdbinit/connect

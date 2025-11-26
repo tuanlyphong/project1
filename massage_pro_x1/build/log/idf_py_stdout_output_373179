@@ -1,0 +1,496 @@
+Command: /home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/phong/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/phong/massage_pro_x1/build/massage_pro_x1.elf /home/phong/massage_pro_x1/build/bootloader/bootloader.elf -m '/home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/phong/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2594-g25c40d4563-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 19 2025 23:29:08[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f3cch (127948) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=0002f3f4 vaddr=3ffbdb60 size=00c24h (  3108) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=7498ch (477580) map[0m
+[0;32mI (310) esp_image: segment 3: paddr=000a49b4 vaddr=3ffbe784 size=03fech ( 16364) load[0m
+[0;32mI (316) esp_image: segment 4: paddr=000a89a8 vaddr=40080000 size=16c30h ( 93232) load[0m
+[0;32mI (355) esp_image: segment 5: paddr=000bf5e0 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (366) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (366) boot: Disabling RNG early entropy source...[0m
+[0;32mI (377) cpu_start: Multicore app[0m
+[0;32mI (385) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (385) cpu_start: Pro cpu start user code[0m
+[0;32mI (385) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (387) app_init: Application information:[0m
+[0;32mI (391) app_init: Project name:     massage_pro_x1[0m
+[0;32mI (396) app_init: App version:      1[0m
+[0;32mI (399) app_init: Compile time:     Nov 19 2025 23:28:24[0m
+[0;32mI (404) app_init: ELF file SHA256:  43a42b821...[0m
+[0;32mI (408) app_init: ESP-IDF:          v6.0-dev-2594-g25c40d4563-dirty[0m
+[0;32mI (414) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (418) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (422) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (426) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (432) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (437) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (443) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFC7230 len 00018DD0 (99 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (458) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 40096C30 len 000093D0 (36 KiB): IRAM[0m
+[0;32mI (471) spi_flash: detected chip: boya[0m
+[0;32mI (472) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (488) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (498) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (503) main_task: Started on CPU0[0m
+[0;32mI (513) main_task: Calling app_main()[0m
+[0;32mI (523) BTDM_INIT: BT controller compile version [7bc9d6a][0m
+[0;32mI (523) BTDM_INIT: Using main XTAL as clock source[0m
+[0;32mI (523) BTDM_INIT: Bluetooth MAC: d4:e9:f4:8a:9a:ca[0m
+[0;32mI (533) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (613) MAX30102: MAX30102 Configured[0m
+[0;32mI (613) MAX30102: MAX30102 Algorithm started[0m
+[0;32mI (943) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (943) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (943) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (953) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (953) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (963) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (963) main_task: Returned from app_main()[0m
+[0;32mI (973) MASSAGE_BLE: Advertising started[0m
+[0;32mI (973) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (973) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (983) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (983) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (993) MASSAGE_BLE: Service started with both characteristics[0m
+[0;32mI (933) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (943) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (943) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (943) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (953) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (953) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (963) main_task: Returned from app_main()[0m
+[0;32mI (973) MASSAGE_BLE: Advertising started[0m
+[0;32mI (973) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (973) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (973) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (983) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (983) MASSAGE_BLE: Service started with both characteristics[0m
+[0;32mI (8903) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (9813) MASSAGE_BLE: Authentication complete, status: 1[0m
+[0;32mI (35103) MAX30102: HR: 41 BPM | SpO2: 94% | Raw - R:121190 IR:133705[0m
+[0;32mI (35613) MAX30102: HR: 51 BPM | SpO2: 97% | Raw - R:122296 IR:134034[0m
+[0;32mI (36123) MAX30102: HR: 141 BPM | SpO2: 95% | Raw - R:119528 IR:129153[0m
+[0;32mI (36633) MAX30102: HR: 114 BPM | SpO2: 96% | Raw - R:118849 IR:128126[0m
+[0;32mI (37143) MAX30102: HR: 111 BPM | SpO2: 94% | Raw - R:123413 IR:135471[0m
+[0;32mI (37653) MAX30102: HR: 111 BPM | SpO2: 94% | Raw - R:124589 IR:136671[0m
+[0;32mI (38163) MAX30102: HR: 96 BPM | SpO2: 92% | Raw - R:127053 IR:140317[0m
+[0;32mI (38673) MAX30102: HR: 84 BPM | SpO2: 93% | Raw - R:128091 IR:141475[0m
+[0;32mI (39183) MAX30102: HR: 84 BPM | SpO2: 95% | Raw - R:128266 IR:141821[0m
+[0;32mI (39693) MAX30102: HR: 84 BPM | SpO2: 95% | Raw - R:128680 IR:142237[0m
+[0;32mI (40203) MAX30102: HR: 84 BPM | SpO2: 94% | Raw - R:128523 IR:141409[0m
+Guru Meditation Error: Core  0 panic'ed (Interrupt wdt timeout on CPU0). 
+
+Core  0 register dump:
+PC      : 0x40083370  PS      : 0x00050f35  A0      : 0x3ffbd710  A1      : 0x3ffbeec0  
+A2      : 0x00000340  A3      : 0x00018340  A4      : 0x000637ff  A5      : 0x3ffbee70  
+A6      : 0x3ffb7eb8  A7      : 0x00000400  A8      : 0x3ffbb460  A9      : 0x3ff53000  
+A10     : 0x00000000  A11     : 0x3ffb7eb8  A12     : 0x00000000  A13     : 0x3ffbe540  
+A14     : 0x3ffbb44c  A15     : 0x00000001  SAR     : 0x00000018  EXCCAUSE: 0x00000005  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0x00000000  
+Core  0 was running in ISR context:
+EPC1    : 0x400d3ef7  EPC2    : 0x00000000  EPC3    : 0x40084df0  EPC4    : 0x40084df0
+
+
+Backtrace: 0x4008336d:0x3ffbeec0 0x3ffbd70d:0x3ffbd7d0 |<-CORRUPTED
+
+
+Core  1 register dump:
+PC      : 0x4008da0e  PS      : 0x00060135  A0      : 0x80140669  A1      : 0x3ffbc820  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3ffb73c0  A5      : 0x3ffb73a0  
+A6      : 0x40081910  A7      : 0x00000001  A8      : 0x80117d82  A9      : 0x3ffbc7e0  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb73a0  A13     : 0x3ffb7380  
+A14     : 0x00000001  A15     : 0x00000000  SAR     : 0x00000000  EXCCAUSE: 0x00000005  
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4008da0b:0x3ffbc820 0x40140666:0x3ffbc840 0x401418ee:0x3ffbc860 0x40140dea:0x3ffbc880
+
+
+
+
+ELF file SHA256: 43a42b821
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2594-g25c40d4563-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 19 2025 23:29:08[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f3cch (127948) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=0002f3f4 vaddr=3ffbdb60 size=00c24h (  3108) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=7498ch (477580) map[0m
+[0;32mI (310) esp_image: segment 3: paddr=000a49b4 vaddr=3ffbe784 size=03fech ( 16364) load[0m
+[0;32mI (316) esp_image: segment 4: paddr=000a89a8 vaddr=40080000 size=16c30h ( 93232) load[0m
+[0;32mI (354) esp_image: segment 5: paddr=000bf5e0 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (366) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (366) boot: Disabling RNG early entropy source...[0m
+[0;32mI (377) cpu_start: Multicore app[0m
+[0;32mI (385) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (385) cpu_start: Pro cpu start user code[0m
+[0;32mI (385) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (387) app_init: Application information:[0m
+[0;32mI (391) app_init: Project name:     massage_pro_x1[0m
+[0;32mI (396) app_init: App version:      1[0m
+[0;32mI (399) app_init: Compile time:     Nov 19 2025 23:28:24[0m
+[0;32mI (404) app_init: ELF file SHA256:  43a42b821...[0m
+[0;32mI (408) app_init: ESP-IDF:          v6.0-dev-2594-g25c40d4563-dirty[0m
+[0;32mI (414) efuse_init: Min chip rev:     v0.0[0m
+I (418) efuse_init: Max chip rev:     v3.99 
+[0;32mI (422) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (426) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (432) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (437) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (442) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFC7230 len 00018DD0 (99 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (458) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 40096C30 len 000093D0 (36 KiB): IRAM[0m
+[0;32mI (471) spi_flash: detected chip: boya[0m
+[0;32mI (472) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (488) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (498) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (503) main_task: Started on CPU0[0m
+[0;32mI (513) main_task: Calling app_main()[0m
+[0;32mI (523) BTDM_INIT: BT controller compile version [7bc9d6a][0m
+[0;32mI (523) BTDM_INIT: Using main XTAL as clock source[0m
+[0;32mI (523) BTDM_INIT: Bluetooth MAC: d4:e9:f4:8a:9a:ca[0m
+[0;32mI (533) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (613) MAX30102: MAX30102 Configured[0m
+[0;32mI (613) MAX30102: MAX30102 Algorithm started[0m
+[0;32mI (933) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (933) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (933) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (943) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (943) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (953) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (953) main_task: Returned from app_main()[0m
+[0;32mI (963) MASSAGE_BLE: Advertising started[0m
+[0;32mI (963) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (973) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (973) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (983) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (983) MASSAGE_BLE: Service started with both characteristics[0m
+[0;32mI (29113) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (30033) MASSAGE_BLE: Authentication complete, status: 1[0m
+[0;32mI (67643) MAX30102: HR: 53 BPM | SpO2: 97% | Raw - R:128246 IR:133804[0m
+[0;32mI (68153) MAX30102: HR: 50 BPM | SpO2: 96% | Raw - R:128177 IR:134290[0m
+[0;32mI (68663) MAX30102: HR: 49 BPM | SpO2: 96% | Raw - R:126572 IR:130645[0m
+[0;32mI (69173) MAX30102: HR: 49 BPM | SpO2: 96% | Raw - R:131824 IR:140623[0m
+[0;32mI (69683) MAX30102: HR: 49 BPM | SpO2: 97% | Raw - R:134424 IR:146392[0m
+[0;32mI (70193) MAX30102: HR: 41 BPM | SpO2: 98% | Raw - R:134192 IR:145925[0m
+[0;32mI (70703) MAX30102: HR: 41 BPM | SpO2: 100% | Raw - R:134839 IR:147131[0m
+[0;32mI (71213) MAX30102: HR: 41 BPM | SpO2: 99% | Raw - R:134940 IR:147484[0m
+[0;32mI (71723) MAX30102: HR: 41 BPM | SpO2: 100% | Raw - R:135528 IR:149333[0m
+[0;32mI (72233) MAX30102: HR: 41 BPM | SpO2: 98% | Raw - R:134757 IR:147961[0m
+[0;32mI (72743) MAX30102: HR: 41 BPM | SpO2: 100% | Raw - R:134821 IR:148448[0m
+[0;32mI (73253) MAX30102: HR: 41 BPM | SpO2: 100% | Raw - R:134677 IR:148471[0m
+[0;32mI (73763) MAX30102: HR: 41 BPM | SpO2: 98% | Raw - R:134114 IR:147276[0m
+[0;32mI (74273) MAX30102: HR: 41 BPM | SpO2: 98% | Raw - R:135189 IR:150002[0m
+[0;32mI (74783) MAX30102: HR: 41 BPM | SpO2: 99% | Raw - R:134984 IR:149432[0m
+[0;32mI (75293) MAX30102: HR: 41 BPM | SpO2: 98% | Raw - R:135201 IR:149735[0m
+[0;32mI (75803) MAX30102: HR: 41 BPM | SpO2: 100% | Raw - R:135526 IR:151166[0m
+[0;32mI (76313) MAX30102: HR: 41 BPM | SpO2: 97% | Raw - R:134424 IR:148977[0m
+Guru Meditation Error: Core  0 panic'ed (Interrupt wdt timeout on CPU0). 
+
+Core  0 register dump:
+PC      : 0x40084d62  PS      : 0x00050b35  A0      : 0x400833b8  A1      : 0x3ffbee70  
+A2      : 0x3ffb7eb8  A3      : 0x00000400  A4      : 0x3ffbb7e8  A5      : 0x3ff53000  
+A6      : 0x00000000  A7      : 0x3ffb7eb8  A8      : 0x3ffbe540  A9      : 0x3ffbe540  
+A10     : 0x3ffbb7d4  A11     : 0x00000001  A12     : 0x3ffbedd0  A13     : 0x00000000  
+A14     : 0x00000004  A15     : 0x00060d23  SAR     : 0x0000001e  EXCCAUSE: 0x00000005  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0x00000000  
+Core  0 was running in ISR context:
+EPC1    : 0x400d3ef7  EPC2    : 0x00000000  EPC3    : 0x40084d57  EPC4    : 0x40084d57
+
+
+Backtrace: 0x40084d5f:0x3ffbee70 0x400833b5:0x3ffbeec0 0x40084f83:0x3ffbd7d0 0x4011bad9:0x3ffbd810 0x400dc3d1:0x3ffbd850 0x400dc753:0x3ffbd870 0x40140dea:0x3ffbd8b0
+
+
+Core  1 register dump:
+PC      : 0x4008da0e  PS      : 0x00060535  A0      : 0x80140669  A1      : 0x3ffbc820  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3ffb73c0  A5      : 0x3ffb73a0  
+A6      : 0x40081910  A7      : 0x00000001  A8      : 0x80117d82  A9      : 0x3ffbc7e0  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb73a0  A13     : 0x3ffb7380  
+A14     : 0x00000001  A15     : 0x00000000  SAR     : 0x00000000  EXCCAUSE: 0x00000005  
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4008da0b:0x3ffbc820 0x40140666:0x3ffbc840 0x401418ee:0x3ffbc860 0x40140dea:0x3ffbc880
+
+
+
+
+ELF file SHA256: 43a42b821
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2594-g25c40d4563-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 19 2025 23:29:08[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f3cch (127948) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=0002f3f4 vaddr=3ffbdb60 size=00c24h (  3108) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=7498ch (477580) map[0m
+[0;32mI (310) esp_image: segment 3: paddr=000a49b4 vaddr=3ffbe784 size=03fech ( 16364) load[0m
+[0;32mI (316) esp_image: segment 4: paddr=000a89a8 vaddr=40080000 size=16c30h ( 93232) load[0m
+[0;32mI (354) esp_image: segment 5: paddr=000bf5e0 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (366) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (366) boot: Disabling RNG early entropy source...[0m
+[0;32mI (377) cpu_start: Multicore app[0m
+[0;32mI (385) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (385) cpu_start: Pro cpu start user code[0m
+[0;32mI (385) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (387) app_init: Application information:[0m
+[0;32mI (391) app_init: Project name:     massage_pro_x1[0m
+[0;32mI (396) app_init: App version:      1[0m
+[0;32mI (399) app_init: Compile time:     Nov 19 2025 23:28:24[0m
+[0;32mI (404) app_init: ELF file SHA256:  43a42b821...[0m
+[0;32mI (408) app_init: ESP-IDF:          v6.0-dev-2594-g25c40d4563-dirty[0m
+[0;32mI (414) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (418) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (422) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (426) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (432) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (437) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (442) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFC7230 len 00018DD0 (99 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (458) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 40096C30 len 000093D0 (36 KiB): IRAM[0m
+[0;32mI (471) spi_flash: detected chip: boya[0m
+[0;32mI (472) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (488) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (498) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (503) main_task: Started on CPU0[0m
+[0;32mI (513) main_task: Calling app_main()[0m
+[0;32mI (523) BTDM_INIT: BT controller compile version [7bc9d6a][0m
+[0;32mI (523) BTDM_INIT: Using main XTAL as clock source[0m
+[0;32mI (523) BTDM_INIT: Bluetooth MAC: d4:e9:f4:8a:9a:ca[0m
+[0;32mI (533) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (613) MAX30102: MAX30102 Configured[0m
+[0;32mI (613) MAX30102: MAX30102 Algorithm started[0m
+[0;32mI (943) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (953) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (953) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (953) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (963) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (963) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (973) main_task: Returned from app_main()[0m
+[0;32mI (983) MASSAGE_BLE: Advertising started[0m
+[0;32mI (983) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (983) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (983) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (993) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (993) MASSAGE_BLE: Service started with both characteristics[0m
+[0;32mI (3143) MAX30102: HR: 46 BPM | SpO2: 93% | Raw - R:124030 IR:150068[0m
+[0;32mI (30353) MAX30102: HR: 41 BPM | SpO2: 84% | Raw - R:59808 IR:84709[0m
+[0;32mI (30863) MAX30102: HR: 83 BPM | SpO2: 77% | Raw - R:83847 IR:109139[0m
+[0;32mI (31373) MAX30102: HR: 83 BPM | SpO2: 79% | Raw - R:85816 IR:108576[0m
+[0;32mI (31883) MAX30102: HR: 78 BPM | SpO2: 79% | Raw - R:84854 IR:106957[0m
+[0;32mI (32393) MAX30102: HR: 78 BPM | SpO2: 77% | Raw - R:80583 IR:103026[0m
+[0;32mI (32903) MAX30102: HR: 78 BPM | SpO2: 83% | Raw - R:78074 IR:100054[0m
+[0;32mI (33413) MAX30102: HR: 78 BPM | SpO2: 83% | Raw - R:77135 IR:99019[0m
+[0;32mI (33923) MAX30102: HR: 78 BPM | SpO2: 75% | Raw - R:76754 IR:99797[0m
+[0;32mI (34433) MAX30102: HR: 48 BPM | SpO2: 88% | Raw - R:75175 IR:96944[0m
+[0;32mI (34943) MAX30102: HR: 48 BPM | SpO2: 81% | Raw - R:75019 IR:96492[0m
+[0;32mI (35453) MAX30102: HR: 48 BPM | SpO2: 88% | Raw - R:75068 IR:96675[0m
+[0;32mI (35963) MAX30102: HR: 48 BPM | SpO2: 88% | Raw - R:75707 IR:98917[0m
+[0;32mI (36473) MAX30102: HR: 48 BPM | SpO2: 90% | Raw - R:78404 IR:103477[0m
+[0;32mI (36983) MAX30102: HR: 48 BPM | SpO2: 80% | Raw - R:76069 IR:100780[0m
+[0;32mI (37493) MAX30102: HR: 48 BPM | SpO2: 76% | Raw - R:80246 IR:104763[0m
+[0;32mI (40643) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (41653) MASSAGE_BLE: Authentication complete, status: 1[0m
+[0;32mI (74583) MAX30102: HR: 141 BPM | SpO2: 83% | Raw - R:135552 IR:155478[0m
+[0;32mI (75093) MAX30102: HR: 134 BPM | SpO2: 80% | Raw - R:100102 IR:120720[0m
+[0;32mI (943) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (943) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (943) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (953) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (953) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (963) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (973) main_task: Returned from app_main()[0m
+[0;32mI (983) MASSAGE_BLE: Advertising started[0m
+[0;32mI (983) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (983) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (983) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (993) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (993) MASSAGE_BLE: Service started with both characteristics[0m
+[0;32mI (4983) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (6113) MASSAGE_BLE: Authentication complete, status: 1[0m
+[0;33mW (29923) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x13 dev_find 1[0m
+[0;32mI (29923) MASSAGE_BLE: Device disconnected, reason: 0x13[0m
+[0;32mI (29943) MASSAGE_BLE: Advertising started[0m
+[0;32mI (31903) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (32853) MASSAGE_BLE: Authentication complete, status: 1[0m
+[0;33mW (73393) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x13 dev_find 1[0m
+[0;32mI (73393) MASSAGE_BLE: Device disconnected, reason: 0x13[0m
+[0;32mI (73413) MASSAGE_BLE: Advertising started[0m
+[0;32mI (933) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (943) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (943) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (943) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (953) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (953) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (963) main_task: Returned from app_main()[0m
+[0;32mI (973) MASSAGE_BLE: Advertising started[0m
+[0;32mI (973) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (973) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (983) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (983) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (983) MASSAGE_BLE: Service started with both characteristics[0m
+[0;32mI (6673) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (7533) MASSAGE_BLE: Authentication complete, status: 1[0m
+[0;32mI (25363) MAX30102: HR: 86 BPM | SpO2: 94% | Raw - R:102486 IR:100043[0m
+[0;32mI (25873) MAX30102: HR: 127 BPM | SpO2: 96% | Raw - R:121053 IR:136710[0m
+[0;32mI (26383) MAX30102: HR: 163 BPM | SpO2: 99% | Raw - R:121165 IR:136801[0m
+[0;32mI (26893) MAX30102: HR: 123 BPM | SpO2: 98% | Raw - R:119607 IR:132951[0m
+[0;32mI (27403) MAX30102: HR: 123 BPM | SpO2: 98% | Raw - R:120731 IR:135740[0m
+[0;32mI (27913) MAX30102: HR: 102 BPM | SpO2: 98% | Raw - R:119943 IR:133973[0m
+[0;32mI (28423) MAX30102: HR: 92 BPM | SpO2: 97% | Raw - R:119129 IR:132240[0m
+[0;32mI (28933) MAX30102: HR: 92 BPM | SpO2: 99% | Raw - R:120140 IR:134890[0m
+[0;32mI (29443) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:119348 IR:133168[0m
+[0;32mI (29953) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:118440 IR:131249[0m
+[0;32mI (30463) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:119235 IR:133223[0m
+[0;32mI (30973) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:118734 IR:132077[0m
+[0;32mI (31483) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:119016 IR:132740[0m
+[0;32mI (31993) MAX30102: HR: 61 BPM | SpO2: 97% | Raw - R:118730 IR:132118[0m
+[0;32mI (32503) MAX30102: HR: 58 BPM | SpO2: 98% | Raw - R:117911 IR:130168[0m
+[0;32mI (33013) MAX30102: HR: 58 BPM | SpO2: 98% | Raw - R:118942 IR:132673[0m
+[0;32mI (33523) MAX30102: HR: 58 BPM | SpO2: 98% | Raw - R:118359 IR:131156[0m
+[0;32mI (34033) MAX30102: HR: 58 BPM | SpO2: 97% | Raw - R:118834 IR:132268[0m
+[0;32mI (34543) MAX30102: HR: 57 BPM | SpO2: 97% | Raw - R:118600 IR:131705[0m
+[0;32mI (35053) MAX30102: HR: 71 BPM | SpO2: 98% | Raw - R:118202 IR:130776[0m
+[0;32mI (35563) MAX30102: HR: 71 BPM | SpO2: 98% | Raw - R:118643 IR:131823[0m
+[0;32mI (36073) MAX30102: HR: 72 BPM | SpO2: 98% | Raw - R:117848 IR:129874[0m
+[0;32mI (36583) MAX30102: HR: 72 BPM | SpO2: 98% | Raw - R:117672 IR:129470[0m
+[0;32mI (37093) MAX30102: HR: 72 BPM | SpO2: 97% | Raw - R:118435 IR:131182[0m
+[0;32mI (37603) MAX30102: HR: 58 BPM | SpO2: 98% | Raw - R:117810 IR:129602[0m
+[0;32mI (38113) MAX30102: HR: 58 BPM | SpO2: 98% | Raw - R:118715 IR:131734[0m
+[0;32mI (38623) MAX30102: HR: 58 BPM | SpO2: 98% | Raw - R:118285 IR:130604[0m
+[0;32mI (39133) MAX30102: HR: 58 BPM | SpO2: 98% | Raw - R:113127 IR:118793[0m
+[0;32mI (48043) MAX30102: HR: 129 BPM | SpO2: 89% | Raw - R:122212 IR:145742[0m
+[0;32mI (48553) MAX30102: HR: 144 BPM | SpO2: 84% | Raw - R:108683 IR:126900[0m
+[0;32mI (49063) MAX30102: HR: 129 BPM | SpO2: 88% | Raw - R:87795 IR:98276[0m
+[0;32mI (49573) MAX30102: HR: 125 BPM | SpO2: 87% | Raw - R:127607 IR:149699[0m
+[0;32mI (50083) MAX30102: HR: 141 BPM | SpO2: 88% | Raw - R:136377 IR:156854[0m
+[0;32mI (50593) MAX30102: HR: 119 BPM | SpO2: 87% | Raw - R:94147 IR:107137[0m
+[0;32mI (51103) MAX30102: HR: 119 BPM | SpO2: 88% | Raw - R:89991 IR:101715[0m
+[0;32mI (51613) MAX30102: HR: 119 BPM | SpO2: 92% | Raw - R:88744 IR:99700[0m
+[0;32mI (52123) MAX30102: HR: 73 BPM | SpO2: 90% | Raw - R:78758 IR:85282[0m
+[0;32mI (52633) MAX30102: HR: 73 BPM | SpO2: 90% | Raw - R:79467 IR:86867[0m
+[0;32mI (53143) MAX30102: HR: 73 BPM | SpO2: 90% | Raw - R:79191 IR:86535[0m
+[0;32mI (53653) MAX30102: HR: 73 BPM | SpO2: 92% | Raw - R:79139 IR:86494[0m
+[0;32mI (54163) MAX30102: HR: 73 BPM | SpO2: 95% | Raw - R:79089 IR:86558[0m
+[0;32mI (54673) MAX30102: HR: 73 BPM | SpO2: 92% | Raw - R:78858 IR:86248[0m
+[0;32mI (55183) MAX30102: HR: 73 BPM | SpO2: 95% | Raw - R:78736 IR:86092[0m
+[0;32mI (55693) MAX30102: HR: 73 BPM | SpO2: 94% | Raw - R:78772 IR:86243[0m
+[0;32mI (56203) MAX30102: HR: 73 BPM | SpO2: 90% | Raw - R:78409 IR:85842[0m
+[0;32mI (56713) MAX30102: HR: 73 BPM | SpO2: 84% | Raw - R:78037 IR:85385[0m
+[0;32mI (57223) MAX30102: HR: 73 BPM | SpO2: 91% | Raw - R:77766 IR:84900[0m
+[0;32mI (57733) MAX30102: HR: 73 BPM | SpO2: 92% | Raw - R:77904 IR:85111[0m
+[0;32mI (58243) MAX30102: HR: 73 BPM | SpO2: 89% | Raw - R:77829 IR:85175[0m
+[0;32mI (58753) MAX30102: HR: 73 BPM | SpO2: 71% | Raw - R:77725 IR:85080[0m
+[0;32mI (59263) MAX30102: HR: 73 BPM | SpO2: 92% | Raw - R:77504 IR:84757[0m
+[0;32mI (59773) MAX30102: HR: 73 BPM | SpO2: 95% | Raw - R:77412 IR:84615[0m
+[0;32mI (60283) MAX30102: HR: 73 BPM | SpO2: 95% | Raw - R:77377 IR:84566[0m
+[0;32mI (60793) MAX30102: HR: 73 BPM | SpO2: 94% | Raw - R:77349 IR:84631[0m
+[0;32mI (61303) MAX30102: HR: 73 BPM | SpO2: 96% | Raw - R:77341 IR:84660[0m
+[0;32mI (61813) MAX30102: HR: 73 BPM | SpO2: 98% | Raw - R:77307 IR:84691[0m
+[0;32mI (62323) MAX30102: HR: 73 BPM | SpO2: 84% | Raw - R:77266 IR:84578[0m
+[0;32mI (62833) MAX30102: HR: 73 BPM | SpO2: 91% | Raw - R:77141 IR:84491[0m
+[0;32mI (63343) MAX30102: HR: 73 BPM | SpO2: 79% | Raw - R:77115 IR:84545[0m
+[0;32mI (63853) MAX30102: HR: 73 BPM | SpO2: 94% | Raw - R:77120 IR:84501[0m
+[0;32mI (64363) MAX30102: HR: 73 BPM | SpO2: 92% | Raw - R:77084 IR:84499[0m
+[0;32mI (64873) MAX30102: HR: 73 BPM | SpO2: 83% | Raw - R:77088 IR:84485[0m
+[0;32mI (65383) MAX30102: HR: 73 BPM | SpO2: 94% | Raw - R:77077 IR:84450[0m
+[0;32mI (65893) MAX30102: HR: 73 BPM | SpO2: 94% | Raw - R:77149 IR:84618[0m
+[0;32mI (66403) MAX30102: HR: 73 BPM | SpO2: 94% | Raw - R:77058 IR:84463[0m
+[0;32mI (66913) MAX30102: HR: 73 BPM | SpO2: 86% | Raw - R:76933 IR:84306[0m
+[0;32mI (67423) MAX30102: HR: 73 BPM | SpO2: 91% | Raw - R:76953 IR:84445[0m
+[0;32mI (67933) MAX30102: HR: 73 BPM | SpO2: 94% | Raw - R:76856 IR:84219[0m
+[0;32mI (68443) MAX30102: HR: 73 BPM | SpO2: 94% | Raw - R:76875 IR:84235[0m
+[0;32mI (68953) MAX30102: HR: 73 BPM | SpO2: 95% | Raw - R:77028 IR:84496[0m
+[0;32mI (69463) MAX30102: HR: 73 BPM | SpO2: 95% | Raw - R:76957 IR:84354[0m
+[0;32mI (69973) MAX30102: HR: 73 BPM | SpO2: 91% | Raw - R:76847 IR:84214[0m
+[0;32mI (70483) MAX30102: HR: 73 BPM | SpO2: 97% | Raw - R:76934 IR:84393[0m
+[0;32mI (70993) MAX30102: HR: 73 BPM | SpO2: 94% | Raw - R:76878 IR:84260[0m
+[0;32mI (71503) MAX30102: HR: 73 BPM | SpO2: 97% | Raw - R:76877 IR:84312[0m
+[0;32mI (72013) MAX30102: HR: 73 BPM | SpO2: 89% | Raw - R:76946 IR:84386[0m
+[0;32mI (72523) MAX30102: HR: 73 BPM | SpO2: 91% | Raw - R:76828 IR:84311[0m
+[0;32mI (73033) MAX30102: HR: 73 BPM | SpO2: 76% | Raw - R:76824 IR:84338[0m
+[0;32mI (73543) MAX30102: HR: 73 BPM | SpO2: 89% | Raw - R:76737 IR:84196[0m
+[0;32mI (74053) MAX30102: HR: 73 BPM | SpO2: 95% | Raw - R:76735 IR:84146[0m
+[0;32mI (74563) MAX30102: HR: 73 BPM | SpO2: 95% | Raw - R:76809 IR:84347[0m
+[0;32mI (75073) MAX30102: HR: 73 BPM | SpO2: 90% | Raw - R:76737 IR:84229[0m
+[0;32mI (75583) MAX30102: HR: 73 BPM | SpO2: 95% | Raw - R:76693 IR:84140[0m
+[0;32mI (76093) MAX30102: HR: 73 BPM | SpO2: 95% | Raw - R:76863 IR:84491[0m
+[0;32mI (76603) MAX30102: HR: 73 BPM | SpO2: 95% | Raw - R:76544 IR:83838[0m

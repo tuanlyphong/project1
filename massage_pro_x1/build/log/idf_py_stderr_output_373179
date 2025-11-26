@@ -1,0 +1,54 @@
+Command: /home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/phong/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/phong/massage_pro_x1/build/massage_pro_x1.elf /home/phong/massage_pro_x1/build/bootloader/bootloader.elf -m '/home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/phong/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/phong/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/phong/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[1;31m--- Error: device reports readiness to read but returned no data (device disconnected or multiple access on port?)[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0m--- 0x40083370: [0;33m_xt_lowint1[0m[0m at [0;32m/home/phong/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4000c2e0: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x4000c2f6: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x400d3ef7: [0;33muart_hal_write_txfifo[0m[0m at [0;32m/home/phong/esp-idf/components/hal/uart_hal_iram.c[0m[0m:[1;31m27[0m
+[0m--- 0x40084df0: [0;33mi2c_isr_handler_default[0m[0m at [0;32m/home/phong/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m592[0m
+[0m--- 0x40084df0: [0;33mi2c_isr_handler_default[0m[0m at [0;32m/home/phong/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m592[0m
+[0m--- 0x4008336d: [0;33m_xt_lowint1[0m[0m at [0;32m/home/phong/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4008da0e: [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32m/home/phong/esp-idf/components/esp_hw_support/cpu.c[0m[0m:[1;31m64[0m
+[0m--- 0x40081910: [0;33mipc_task[0m[0m at [0;32m/home/phong/esp-idf/components/esp_system/esp_ipc.c[0m[0m:[1;31m53[0m
+[0m--- 0x4008da0b: [0;33mxt_utils_wait_for_intr[0m[0m at [0;32m/home/phong/esp-idf/components/xtensa/include/xt_utils.h[0m[0m:[1;31m82[0m
+[0m--- (inlined by) [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32m/home/phong/esp-idf/components/esp_hw_support/cpu.c[0m[0m:[1;31m55[0m
+[0m--- 0x40140666: [0;33mesp_vApplicationIdleHook[0m[0m at [0;32m/home/phong/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m58[0m
+[0m--- 0x401418ee: [0;33mprvIdleTask[0m[0m at [0;32m/home/phong/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4350[0m
+[0m--- 0x40140dea: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/phong/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m143[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/phong/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/phong/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40084d62: [0;33mi2c_isr_handler_default[0m[0m at [0;32m/home/phong/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m571[0m
+[0m--- 0x400833b8: [0;33m_xt_lowint1[0m[0m at [0;32m/home/phong/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4000c2e0: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x4000c2f6: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x400d3ef7: [0;33muart_hal_write_txfifo[0m[0m at [0;32m/home/phong/esp-idf/components/hal/uart_hal_iram.c[0m[0m:[1;31m27[0m
+[0m--- 0x40084d57: [0;33mi2c_isr_handler_default[0m[0m at [0;32m/home/phong/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m570[0m
+[0m--- 0x40084d57: [0;33mi2c_isr_handler_default[0m[0m at [0;32m/home/phong/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m570[0m
+[0m--- 0x40084d5f: [0;33mi2c_ll_get_intr_mask[0m[0m at [0;32m/home/phong/esp-idf/components/esp_hal_i2c/esp32/include/hal/i2c_ll.h[0m[0m:[1;31m272[0m
+[0m--- (inlined by) [0;33mi2c_isr_handler_default[0m[0m at [0;32m/home/phong/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m570[0m
+[0m--- 0x400833b5: [0;33m_xt_lowint1[0m[0m at [0;32m/home/phong/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x40084f83: [0;33mi2c_isr_handler_default[0m[0m at [0;32m/home/phong/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m633[0m
+[0m--- 0x4011bad9: [0;33mi2c_master_cmd_begin[0m[0m at [0;32m/home/phong/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m1602[0m
+[0m--- 0x400dc3d1: [0;33mmax30102_read_fifo[0m[0m at [0;32m/home/phong/massage_pro_x1/main/max30102.c[0m[0m:[1;31m56[0m
+[0m--- 0x400dc753: [0;33mmax30102_task[0m[0m at [0;32m/home/phong/massage_pro_x1/main/max30102.c[0m[0m:[1;31m270[0m
+[0m--- 0x40140dea: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/phong/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m143[0m
+[0m--- 0x4008da0e: [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32m/home/phong/esp-idf/components/esp_hw_support/cpu.c[0m[0m:[1;31m64[0m
+[0m--- 0x40081910: [0;33mipc_task[0m[0m at [0;32m/home/phong/esp-idf/components/esp_system/esp_ipc.c[0m[0m:[1;31m53[0m
+[0m--- 0x4008da0b: [0;33mxt_utils_wait_for_intr[0m[0m at [0;32m/home/phong/esp-idf/components/xtensa/include/xt_utils.h[0m[0m:[1;31m82[0m
+[0m--- (inlined by) [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32m/home/phong/esp-idf/components/esp_hw_support/cpu.c[0m[0m:[1;31m55[0m
+[0m--- 0x40140666: [0;33mesp_vApplicationIdleHook[0m[0m at [0;32m/home/phong/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m58[0m
+[0m--- 0x401418ee: [0;33mprvIdleTask[0m[0m at [0;32m/home/phong/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4350[0m
+[0m--- 0x40140dea: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/phong/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m143[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/phong/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/phong/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[1;31m--- Error: device reports readiness to read but returned no data (device disconnected or multiple access on port?)[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[1;31m--- Error: device reports readiness to read but returned no data (device disconnected or multiple access on port?)[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[1;31m--- Error: device reports readiness to read but returned no data (device disconnected or multiple access on port?)[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0m

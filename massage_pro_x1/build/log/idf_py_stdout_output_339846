@@ -1,0 +1,328 @@
+Command: /home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/phong/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/phong/massage_pro_x1/build/massage_pro_x1.elf /home/phong/massage_pro_x1/build/bootloader/bootloader.elf -m '/home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/phong/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2594-g25c40d4563-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 19 2025 23:29:08[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f36ch (127852) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=0002f394 vaddr=3ffbdb60 size=00c84h (  3204) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=74580h (476544) map[0m
+[0;32mI (309) esp_image: segment 3: paddr=000a45a8 vaddr=3ffbe7e4 size=03f8ch ( 16268) load[0m
+[0;32mI (316) esp_image: segment 4: paddr=000a853c vaddr=40080000 size=16c30h ( 93232) load[0m
+[0;32mI (354) esp_image: segment 5: paddr=000bf174 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (366) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (366) boot: Disabling RNG early entropy source...[0m
+[0;32mI (376) cpu_start: Multicore app[0m
+[0;32mI (385) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (385) cpu_start: Pro cpu start user code[0m
+[0;32mI (385) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (387) app_init: Application information:[0m
+[0;32mI (391) app_init: Project name:     massage_pro_x1[0m
+[0;32mI (395) app_init: App version:      1[0m
+[0;32mI (399) app_init: Compile time:     Nov 19 2025 23:28:24[0m
+[0;32mI (404) app_init: ELF file SHA256:  bc9827db6...[0m
+[0;32mI (408) app_init: ESP-IDF:          v6.0-dev-2594-g25c40d4563-dirty[0m
+[0;32mI (414) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (418) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (422) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (426) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (432) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (437) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (442) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (447) heap_init: At 3FFC6ED8 len 00019128 (100 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (458) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 40096C30 len 000093D0 (36 KiB): IRAM[0m
+[0;32mI (470) spi_flash: detected chip: boya[0m
+[0;32mI (472) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (488) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (498) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (502) main_task: Started on CPU0[0m
+[0;32mI (512) main_task: Calling app_main()[0m
+[0;32mI (522) BTDM_INIT: BT controller compile version [7bc9d6a][0m
+[0;32mI (522) BTDM_INIT: Using main XTAL as clock source[0m
+[0;32mI (522) BTDM_INIT: Bluetooth MAC: d4:e9:f4:8a:9a:ca[0m
+[0;32mI (532) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (612) MAX30102: MAX30102 Configured[0m
+[0;32mI (612) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (632) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (652) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (672) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (692) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (712) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (732) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (752) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (772) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (792) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (812) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (832) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (852) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (872) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (892) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (912) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (932) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (942) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (942) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (952) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (952) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (952) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (962) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (972) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (972) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (982) MASSAGE_BLE: Advertising started[0m
+[0;32mI (982) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (982) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (992) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (992) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (1002) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (992) main_task: Returned from app_main()[0m
+[0;32mI (1012) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1032) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1052) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1072) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1092) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1112) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1132) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1152) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1172) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1192) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1212) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1232) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1252) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1272) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1292) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1312) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1332) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1352) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1372) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1392) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1412) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1432) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1452) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1472) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1492) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1512) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1532) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1552) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1572) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1592) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1612) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1632) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1652) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1672) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1692) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1712) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1732) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1752) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1772) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1792) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1812) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1832) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1852) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1872) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1892) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1912) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1932) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1952) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1972) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (1992) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2012) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2032) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2052) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2072) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2092) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2112) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2132) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2152) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2172) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2192) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2212) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2232) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2252) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2272) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2292) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2312) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2332) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2352) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2372) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2392) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2412) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2432) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2452) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2472) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2492) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2512) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2532) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2552) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2572) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2592) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2612) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2632) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2652) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2672) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2692) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2712) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2732) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2752) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2772) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2792) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2812) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2832) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2852) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2872) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2892) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2912) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2932) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2952) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2972) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (2992) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3012) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3032) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3052) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3072) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3092) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3112) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3132) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3152) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3172) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3192) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3212) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3232) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3252) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3272) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3292) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3312) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3332) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3352) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (3372) MAX30102: R:59129 IR:196608 | NOTIFY HR:75 SpO2:98[0m
+[0;32mI (692) MAX30102: R:224894 IR:84523 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (712) MAX30102: R:189221 IR:63538 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (732) MAX30102: R:197296 IR:121779 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (752) MAX30102: R:98863 IR:119666 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (772) MAX30102: R:241137 IR:175787 | NOTIFY HR:77 SpO2:99[0m
+[0;32mI (792) MAX30102: R:218241 IR:79232 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (812) MAX30102: R:36342 IR:100284 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (832) MAX30102: R:56308 IR:101310 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (872) MAX30102: R:248414 IR:256926 | NOTIFY HR:80 SpO2:98[0m
+[0;32mI (892) MAX30102: R:213872 IR:214262 | NOTIFY HR:74 SpO2:98[0m
+[0;32mI (912) MAX30102: R:248532 IR:121037 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (932) MAX30102: R:228189 IR:128399 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (952) MAX30102: R:89981 IR:164325 | NOTIFY HR:77 SpO2:99[0m
+[0;32mI (952) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (952) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (952) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (962) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (962) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (972) MAX30102: R:246096 IR:180293 | NOTIFY HR:73 SpO2:99[0m
+[0;32mI (972) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (982) main_task: Returned from app_main()[0m
+[0;32mI (992) MASSAGE_BLE: Advertising started[0m
+[0;32mI (992) MAX30102: R:257263 IR:131963 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (992) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (1002) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (1002) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (1012) MAX30102: R:206882 IR:217752 | NOTIFY HR:77 SpO2:98[0m
+[0;32mI (1012) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (1032) MAX30102: R:110139 IR:178486 | NOTIFY HR:70 SpO2:98[0m
+[0;32mI (1052) MAX30102: R:119304 IR:70026 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (1092) MAX30102: R:126841 IR:217456 | NOTIFY HR:78 SpO2:98[0m
+[0;32mI (1132) MAX30102: R:38658 IR:238132 | NOTIFY HR:74 SpO2:98[0m
+[0;32mI (1172) MAX30102: R:244247 IR:178724 | NOTIFY HR:77 SpO2:98[0m
+[0;32mI (1192) MAX30102: R:32759 IR:241531 | NOTIFY HR:74 SpO2:99[0m
+[0;32mI (1212) MAX30102: R:228156 IR:56084 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (1232) MAX30102: R:102330 IR:65726 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (6272) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (7252) MASSAGE_BLE: Authentication complete, status: 1[0m
+[0;32mI (732) MAX30102: R:66158 IR:88987 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (752) MAX30102: R:8871 IR:53290 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (792) MAX30102: R:15269 IR:94464 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (812) MAX30102: R:11186 IR:94270 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (872) MAX30102: R:68606 IR:61660 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (912) MAX30102: R:84990 IR:61640 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (932) MAX30102: R:211959 IR:61711 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (942) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (942) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (952) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (952) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (952) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (962) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (962) main_task: Returned from app_main()[0m
+[0;32mI (982) MASSAGE_BLE: Advertising started[0m
+[0;32mI (982) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (982) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (982) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (992) MAX30102: R:257261 IR:159843 | NOTIFY HR:72 SpO2:99[0m
+[0;32mI (992) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (1052) MAX30102: R:109387 IR:94378 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (1092) MAX30102: R:93209 IR:86384 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (1172) MAX30102: R:240180 IR:158252 | NOTIFY HR:76 SpO2:98[0m
+[0;32mI (1212) MAX30102: R:76605 IR:61321 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (1232) MAX30102: R:43901 IR:83588 | NOTIFY HR:60 SpO2:95[0m
+[0;32mI (12422) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (13352) MASSAGE_BLE: Authentication complete, status: 1[0m
+�N����1���L)9 k�h04108 (16 KiB): DRAM
+[0;32mI (447) heap_init: At 3FFC6ED8 len 00019128 (100 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (458) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 40096C30 len 000093D0 (36 KiB): IRAM[0m
+[0;32mI (470) spi_flash: detected chip: boya[0m
+[0;32mI (472) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (488) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (498) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (502) main_task: Started on CPU0[0m
+[0;32mI (512) main_task: Calling app_main()[0m
+[0;32mI (522) BTDM_INIT: BT controller compile version [7bc9d6a][0m
+[0;32mI (522) BTDM_INIT: Using main XTAL as clock source[0m
+[0;32mI (522) BTDM_INIT: Bluetooth MAC: d4:e9:f4:8a:9a:ca[0m
+[0;32mI (532) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (612) MAX30102: MAX30102 Configured[0m
+[0;32mI (942) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (942) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (942) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (952) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (952) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (962) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (962) main_task: Returned from app_main()[0m
+[0;32mI (972) MASSAGE_BLE: Advertising started[0m
+[0;32mI (972) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (972) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (982) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (982) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (9462) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (10412) MASSAGE_BLE: Authentication complete, status: 1[0m
+��ad,Aug  5 2025,11:16:06
+[0;32mI (612) MAX30102: MAX30102 Configured[0m
+[0;32mI (932) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (932) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (942) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (942) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (952) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (952) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (962) main_task: Returned from app_main()[0m
+[0;32mI (972) MASSAGE_BLE: Advertising started[0m
+[0;32mI (972) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (972) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (972) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (982) MASSAGE_BLE: SpO2 Char Handle: 44[0m
