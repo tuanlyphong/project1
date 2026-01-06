@@ -33,5 +33,14 @@
             </intent-filter>
 
         </activity>
+        <activity
+            android:name=".AssistantActivity"
+            android:label="@string/assistant_title"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 </manifest>

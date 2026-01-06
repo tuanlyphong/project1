@@ -1,0 +1,108 @@
+Command: /home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/phong/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/phong/massage_pro_x1/build/massage_pro_x1.elf /home/phong/massage_pro_x1/build/bootloader/bootloader.elf -m '/home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/phong/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2594-g25c40d4563-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 19 2025 23:29:08[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=25508h (152840) map[0m
+[0;32mI (145) esp_image: segment 1: paddr=00035530 vaddr=3ffbdb60 size=04e70h ( 20080) load[0m
+[0;32mI (153) esp_image: segment 2: paddr=0003a3a8 vaddr=40080000 size=05c70h ( 23664) load[0m
+[0;32mI (163) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=86508h (550152) map[0m
+[0;32mI (359) esp_image: segment 4: paddr=000c6530 vaddr=40085c70 size=134b4h ( 79028) load[0m
+[0;32mI (391) esp_image: segment 5: paddr=000d99ec vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (404) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (404) boot: Disabling RNG early entropy source...[0m
+[0;32mI (415) cpu_start: Multicore app[0m
+[0;32mI (423) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (423) cpu_start: Pro cpu start user code[0m
+[0;32mI (423) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (425) app_init: Application information:[0m
+[0;32mI (429) app_init: Project name:     massage_pro_x1[0m
+[0;32mI (433) app_init: App version:      1[0m
+[0;32mI (437) app_init: Compile time:     Nov 19 2025 23:28:24[0m
+[0;32mI (442) app_init: ELF file SHA256:  da47ccdfd...[0m
+[0;32mI (446) app_init: ESP-IDF:          v6.0-dev-2594-g25c40d4563-dirty[0m
+[0;32mI (452) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (456) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (460) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (464) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (470) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (475) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (485) heap_init: At 3FFC7208 len 00018DF8 (99 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (496) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (502) heap_init: At 40099124 len 00006EDC (27 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: boya[0m
+[0;32mI (510) spi_flash: flash io: dio[0m
+[0;33mW (513) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (526) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (536) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (540) main_task: Started on CPU0[0m
+[0;32mI (550) main_task: Calling app_main()[0m
+[0;32mI (550) MAIN: ========================================[0m
+[0;32mI (550) MAIN:   Massage Pro X1 - Starting Up[0m
+[0;32mI (550) MAIN:   Firmware Version: 1.0.0[0m
+[0;32mI (550) MAIN: ========================================[0m
+[0;32mI (560) MAIN: Initializing NVS...[0m
+[0;32mI (570) MAIN: ✓ NVS initialized successfully[0m
+[0;32mI (570) MAIN: Initializing hardware peripherals...[0m
+[0;32mI (570) MAIN:   - Motor control...[0m
+[0;32mI (580) MOTOR: Motor control initialized[0m
+[0;32mI (580) MOTOR:   PWM: GPIO23 @ 5000 Hz[0m
+[0;32mI (580) MOTOR:   DIR: GPIO25, GPIO26[0m
+[0;32mI (590) MOTOR:   HEAT: GPIO27[0m
+[0;32mI (590) MAIN:   ✓ Motor control ready[0m
+[0;32mI (590) MAIN:   - Health monitor...[0m
+[0;32mI (600) MAIN:   ✓ Health monitor ready[0m
+[0;32mI (600) MAIN:   - Audio system...[0m
+[0;32mI (600) AUDIO: Initializing audio system...[0m
+[0;33mW (610) i2s_common: dma frame num is out of dma buffer size, limited to 1023[0m
+[0;32mI (610) AUDIO: I2S initialized successfully[0m
+[1;31mE (820) sdmmc_sd: sdmmc_init_sd_if_cond: send_if_cond (1) returned 0x108[0m
+[1;31mE (820) vfs_fat_sdmmc: sdmmc_card_init failed (0x108).[0m
+[1;31mE (820) AUDIO: Failed to mount SD card: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (820) MAIN:   ⚠ Audio init failed (non-critical)[0m
+[0;32mI (830) MAIN: ✓ Hardware initialization complete[0m
+[0;32mI (830) MAIN: Initializing Bluetooth...[0m
+[0;32mI (840) BTDM_INIT: BT controller compile version [7bc9d6a][0m
+[0;32mI (840) BTDM_INIT: Using main XTAL as clock source[0m
+[0;32mI (850) BTDM_INIT: Bluetooth MAC: d4:e9:f4:8a:9a:ca[0m
+[0;32mI (850) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (1260) BLE_SERVER: GATT server registered, app_id: 0[0m
+[0;32mI (1260) BLE_SERVER: BLE GATT Server initialized[0m
+[0;32mI (1260) BLE_SERVER: Device name: Massage_Pro_X1[0m
+[0;32mI (1260) BLE_SERVER: Advertising data set, starting advertising...[0m
+[0;32mI (1260) BLE_SERVER: Service created, handle: 40[0m
+[0;32mI (1270) MAIN: ✓ Bluetooth initialized successfully[0m
+[0;32mI (1270) MAIN: Initializing AI Assistant...[0m
+[0;32mI (1280) ASSISTANT: Assistant timer task started[0m
+[0;32mI (1280) ASSISTANT: Assistant timer task created successfully[0m
+[0;32mI (1290) BLE_SERVER: ✓ Advertising started successfully[0m
+[0;32mI (1290) BLE_SERVER: Characteristic added, handle: 42[0m
+[0;32mI (1300) BLE_SERVER: Characteristic added, handle: 44[0m
+[0;32mI (1300) MAIN: ✓ AI Assistant ready[0m
+[0;32mI (1310) MAIN: ========================================[0m
+[0;32mI (1310) MAIN:   ✓ System Ready![0m
+[0;32mI (1310) MAIN:   Waiting for BLE connections...[0m
+[0;32mI (1320) MAIN: ========================================[0m

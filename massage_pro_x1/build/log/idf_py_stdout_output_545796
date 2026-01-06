@@ -1,0 +1,37 @@
+Command: ninja all
+[1/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ble_server.c.obj
+/home/phong/massage_pro_x1/main/ble_server.c:37:13: warning: excess elements in array initializer
+   37 |             0xDE, 0xF0
+      |             ^~~~
+/home/phong/massage_pro_x1/main/ble_server.c:37:13: note: (near initialization for 'char_write_uuid.uuid.uuid128')
+/home/phong/massage_pro_x1/main/ble_server.c:37:19: warning: excess elements in array initializer
+   37 |             0xDE, 0xF0
+      |                   ^~~~
+/home/phong/massage_pro_x1/main/ble_server.c:37:19: note: (near initialization for 'char_write_uuid.uuid.uuid128')
+/home/phong/massage_pro_x1/main/ble_server.c:48:13: warning: excess elements in array initializer
+   48 |             0xDE, 0xF0
+      |             ^~~~
+/home/phong/massage_pro_x1/main/ble_server.c:48:13: note: (near initialization for 'char_notify_uuid.uuid.uuid128')
+/home/phong/massage_pro_x1/main/ble_server.c:48:19: warning: excess elements in array initializer
+   48 |             0xDE, 0xF0
+      |                   ^~~~
+/home/phong/massage_pro_x1/main/ble_server.c:48:19: note: (near initialization for 'char_notify_uuid.uuid.uuid128')
+[2/9] Performing build step for 'bootloader'
+[1/1] cd /home/phong/massage_pro_x1/build/bootloader && /home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/phong/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/phong/massage_pro_x1/build/bootloader/bootloader.bin
+Bootloader binary size 0x66b0 bytes. 0x950 bytes (8%) free.
+[3/9] No install step for 'bootloader'
+[4/9] Completed 'bootloader'
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+[7/9] Linking CXX executable massage_pro_x1.elf
+[8/9] Generating binary image from built executable
+Warning: Deprecated: Option '--flash_mode' is deprecated. Use '--flash-mode' instead.
+Warning: Deprecated: Option '--flash_freq' is deprecated. Use '--flash-freq' instead.
+Warning: Deprecated: Option '--flash_size' is deprecated. Use '--flash-size' instead.
+esptool v5.1.0
+Creating ESP32 image...
+Merged 2 ELF sections.
+Successfully created ESP32 image.
+Generated /home/phong/massage_pro_x1/build/massage_pro_x1.bin
+[9/9] cd /home/phong/massage_pro_x1/build && /home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/phong/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/phong/massage_pro_x1/build/partition_table/partition-table.bin /home/phong/massage_pro_x1/build/massage_pro_x1.bin
+massage_pro_x1.bin binary size 0xc9a40 bytes. Smallest app partition is 0x100000 bytes. 0x365c0 bytes (21%) free.

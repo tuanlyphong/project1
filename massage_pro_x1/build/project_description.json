@@ -1315,7 +1315,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/phong/massage_pro_x1/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/phong/massage_pro_x1/main/massage_pro_x1.c", "/home/phong/massage_pro_x1/main/max30102.c" ],
+            "sources": [ "/home/phong/massage_pro_x1/main/massage_pro_x1.c", "/home/phong/massage_pro_x1/main/max30102.c", "/home/phong/massage_pro_x1/main/audio_control.c", "/home/phong/massage_pro_x1/main/assistant_handler.c", "/home/phong/massage_pro_x1/main/motor_control.c", "/home/phong/massage_pro_x1/main/ble_server.c", "/home/phong/massage_pro_x1/main/command_processor.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {

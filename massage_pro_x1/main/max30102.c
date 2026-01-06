@@ -4,9 +4,8 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
-
 static const char *TAG = "MAX30102";
-
+#include "ble_server.h"
 // Register Addresses
 #define MAX30102_ADDR               0x57
 #define REG_INTR_STATUS_1           0x00
@@ -17,7 +16,6 @@ static const char *TAG = "MAX30102";
 #define REG_SPO2_CONFIG             0x0A
 #define REG_LED1_PA                 0x0C
 #define REG_LED2_PA                 0x0D
-#define GATTS_NUM_HANDLE      10
 // --- Low Level I2C Functions ---
 
 esp_err_t max30102_i2c_init(void) {
@@ -276,7 +274,7 @@ void max30102_task(void *pvParameters) {
         ir_raw  = ((uint32_t)fifo_buffer[3] << 16 | 
                    (uint32_t)fifo_buffer[4] << 8 | 
                    fifo_buffer[5]) & 0x03FFFF;
-        
+        notify_waveform_data(ir_raw);       
         // Check if finger is present
         if (ir_raw < MIN_VALID_IR || ir_raw > MAX_VALID_IR) {
             // No finger or sensor saturated

@@ -1,0 +1,934 @@
+Command: /home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/phong/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/phong/massage_pro_x1/build/massage_pro_x1.elf /home/phong/massage_pro_x1/build/bootloader/bootloader.elf -m '/home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/phong/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2594-g25c40d4563-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 19 2025 23:29:08[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f3fch (127996) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=0002f424 vaddr=3ffbdb60 size=00bf4h (  3060) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=74a38h (477752) map[0m
+[0;32mI (310) esp_image: segment 3: paddr=000a4a60 vaddr=3ffbe754 size=0402ch ( 16428) load[0m
+[0;32mI (316) esp_image: segment 4: paddr=000a8a94 vaddr=40080000 size=16c30h ( 93232) load[0m
+[0;32mI (355) esp_image: segment 5: paddr=000bf6cc vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (366) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (367) boot: Disabling RNG early entropy source...[0m
+[0;32mI (377) cpu_start: Multicore app[0m
+[0;32mI (385) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (386) cpu_start: Pro cpu start user code[0m
+[0;32mI (386) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (387) app_init: Application information:[0m
+[0;32mI (391) app_init: Project name:     massage_pro_x1[0m
+[0;32mI (396) app_init: App version:      1[0m
+[0;32mI (399) app_init: Compile time:     Nov 19 2025 23:28:24[0m
+[0;32mI (404) app_init: ELF file SHA256:  712f8440a...[0m
+[0;32mI (408) app_init: ESP-IDF:          v6.0-dev-2594-g25c40d4563-dirty[0m
+[0;32mI (414) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (418) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (422) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (426) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (433) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (438) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (443) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFC7240 len 00018DC0 (99 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (458) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 40096C30 len 000093D0 (36 KiB): IRAM[0m
+[0;32mI (471) spi_flash: detected chip: boya[0m
+[0;32mI (473) spi_flash: flash io: dio[0m
+[0;33mW (476) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (488) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (498) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (503) main_task: Started on CPU0[0m
+[0;32mI (513) main_task: Calling app_main()[0m
+[0;32mI (523) BTDM_INIT: BT controller compile version [7bc9d6a][0m
+[0;32mI (523) BTDM_INIT: Using main XTAL as clock source[0m
+[0;32mI (523) BTDM_INIT: Bluetooth MAC: d4:e9:f4:8a:9a:ca[0m
+[0;32mI (533) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (613) MAX30102: MAX30102 Configured[0m
+[0;32mI (613) MAX30102: MAX30102 Algorithm started[0m
+[0;32mI (943) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (943) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (943) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (953) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (953) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (963) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (963) main_task: Returned from app_main()[0m
+[0;32mI (973) MASSAGE_BLE: Advertising started[0m
+[0;32mI (983) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (983) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (983) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (993) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (993) MASSAGE_BLE: Characteristic added, status 0, attr_handle 46[0m
+[0;32mI (1003) MASSAGE_BLE: Waveform Char Handle: 46[0m
+[0;32mI (1003) MASSAGE_BLE: Service started with 3 characteristics[0m
+[0;32mI (4073) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (4993) MASSAGE_BLE: Authentication complete, status: 1[0m
+[0;32mI (28873) MAX30102: HR: 157 BPM | SpO2: 86% | Raw - R:89768 IR:94818[0m
+[0;32mI (29383) MAX30102: HR: 163 BPM | SpO2: 80% | Raw - R:86227 IR:96581[0m
+[0;32mI (29893) MAX30102: HR: 155 BPM | SpO2: 74% | Raw - R:96221 IR:101061[0m
+[0;32mI (36013) MAX30102: HR: 43 BPM | SpO2: 70% | Raw - R:105431 IR:105375[0m
+[0;32mI (36523) MAX30102: HR: 136 BPM | SpO2: 79% | Raw - R:41615 IR:52131[0m
+[0;32mI (55363) MAX30102: HR: 165 BPM | SpO2: 87% | Raw - R:84818 IR:80523[0m
+[0;32mI (55873) MAX30102: HR: 120 BPM | SpO2: 91% | Raw - R:73950 IR:85689[0m
+[0;32mI (56383) MAX30102: HR: 120 BPM | SpO2: 70% | Raw - R:95549 IR:92176[0m
+[0;32mI (56893) MAX30102: HR: 114 BPM | SpO2: 79% | Raw - R:50017 IR:53056[0m
+[0;32mI (66333) MAX30102: HR: 116 BPM | SpO2: 70% | Raw - R:76854 IR:95862[0m
+[0;32mI (66843) MAX30102: HR: 112 BPM | SpO2: 70% | Raw - R:78396 IR:93883[0m
+[0;32mI (67353) MAX30102: HR: 118 BPM | SpO2: 70% | Raw - R:86123 IR:90615[0m
+[0;32mI (67863) MAX30102: HR: 118 BPM | SpO2: 70% | Raw - R:85770 IR:90449[0m
+[0;32mI (91933) MAX30102: HR: 142 BPM | SpO2: 88% | Raw - R:66437 IR:66289[0m
+[0;32mI (110583) MAX30102: HR: 42 BPM | SpO2: 89% | Raw - R:81259 IR:86633[0m
+[0;32mI (111093) MAX30102: HR: 42 BPM | SpO2: 70% | Raw - R:83152 IR:86992[0m
+[0;32mI (111603) MAX30102: HR: 42 BPM | SpO2: 91% | Raw - R:83499 IR:85553[0m
+[0;32mI (112113) MAX30102: HR: 42 BPM | SpO2: 83% | Raw - R:83475 IR:85722[0m
+[0;32mI (112623) MAX30102: HR: 42 BPM | SpO2: 70% | Raw - R:78878 IR:83294[0m
+[0;32mI (113133) MAX30102: HR: 42 BPM | SpO2: 89% | Raw - R:78188 IR:82444[0m
+[0;32mI (113643) MAX30102: HR: 42 BPM | SpO2: 91% | Raw - R:77907 IR:82041[0m
+[0;32mI (114153) MAX30102: HR: 42 BPM | SpO2: 80% | Raw - R:77666 IR:82083[0m
+[0;32mI (114663) MAX30102: HR: 42 BPM | SpO2: 74% | Raw - R:77563 IR:82009[0m
+[0;32mI (115173) MAX30102: HR: 42 BPM | SpO2: 87% | Raw - R:77339 IR:81796[0m
+[0;32mI (115683) MAX30102: HR: 42 BPM | SpO2: 99% | Raw - R:77277 IR:81560[0m
+[0;32mI (116193) MAX30102: HR: 42 BPM | SpO2: 94% | Raw - R:77011 IR:80953[0m
+[0;32mI (116703) MAX30102: HR: 42 BPM | SpO2: 94% | Raw - R:76997 IR:81051[0m
+[0;32mI (117213) MAX30102: HR: 42 BPM | SpO2: 92% | Raw - R:76899 IR:80959[0m
+[0;32mI (117723) MAX30102: HR: 42 BPM | SpO2: 93% | Raw - R:76841 IR:80909[0m
+[0;32mI (118233) MAX30102: HR: 42 BPM | SpO2: 90% | Raw - R:76721 IR:80796[0m
+[0;32mI (118743) MAX30102: HR: 42 BPM | SpO2: 100% | Raw - R:76524 IR:80062[0m
+[0;32mI (119253) MAX30102: HR: 42 BPM | SpO2: 70% | Raw - R:75953 IR:79884[0m
+[0;32mI (119763) MAX30102: HR: 42 BPM | SpO2: 80% | Raw - R:75737 IR:79903[0m
+[0;32mI (120273) MAX30102: HR: 42 BPM | SpO2: 96% | Raw - R:75747 IR:79930[0m
+[0;32mI (120783) MAX30102: HR: 42 BPM | SpO2: 70% | Raw - R:74002 IR:78957[0m
+[0;32mI (123333) MAX30102: HR: 108 BPM | SpO2: 72% | Raw - R:82729 IR:94409[0m
+[0;32mI (123843) MAX30102: HR: 103 BPM | SpO2: 94% | Raw - R:99847 IR:120094[0m
+[0;32mI (124353) MAX30102: HR: 124 BPM | SpO2: 96% | Raw - R:98119 IR:110628[0m
+[0;32mI (124863) MAX30102: HR: 124 BPM | SpO2: 70% | Raw - R:92509 IR:108456[0m
+[0;32mI (125373) MAX30102: HR: 124 BPM | SpO2: 70% | Raw - R:96689 IR:109921[0m
+[0;32mI (125883) MAX30102: HR: 124 BPM | SpO2: 70% | Raw - R:89423 IR:109466[0m
+[0;32mI (126393) MAX30102: HR: 124 BPM | SpO2: 91% | Raw - R:89786 IR:109604[0m
+[0;32mI (126903) MAX30102: HR: 57 BPM | SpO2: 70% | Raw - R:101101 IR:109959[0m
+[0;32mI (127413) MAX30102: HR: 57 BPM | SpO2: 98% | Raw - R:102330 IR:112557[0m
+[0;32mI (127923) MAX30102: HR: 56 BPM | SpO2: 87% | Raw - R:89911 IR:96468[0m
+[0;32mI (128433) MAX30102: HR: 56 BPM | SpO2: 83% | Raw - R:93056 IR:99683[0m
+[0;32mI (128943) MAX30102: HR: 56 BPM | SpO2: 93% | Raw - R:97926 IR:107562[0m
+[0;32mI (129453) MAX30102: HR: 56 BPM | SpO2: 83% | Raw - R:100956 IR:111348[0m
+[0;32mI (129963) MAX30102: HR: 41 BPM | SpO2: 80% | Raw - R:100407 IR:110503[0m
+[0;32mI (130473) MAX30102: HR: 41 BPM | SpO2: 70% | Raw - R:99922 IR:110335[0m
+[0;32mI (130983) MAX30102: HR: 41 BPM | SpO2: 84% | Raw - R:99536 IR:109965[0m
+[0;32mI (131493) MAX30102: HR: 41 BPM | SpO2: 70% | Raw - R:99217 IR:109810[0m
+[0;32mI (132513) MAX30102: HR: 43 BPM | SpO2: 78% | Raw - R:97554 IR:102124[0m
+[0;32mI (133023) MAX30102: HR: 43 BPM | SpO2: 86% | Raw - R:94975 IR:99681[0m
+[0;32mI (133533) MAX30102: HR: 43 BPM | SpO2: 89% | Raw - R:90517 IR:94047[0m
+[0;32mI (134043) MAX30102: HR: 43 BPM | SpO2: 76% | Raw - R:88940 IR:92816[0m
+[0;32mI (134553) MAX30102: HR: 43 BPM | SpO2: 95% | Raw - R:88790 IR:91671[0m
+[0;32mI (135063) MAX30102: HR: 43 BPM | SpO2: 80% | Raw - R:90820 IR:93401[0m
+[0;32mI (135573) MAX30102: HR: 43 BPM | SpO2: 79% | Raw - R:88131 IR:90884[0m
+[0;32mI (136083) MAX30102: HR: 43 BPM | SpO2: 70% | Raw - R:85260 IR:90509[0m
+[0;32mI (136593) MAX30102: HR: 43 BPM | SpO2: 70% | Raw - R:85778 IR:90491[0m
+[0;32mI (137103) MAX30102: HR: 43 BPM | SpO2: 81% | Raw - R:86557 IR:91204[0m
+[0;32mI (137613) MAX30102: HR: 43 BPM | SpO2: 91% | Raw - R:86855 IR:91160[0m
+[0;32mI (138123) MAX30102: HR: 43 BPM | SpO2: 70% | Raw - R:89411 IR:91353[0m
+[0;32mI (150893) MAX30102: HR: 51 BPM | SpO2: 95% | Raw - R:106407 IR:122961[0m
+[0;32mI (151403) MAX30102: HR: 132 BPM | SpO2: 98% | Raw - R:108121 IR:126034[0m
+[0;32mI (151913) MAX30102: HR: 125 BPM | SpO2: 98% | Raw - R:112118 IR:135729[0m
+[0;32mI (152423) MAX30102: HR: 127 BPM | SpO2: 98% | Raw - R:113889 IR:140516[0m
+[0;32mI (152933) MAX30102: HR: 127 BPM | SpO2: 98% | Raw - R:114169 IR:141217[0m
+[0;32mI (153443) MAX30102: HR: 127 BPM | SpO2: 98% | Raw - R:114128 IR:141018[0m
+[0;32mI (153953) MAX30102: HR: 127 BPM | SpO2: 98% | Raw - R:114579 IR:142294[0m
+[0;32mI (154463) MAX30102: HR: 127 BPM | SpO2: 97% | Raw - R:114106 IR:141157[0m
+[0;32mI (154973) MAX30102: HR: 127 BPM | SpO2: 97% | Raw - R:113381 IR:139641[0m
+[0;32mI (155483) MAX30102: HR: 127 BPM | SpO2: 98% | Raw - R:112960 IR:138638[0m
+[0;32mI (155993) MAX30102: HR: 127 BPM | SpO2: 100% | Raw - R:113075 IR:139281[0m
+[0;32mI (156503) MAX30102: HR: 127 BPM | SpO2: 97% | Raw - R:112471 IR:137833[0m
+[0;32mI (157013) MAX30102: HR: 127 BPM | SpO2: 98% | Raw - R:112607 IR:138298[0m
+[0;32mI (201513) MAX30102: HR: 81 BPM | SpO2: 92% | Raw - R:116751 IR:129691[0m
+[0;32mI (202023) MAX30102: HR: 103 BPM | SpO2: 84% | Raw - R:106712 IR:124659[0m
+[0;32mI (202533) MAX30102: HR: 103 BPM | SpO2: 98% | Raw - R:107268 IR:125972[0m
+[0;32mI (203043) MAX30102: HR: 103 BPM | SpO2: 98% | Raw - R:107072 IR:125465[0m
+[0;32mI (203553) MAX30102: HR: 103 BPM | SpO2: 97% | Raw - R:107368 IR:126138[0m
+[0;32mI (204063) MAX30102: HR: 103 BPM | SpO2: 98% | Raw - R:107000 IR:125272[0m
+[0;32mI (204573) MAX30102: HR: 103 BPM | SpO2: 98% | Raw - R:107063 IR:125253[0m
+[0;32mI (205083) MAX30102: HR: 103 BPM | SpO2: 98% | Raw - R:108173 IR:128041[0m
+[0;32mI (205593) MAX30102: HR: 103 BPM | SpO2: 98% | Raw - R:107858 IR:127222[0m
+[0;32mI (206103) MAX30102: HR: 103 BPM | SpO2: 98% | Raw - R:108360 IR:128354[0m
+[0;32mI (206613) MAX30102: HR: 103 BPM | SpO2: 98% | Raw - R:107812 IR:126855[0m
+[0;32mI (247643) MAX30102: HR: 65 BPM | SpO2: 89% | Raw - R:105543 IR:127098[0m
+[0;32mI (248153) MAX30102: HR: 65 BPM | SpO2: 100% | Raw - R:104199 IR:122570[0m
+[0;32mI (264473) MAX30102: HR: 129 BPM | SpO2: 90% | Raw - R:87471 IR:92587[0m
+[0;32mI (264983) MAX30102: HR: 149 BPM | SpO2: 83% | Raw - R:100750 IR:104209[0m
+[0;32mI (265493) MAX30102: HR: 150 BPM | SpO2: 78% | Raw - R:71817 IR:84896[0m
+[0;32mI (266003) MAX30102: HR: 151 BPM | SpO2: 73% | Raw - R:103851 IR:111187[0m
+[0;32mI (266513) MAX30102: HR: 157 BPM | SpO2: 72% | Raw - R:125443 IR:128664[0m
+[0;32mI (267023) MAX30102: HR: 170 BPM | SpO2: 76% | Raw - R:110503 IR:114267[0m
+[0;32mI (267533) MAX30102: HR: 170 BPM | SpO2: 77% | Raw - R:107072 IR:111521[0m
+[0;32mI (268043) MAX30102: HR: 170 BPM | SpO2: 86% | Raw - R:105964 IR:110280[0m
+[0;32mI (268553) MAX30102: HR: 170 BPM | SpO2: 82% | Raw - R:105300 IR:109615[0m
+[0;32mI (269063) MAX30102: HR: 170 BPM | SpO2: 80% | Raw - R:104998 IR:109358[0m
+[0;32mI (269573) MAX30102: HR: 170 BPM | SpO2: 77% | Raw - R:104823 IR:109268[0m
+[0;32mI (270083) MAX30102: HR: 170 BPM | SpO2: 90% | Raw - R:104584 IR:109006[0m
+[0;32mI (270593) MAX30102: HR: 170 BPM | SpO2: 87% | Raw - R:104380 IR:108859[0m
+[0;32mI (271103) MAX30102: HR: 170 BPM | SpO2: 100% | Raw - R:104372 IR:108942[0m
+[0;32mI (271613) MAX30102: HR: 170 BPM | SpO2: 91% | Raw - R:104075 IR:108580[0m
+[0;32mI (272123) MAX30102: HR: 170 BPM | SpO2: 77% | Raw - R:103596 IR:108239[0m
+[0;32mI (272633) MAX30102: HR: 170 BPM | SpO2: 80% | Raw - R:102916 IR:107606[0m
+[0;32mI (273143) MAX30102: HR: 170 BPM | SpO2: 83% | Raw - R:101086 IR:105814[0m
+[0;32mI (273653) MAX30102: HR: 170 BPM | SpO2: 79% | Raw - R:100854 IR:105778[0m
+[0;32mI (274163) MAX30102: HR: 170 BPM | SpO2: 92% | Raw - R:101123 IR:106185[0m
+[0;32mI (274673) MAX30102: HR: 170 BPM | SpO2: 94% | Raw - R:100949 IR:105949[0m
+[0;32mI (275183) MAX30102: HR: 170 BPM | SpO2: 88% | Raw - R:100815 IR:105859[0m
+[0;32mI (275693) MAX30102: HR: 170 BPM | SpO2: 88% | Raw - R:100735 IR:105806[0m
+[0;32mI (276203) MAX30102: HR: 170 BPM | SpO2: 97% | Raw - R:100742 IR:105775[0m
+[0;32mI (276713) MAX30102: HR: 170 BPM | SpO2: 91% | Raw - R:100912 IR:106040[0m
+[0;32mI (277223) MAX30102: HR: 170 BPM | SpO2: 81% | Raw - R:102316 IR:107300[0m
+[0;32mI (277733) MAX30102: HR: 170 BPM | SpO2: 70% | Raw - R:102185 IR:107331[0m
+[0;32mI (278243) MAX30102: HR: 170 BPM | SpO2: 82% | Raw - R:100886 IR:106026[0m
+[0;32mI (278753) MAX30102: HR: 170 BPM | SpO2: 80% | Raw - R:102342 IR:107333[0m
+[0;32mI (279263) MAX30102: HR: 170 BPM | SpO2: 83% | Raw - R:102702 IR:107769[0m
+[0;32mI (279773) MAX30102: HR: 170 BPM | SpO2: 85% | Raw - R:101845 IR:106852[0m
+[0;32mI (280283) MAX30102: HR: 170 BPM | SpO2: 79% | Raw - R:100909 IR:106081[0m
+[0;32mI (280793) MAX30102: HR: 170 BPM | SpO2: 83% | Raw - R:102742 IR:107900[0m
+[0;32mI (281303) MAX30102: HR: 170 BPM | SpO2: 79% | Raw - R:102031 IR:107289[0m
+[0;32mI (281813) MAX30102: HR: 170 BPM | SpO2: 82% | Raw - R:101231 IR:106511[0m
+[0;32mI (282323) MAX30102: HR: 170 BPM | SpO2: 87% | Raw - R:101193 IR:106530[0m
+[0;32mI (282833) MAX30102: HR: 170 BPM | SpO2: 83% | Raw - R:101176 IR:106734[0m
+[0;32mI (283343) MAX30102: HR: 170 BPM | SpO2: 96% | Raw - R:101247 IR:106723[0m
+[0;32mI (283853) MAX30102: HR: 170 BPM | SpO2: 81% | Raw - R:101014 IR:106760[0m
+[0;32mI (284363) MAX30102: HR: 170 BPM | SpO2: 82% | Raw - R:99484 IR:105386[0m
+[0;32mI (284873) MAX30102: HR: 170 BPM | SpO2: 82% | Raw - R:107684 IR:113240[0m
+[0;32mI (294443) MAX30102: HR: 148 BPM | SpO2: 70% | Raw - R:106341 IR:116401[0m
+[0;32mI (294953) MAX30102: HR: 144 BPM | SpO2: 72% | Raw - R:83907 IR:99304[0m
+[0;32mI (295463) MAX30102: HR: 144 BPM | SpO2: 77% | Raw - R:85435 IR:100637[0m
+[0;32mI (295973) MAX30102: HR: 144 BPM | SpO2: 77% | Raw - R:82201 IR:97703[0m
+[0;32mI (296483) MAX30102: HR: 144 BPM | SpO2: 84% | Raw - R:79259 IR:94261[0m
+[0;32mI (296993) MAX30102: HR: 144 BPM | SpO2: 86% | Raw - R:79083 IR:94042[0m
+[0;32mI (297503) MAX30102: HR: 144 BPM | SpO2: 79% | Raw - R:79204 IR:94088[0m
+[0;32mI (298013) MAX30102: HR: 144 BPM | SpO2: 83% | Raw - R:79960 IR:94893[0m
+[0;32mI (298523) MAX30102: HR: 144 BPM | SpO2: 92% | Raw - R:79964 IR:94834[0m
+[0;32mI (299033) MAX30102: HR: 144 BPM | SpO2: 93% | Raw - R:80040 IR:94937[0m
+[0;32mI (299543) MAX30102: HR: 144 BPM | SpO2: 83% | Raw - R:80489 IR:95425[0m
+[0;32mI (300053) MAX30102: HR: 144 BPM | SpO2: 80% | Raw - R:81702 IR:96554[0m
+[0;32mI (300563) MAX30102: HR: 144 BPM | SpO2: 79% | Raw - R:82052 IR:96838[0m
+9k). Using the size in the binary image header.
+[0;33mW (488) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (498) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (503) main_task: Started on CPU0[0m
+[0;32mI (513) main_task: Calling app_main()[0m
+[0;32mI (523) BTDM_INIT: BT controller compile version [7bc9d6a][0m
+[0;32mI (523) BTDM_INIT: Using main XTAL as clock source[0m
+[0;32mI (523) BTDM_INIT: Bluetooth MAC: d4:e9:f4:8a:9a:ca[0m
+[0;32mI (533) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (613) MAX30102: MAX30102 Configured[0m
+[0;32mI (613) MAX30102: MAX30102 Algorithm started[0m
+[0;32mI (943) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (943) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (943) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (953) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (953) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (953) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (963) main_task: Returned from app_main()[0m
+[0;32mI (973) MASSAGE_BLE: Advertising started[0m
+[0;32mI (973) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (973) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (983) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (983) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (993) MASSAGE_BLE: Characteristic added, status 0, attr_handle 46[0m
+[0;32mI (993) MASSAGE_BLE: Waveform Char Handle: 46[0m
+[0;32mI (1003) MASSAGE_BLE: Service started with 3 characteristics[0m
+[0;32mI (11523) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (12413) MASSAGE_BLE: Authentication complete, status: 1[0m
+[0;32mI (22133) MAX30102: HR: 93 BPM | SpO2: 98% | Raw - R:112314 IR:130210[0m
+[0;32mI (22643) MAX30102: HR: 81 BPM | SpO2: 98% | Raw - R:113644 IR:133555[0m
+[0;32mI (23153) MAX30102: HR: 91 BPM | SpO2: 79% | Raw - R:107665 IR:116293[0m
+[0;32mI (23663) MAX30102: HR: 90 BPM | SpO2: 100% | Raw - R:110339 IR:129183[0m
+[0;32mI (24173) MAX30102: HR: 90 BPM | SpO2: 98% | Raw - R:111575 IR:132653[0m
+[0;32mI (24683) MAX30102: HR: 103 BPM | SpO2: 98% | Raw - R:109960 IR:128644[0m
+[0;32mI (25193) MAX30102: HR: 100 BPM | SpO2: 98% | Raw - R:108757 IR:125707[0m
+[0;32mI (25703) MAX30102: HR: 100 BPM | SpO2: 99% | Raw - R:109075 IR:126577[0m
+[0;32mI (26213) MAX30102: HR: 100 BPM | SpO2: 98% | Raw - R:109240 IR:127476[0m
+[0;32mI (26723) MAX30102: HR: 66 BPM | SpO2: 99% | Raw - R:108602 IR:125186[0m
+[0;32mI (28513) MAX30102: HR: 82 BPM | SpO2: 98% | Raw - R:104044 IR:109411[0m
+[0;32mI (29023) MAX30102: HR: 82 BPM | SpO2: 97% | Raw - R:107753 IR:117686[0m
+[0;32mI (29533) MAX30102: HR: 86 BPM | SpO2: 100% | Raw - R:110513 IR:125418[0m
+[0;32mI (30043) MAX30102: HR: 87 BPM | SpO2: 98% | Raw - R:109250 IR:122383[0m
+[0;32mI (30553) MAX30102: HR: 96 BPM | SpO2: 98% | Raw - R:108978 IR:121930[0m
+[0;32mI (31063) MAX30102: HR: 96 BPM | SpO2: 99% | Raw - R:109580 IR:123680[0m
+[0;32mI (31573) MAX30102: HR: 82 BPM | SpO2: 98% | Raw - R:109034 IR:122396[0m
+[0;32mI (32083) MAX30102: HR: 78 BPM | SpO2: 99% | Raw - R:109189 IR:122967[0m
+[0;32mI (32593) MAX30102: HR: 78 BPM | SpO2: 99% | Raw - R:109889 IR:124791[0m
+[0;32mI (33103) MAX30102: HR: 75 BPM | SpO2: 98% | Raw - R:109191 IR:123134[0m
+[0;32mI (33613) MAX30102: HR: 75 BPM | SpO2: 99% | Raw - R:110077 IR:125582[0m
+[0;32mI (34123) MAX30102: HR: 76 BPM | SpO2: 98% | Raw - R:109579 IR:124365[0m
+[0;32mI (34633) MAX30102: HR: 76 BPM | SpO2: 98% | Raw - R:109054 IR:123102[0m
+[0;32mI (35143) MAX30102: HR: 76 BPM | SpO2: 99% | Raw - R:110104 IR:125853[0m
+[0;32mI (35653) MAX30102: HR: 76 BPM | SpO2: 98% | Raw - R:109311 IR:123892[0m
+[0;32mI (36163) MAX30102: HR: 76 BPM | SpO2: 98% | Raw - R:108320 IR:121440[0m
+[0;32mI (36673) MAX30102: HR: 76 BPM | SpO2: 98% | Raw - R:109578 IR:124577[0m
+[0;32mI (37183) MAX30102: HR: 77 BPM | SpO2: 98% | Raw - R:108720 IR:122515[0m
+[0;32mI (37693) MAX30102: HR: 76 BPM | SpO2: 98% | Raw - R:108086 IR:120963[0m
+[0;32mI (38203) MAX30102: HR: 76 BPM | SpO2: 98% | Raw - R:109678 IR:124990[0m
+[0;32mI (38713) MAX30102: HR: 76 BPM | SpO2: 98% | Raw - R:108487 IR:121969[0m
+[0;32mI (39223) MAX30102: HR: 77 BPM | SpO2: 98% | Raw - R:108506 IR:122071[0m
+[0;32mI (39733) MAX30102: HR: 77 BPM | SpO2: 98% | Raw - R:109777 IR:125064[0m
+[0;32mI (40243) MAX30102: HR: 77 BPM | SpO2: 98% | Raw - R:109332 IR:123990[0m
+[0;32mI (40753) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:109094 IR:123464[0m
+[0;32mI (41263) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:110131 IR:126064[0m
+[0;32mI (41773) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:109476 IR:124411[0m
+[0;32mI (42283) MAX30102: HR: 81 BPM | SpO2: 97% | Raw - R:108856 IR:122968[0m
+[0;32mI (42793) MAX30102: HR: 81 BPM | SpO2: 98% | Raw - R:108875 IR:123040[0m
+[0;32mI (43303) MAX30102: HR: 81 BPM | SpO2: 98% | Raw - R:109091 IR:123614[0m
+[0;32mI (43813) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:108502 IR:122260[0m
+[0;32mI (44323) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:108593 IR:122549[0m
+[0;32mI (44833) MAX30102: HR: 79 BPM | SpO2: 98% | Raw - R:109272 IR:124156[0m
+[0;32mI (45343) MAX30102: HR: 79 BPM | SpO2: 98% | Raw - R:108694 IR:122803[0m
+[0;32mI (45853) MAX30102: HR: 80 BPM | SpO2: 97% | Raw - R:108149 IR:121529[0m
+[0;32mI (46363) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:109297 IR:124260[0m
+[0;32mI (46873) MAX30102: HR: 81 BPM | SpO2: 97% | Raw - R:108657 IR:122523[0m
+[0;32mI (47383) MAX30102: HR: 81 BPM | SpO2: 98% | Raw - R:107981 IR:121046[0m
+[0;32mI (47893) MAX30102: HR: 81 BPM | SpO2: 97% | Raw - R:109152 IR:123786[0m
+[0;32mI (48403) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:108080 IR:121134[0m
+[0;32mI (48913) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:107973 IR:120758[0m
+[0;32mI (49423) MAX30102: HR: 77 BPM | SpO2: 96% | Raw - R:107910 IR:120444[0m
+[0;32mI (49933) MAX30102: HR: 74 BPM | SpO2: 97% | Raw - R:107422 IR:119244[0m
+[0;32mI (50443) MAX30102: HR: 74 BPM | SpO2: 98% | Raw - R:107534 IR:119447[0m
+[0;32mI (50953) MAX30102: HR: 74 BPM | SpO2: 97% | Raw - R:108471 IR:121553[0m
+[0;32mI (51463) MAX30102: HR: 61 BPM | SpO2: 98% | Raw - R:107787 IR:119987[0m
+[0;32mI (51973) MAX30102: HR: 62 BPM | SpO2: 98% | Raw - R:107226 IR:118574[0m
+[0;32mI (52483) MAX30102: HR: 62 BPM | SpO2: 98% | Raw - R:108558 IR:121843[0m
+[0;32mI (52993) MAX30102: HR: 63 BPM | SpO2: 98% | Raw - R:108145 IR:120729[0m
+[0;32mI (53503) MAX30102: HR: 63 BPM | SpO2: 98% | Raw - R:108642 IR:121866[0m
+[0;32mI (54013) MAX30102: HR: 62 BPM | SpO2: 97% | Raw - R:109078 IR:122810[0m
+[0;32mI (54523) MAX30102: HR: 62 BPM | SpO2: 98% | Raw - R:108880 IR:122295[0m
+[0;32mI (55033) MAX30102: HR: 64 BPM | SpO2: 98% | Raw - R:114327 IR:135857[0m
+[0;32mI (55543) MAX30102: HR: 64 BPM | SpO2: 97% | Raw - R:114023 IR:135158[0m
+[0;32mI (56053) MAX30102: HR: 58 BPM | SpO2: 98% | Raw - R:113188 IR:132959[0m
+[0;32mI (56563) MAX30102: HR: 66 BPM | SpO2: 99% | Raw - R:114195 IR:135748[0m
+[0;32mI (57073) MAX30102: HR: 73 BPM | SpO2: 98% | Raw - R:113626 IR:134364[0m
+[0;32mI (57583) MAX30102: HR: 100 BPM | SpO2: 98% | Raw - R:107622 IR:119334[0m
+[0;32mI (58093) MAX30102: HR: 100 BPM | SpO2: 98% | Raw - R:110489 IR:126293[0m
+[0;32mI (58603) MAX30102: HR: 107 BPM | SpO2: 98% | Raw - R:110236 IR:125617[0m
+[0;32mI (59113) MAX30102: HR: 91 BPM | SpO2: 98% | Raw - R:109958 IR:124917[0m
+[0;32mI (59623) MAX30102: HR: 91 BPM | SpO2: 98% | Raw - R:109771 IR:124427[0m
+[0;32mI (60133) MAX30102: HR: 85 BPM | SpO2: 97% | Raw - R:110575 IR:126321[0m
+[0;32mI (60643) MAX30102: HR: 85 BPM | SpO2: 98% | Raw - R:110261 IR:125541[0m
+[0;32mI (61153) MAX30102: HR: 63 BPM | SpO2: 98% | Raw - R:110885 IR:127093[0m
+[0;32mI (61663) MAX30102: HR: 63 BPM | SpO2: 98% | Raw - R:110991 IR:127624[0m
+[0;32mI (62173) MAX30102: HR: 67 BPM | SpO2: 98% | Raw - R:110779 IR:127262[0m
+[0;32mI (62683) MAX30102: HR: 67 BPM | SpO2: 97% | Raw - R:110958 IR:128010[0m
+[0;32mI (63193) MAX30102: HR: 67 BPM | SpO2: 99% | Raw - R:111841 IR:130350[0m
+[0;32mI (63703) MAX30102: HR: 67 BPM | SpO2: 98% | Raw - R:111887 IR:130698[0m
+[0;32mI (64213) MAX30102: HR: 67 BPM | SpO2: 96% | Raw - R:112264 IR:131723[0m
+[0;32mI (64723) MAX30102: HR: 67 BPM | SpO2: 96% | Raw - R:113073 IR:133399[0m
+[0;32mI (65233) MAX30102: HR: 67 BPM | SpO2: 85% | Raw - R:113770 IR:134259[0m
+[0;32mI (65743) MAX30102: HR: 67 BPM | SpO2: 97% | Raw - R:113964 IR:134600[0m
+[0;32mI (66253) MAX30102: HR: 67 BPM | SpO2: 94% | Raw - R:114826 IR:136270[0m
+[0;32mI (66763) MAX30102: HR: 67 BPM | SpO2: 92% | Raw - R:114963 IR:136277[0m
+[0;32mI (67273) MAX30102: HR: 67 BPM | SpO2: 90% | Raw - R:114525 IR:135666[0m
+[0;32mI (67783) MAX30102: HR: 67 BPM | SpO2: 99% | Raw - R:114810 IR:136620[0m
+[0;32mI (68293) MAX30102: HR: 67 BPM | SpO2: 97% | Raw - R:114983 IR:136909[0m
+[0;32mI (78083) MAX30102: HR: 59 BPM | SpO2: 98% | Raw - R:115372 IR:139050[0m
+[0;32mI (78593) MAX30102: HR: 60 BPM | SpO2: 99% | Raw - R:114562 IR:136835[0m
+[0;32mI (79103) MAX30102: HR: 60 BPM | SpO2: 100% | Raw - R:115610 IR:139979[0m
+[0;32mI (79613) MAX30102: HR: 73 BPM | SpO2: 99% | Raw - R:115158 IR:138772[0m
+[0;32mI (80123) MAX30102: HR: 73 BPM | SpO2: 99% | Raw - R:115767 IR:140634[0m
+[0;32mI (80633) MAX30102: HR: 64 BPM | SpO2: 99% | Raw - R:115327 IR:139480[0m
+[0;32mI (81143) MAX30102: HR: 70 BPM | SpO2: 99% | Raw - R:114723 IR:137809[0m
+[0;32mI (81653) MAX30102: HR: 70 BPM | SpO2: 99% | Raw - R:115647 IR:140579[0m
+[0;32mI (82163) MAX30102: HR: 69 BPM | SpO2: 99% | Raw - R:115296 IR:139475[0m
+[0;32mI (82673) MAX30102: HR: 69 BPM | SpO2: 100% | Raw - R:115767 IR:141016[0m
+[0;32mI (83183) MAX30102: HR: 69 BPM | SpO2: 99% | Raw - R:115314 IR:140117[0m
+[0;32mI (83693) MAX30102: HR: 69 BPM | SpO2: 98% | Raw - R:115761 IR:141349[0m
+[0;32mI (84203) MAX30102: HR: 69 BPM | SpO2: 99% | Raw - R:116172 IR:142549[0m
+[0;32mI (84713) MAX30102: HR: 69 BPM | SpO2: 98% | Raw - R:114949 IR:139288[0m
+[0;32mI (85223) MAX30102: HR: 44 BPM | SpO2: 96% | Raw - R:111848 IR:132198[0m
+[0;32mI (85733) MAX30102: HR: 44 BPM | SpO2: 97% | Raw - R:113629 IR:136902[0m
+[0;32mI (86243) MAX30102: HR: 42 BPM | SpO2: 93% | Raw - R:100243 IR:112867[0m
+[0;32mI (88853) MAX30102: HR: 49 BPM | SpO2: 99% | Raw - R:114111 IR:139188[0m
+[0;32mI (89363) MAX30102: HR: 56 BPM | SpO2: 98% | Raw - R:112333 IR:134272[0m
+[0;32mI (89873) MAX30102: HR: 56 BPM | SpO2: 97% | Raw - R:111685 IR:132696[0m
+[0;32mI (90383) MAX30102: HR: 56 BPM | SpO2: 98% | Raw - R:110939 IR:130686[0m
+[0;32mI (90893) MAX30102: HR: 49 BPM | SpO2: 98% | Raw - R:110637 IR:129880[0m
+[0;32mI (91403) MAX30102: HR: 49 BPM | SpO2: 98% | Raw - R:111596 IR:132354[0m
+[0;32mI (91913) MAX30102: HR: 49 BPM | SpO2: 98% | Raw - R:111057 IR:131124[0m
+[0;32mI (92423) MAX30102: HR: 49 BPM | SpO2: 98% | Raw - R:111663 IR:132810[0m
+[0;32mI (933) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (933) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (933) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (943) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (943) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (953) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (953) main_task: Returned from app_main()[0m
+[0;32mI (963) MASSAGE_BLE: Advertising started[0m
+[0;32mI (963) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (973) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (973) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (983) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (983) MASSAGE_BLE: Characteristic added, status 0, attr_handle 46[0m
+[0;32mI (993) MASSAGE_BLE: Waveform Char Handle: 46[0m
+[0;32mI (993) MASSAGE_BLE: Service started with 3 characteristics[0m
+[0;32mI (3403) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (4263) MASSAGE_BLE: Authentication complete, status: 1[0m
+[0;32mI (14663) MAX30102: HR: 68 BPM | SpO2: 99% | Raw - R:115210 IR:138167[0m
+[0;32mI (15173) MAX30102: HR: 72 BPM | SpO2: 98% | Raw - R:114603 IR:136648[0m
+[0;32mI (15683) MAX30102: HR: 72 BPM | SpO2: 99% | Raw - R:115648 IR:139579[0m
+[0;32mI (16193) MAX30102: HR: 75 BPM | SpO2: 99% | Raw - R:115124 IR:138155[0m
+[0;32mI (16703) MAX30102: HR: 75 BPM | SpO2: 99% | Raw - R:115742 IR:140002[0m
+[0;32mI (17213) MAX30102: HR: 75 BPM | SpO2: 99% | Raw - R:115401 IR:139043[0m
+[0;32mI (17723) MAX30102: HR: 75 BPM | SpO2: 99% | Raw - R:114926 IR:137811[0m
+[0;32mI (18233) MAX30102: HR: 75 BPM | SpO2: 99% | Raw - R:115553 IR:139641[0m
+[0;32mI (18743) MAX30102: HR: 74 BPM | SpO2: 99% | Raw - R:114914 IR:137844[0m
+[0;32mI (19253) MAX30102: HR: 76 BPM | SpO2: 99% | Raw - R:114377 IR:136547[0m
+[0;32mI (19763) MAX30102: HR: 76 BPM | SpO2: 99% | Raw - R:115139 IR:138606[0m
+[0;32mI (20273) MAX30102: HR: 78 BPM | SpO2: 99% | Raw - R:114708 IR:137562[0m
+[0;32mI (20783) MAX30102: HR: 78 BPM | SpO2: 99% | Raw - R:114074 IR:135853[0m
+[0;32mI (21293) MAX30102: HR: 78 BPM | SpO2: 99% | Raw - R:114940 IR:138364[0m
+[0;32mI (21803) MAX30102: HR: 80 BPM | SpO2: 99% | Raw - R:114672 IR:137642[0m
+[0;32mI (22313) MAX30102: HR: 79 BPM | SpO2: 98% | Raw - R:114145 IR:136245[0m
+[0;32mI (22823) MAX30102: HR: 79 BPM | SpO2: 99% | Raw - R:115092 IR:138952[0m
+[0;32mI (23333) MAX30102: HR: 78 BPM | SpO2: 99% | Raw - R:114573 IR:137614[0m
+[0;32mI (23843) MAX30102: HR: 78 BPM | SpO2: 99% | Raw - R:114327 IR:136977[0m
+[0;32mI (24353) MAX30102: HR: 78 BPM | SpO2: 99% | Raw - R:114741 IR:138271[0m
+[0;32mI (24863) MAX30102: HR: 78 BPM | SpO2: 99% | Raw - R:114850 IR:138608[0m
+[0;32mI (25373) MAX30102: HR: 80 BPM | SpO2: 99% | Raw - R:114483 IR:137626[0m
+[0;32mI (25883) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:113938 IR:136220[0m
+[0;32mI (26393) MAX30102: HR: 80 BPM | SpO2: 99% | Raw - R:114971 IR:139114[0m
+[0;32mI (26903) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:114564 IR:138013[0m
+[0;32mI (27413) MAX30102: HR: 80 BPM | SpO2: 99% | Raw - R:114745 IR:138554[0m
+[0;32mI (27923) MAX30102: HR: 78 BPM | SpO2: 99% | Raw - R:114787 IR:138784[0m
+[0;32mI (28433) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:113938 IR:136467[0m
+[0;32mI (28943) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:113202 IR:134659[0m
+[0;32mI (29453) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:114443 IR:137982[0m
+[0;32mI (29963) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:114132 IR:137216[0m
+[0;32mI (30473) MAX30102: HR: 82 BPM | SpO2: 98% | Raw - R:113745 IR:136301[0m
+[0;32mI (30983) MAX30102: HR: 82 BPM | SpO2: 99% | Raw - R:114851 IR:139394[0m
+[0;32mI (31493) MAX30102: HR: 82 BPM | SpO2: 98% | Raw - R:114441 IR:138271[0m
+[0;32mI (32003) MAX30102: HR: 84 BPM | SpO2: 98% | Raw - R:114210 IR:137791[0m
+[0;32mI (32513) MAX30102: HR: 85 BPM | SpO2: 98% | Raw - R:112829 IR:134120[0m
+[0;32mI (33023) MAX30102: HR: 85 BPM | SpO2: 98% | Raw - R:113123 IR:134905[0m
+[0;32mI (33533) MAX30102: HR: 85 BPM | SpO2: 98% | Raw - R:112006 IR:132240[0m
+[0;32mI (34043) MAX30102: HR: 66 BPM | SpO2: 98% | Raw - R:111796 IR:131944[0m
+[0;32mI (34553) MAX30102: HR: 66 BPM | SpO2: 99% | Raw - R:112217 IR:132966[0m
+[0;32mI (35063) MAX30102: HR: 66 BPM | SpO2: 97% | Raw - R:111364 IR:131277[0m
+[0;32mI (35573) MAX30102: HR: 65 BPM | SpO2: 97% | Raw - R:110651 IR:129681[0m
+[0;32mI (36083) MAX30102: HR: 65 BPM | SpO2: 99% | Raw - R:110651 IR:129903[0m
+
+1�L�@�!!NJ� �]�)��
+�H!18!I (943) MASSAGE_BLE: GATT server registered, app_id 0000
+[0;33mW (943) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (943) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (953) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (953) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (963) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (963) main_task: Returned from app_main()[0m
+[0;32mI (973) MASSAGE_BLE: Advertising started[0m
+[0;32mI (973) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (983) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (983) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (993) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (993) MASSAGE_BLE: Characteristic added, status 0, attr_handle 46[0m
+[0;32mI (993) MASSAGE_BLE: Waveform Char Handle: 46[0m
+[0;32mI (1003) MASSAGE_BLE: Service started with 3 characteristics[0m
+[0;32mI (9593) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (10943) MASSAGE_BLE: Authentication complete, status: 1[0m
+[1;31mE (18113) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18123) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18133) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18143) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18153) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18163) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18173) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18183) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18193) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18203) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18213) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18223) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18233) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18243) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18313) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18323) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18333) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18343) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18353) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18363) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18373) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18383) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18393) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18403) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18413) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18423) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18433) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (18443) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (19973) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (20483) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (20993) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (22013) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (22523) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (23033) MAX30102: HR: 55 BPM | SpO2: 86% | Raw - R:124721 IR:138063[0m
+[1;31mE (23543) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (23543) MAX30102: HR: 55 BPM | SpO2: 70% | Raw - R:136180 IR:144026[0m
+[1;31mE (24053) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (24053) MAX30102: HR: 55 BPM | SpO2: 84% | Raw - R:106583 IR:111390[0m
+[1;31mE (24563) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (24563) MAX30102: HR: 55 BPM | SpO2: 88% | Raw - R:105782 IR:110450[0m
+[0;32mI (25073) MAX30102: HR: 55 BPM | SpO2: 87% | Raw - R:105206 IR:109759[0m
+[0;32mI (25583) MAX30102: HR: 55 BPM | SpO2: 83% | Raw - R:104473 IR:109207[0m
+[0;32mI (26093) MAX30102: HR: 55 BPM | SpO2: 93% | Raw - R:104354 IR:108877[0m
+[1;31mE (26603) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (26603) MAX30102: HR: 55 BPM | SpO2: 92% | Raw - R:104255 IR:108727[0m
+[0;32mI (27113) MAX30102: HR: 55 BPM | SpO2: 92% | Raw - R:104143 IR:108633[0m
+[0;32mI (27623) MAX30102: HR: 55 BPM | SpO2: 93% | Raw - R:104226 IR:108753[0m
+[1;31mE (28133) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (28133) MAX30102: HR: 55 BPM | SpO2: 94% | Raw - R:104104 IR:108605[0m
+[0;32mI (28643) MAX30102: HR: 55 BPM | SpO2: 92% | Raw - R:104026 IR:108536[0m
+[0;32mI (29153) MAX30102: HR: 55 BPM | SpO2: 88% | Raw - R:104017 IR:108537[0m
+[0;32mI (29663) MAX30102: HR: 55 BPM | SpO2: 96% | Raw - R:104069 IR:108658[0m
+[0;32mI (30173) MAX30102: HR: 55 BPM | SpO2: 91% | Raw - R:103978 IR:108525[0m
+[1;31mE (30683) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (30683) MAX30102: HR: 55 BPM | SpO2: 93% | Raw - R:103903 IR:108507[0m
+[0;32mI (31193) MAX30102: HR: 55 BPM | SpO2: 89% | Raw - R:103949 IR:108666[0m
+[1;31mE (31703) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (31703) MAX30102: HR: 55 BPM | SpO2: 98% | Raw - R:103937 IR:108615[0m
+[0;32mI (32213) MAX30102: HR: 55 BPM | SpO2: 96% | Raw - R:103949 IR:108675[0m
+[1;31mE (32723) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (32723) MAX30102: HR: 55 BPM | SpO2: 86% | Raw - R:104072 IR:108855[0m
+[1;31mE (33233) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (33233) MAX30102: HR: 55 BPM | SpO2: 97% | Raw - R:104041 IR:108842[0m
+[1;31mE (33743) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (33743) MAX30102: HR: 55 BPM | SpO2: 84% | Raw - R:103857 IR:108660[0m
+[1;31mE (34253) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (34253) MAX30102: HR: 55 BPM | SpO2: 95% | Raw - R:103786 IR:108641[0m
+[0;32mI (34763) MAX30102: HR: 55 BPM | SpO2: 87% | Raw - R:103730 IR:108701[0m
+[0;32mI (35273) MAX30102: HR: 55 BPM | SpO2: 88% | Raw - R:103628 IR:108514[0m
+[0;32mI (35783) MAX30102: HR: 55 BPM | SpO2: 95% | Raw - R:103601 IR:108471[0m
+[0;32mI (36293) MAX30102: HR: 55 BPM | SpO2: 95% | Raw - R:103577 IR:108437[0m
+[1;31mE (36803) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (36803) MAX30102: HR: 55 BPM | SpO2: 87% | Raw - R:103650 IR:108586[0m
+[1;31mE (37313) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (37313) MAX30102: HR: 55 BPM | SpO2: 90% | Raw - R:103536 IR:108523[0m
+[0;32mI (37823) MAX30102: HR: 55 BPM | SpO2: 90% | Raw - R:103586 IR:108580[0m
+[0;32mI (38333) MAX30102: HR: 55 BPM | SpO2: 70% | Raw - R:102899 IR:108247[0m
+[1;31mE (38843) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (38843) MAX30102: HR: 55 BPM | SpO2: 82% | Raw - R:102138 IR:107485[0m
+[1;31mE (39353) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (39353) MAX30102: HR: 55 BPM | SpO2: 91% | Raw - R:102123 IR:107418[0m
+[1;31mE (39863) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (39863) MAX30102: HR: 55 BPM | SpO2: 72% | Raw - R:102927 IR:107886[0m
+[0;32mI (40373) MAX30102: HR: 55 BPM | SpO2: 83% | Raw - R:103211 IR:108142[0m
+[0;32mI (40883) MAX30102: HR: 55 BPM | SpO2: 76% | Raw - R:103885 IR:108733[0m
+[0;32mI (41393) MAX30102: HR: 55 BPM | SpO2: 81% | Raw - R:103758 IR:108600[0m
+[0;32mI (41903) MAX30102: HR: 55 BPM | SpO2: 71% | Raw - R:103490 IR:108435[0m
+[1;31mE (42413) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (42413) MAX30102: HR: 55 BPM | SpO2: 89% | Raw - R:103361 IR:108320[0m
+[1;31mE (42923) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (42923) MAX30102: HR: 55 BPM | SpO2: 94% | Raw - R:103332 IR:108315[0m
+[0;32mI (43433) MAX30102: HR: 55 BPM | SpO2: 88% | Raw - R:103144 IR:108106[0m
+[1;31mE (43943) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (43943) MAX30102: HR: 55 BPM | SpO2: 98% | Raw - R:103175 IR:108184[0m
+[1;31mE (44453) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (44453) MAX30102: HR: 55 BPM | SpO2: 92% | Raw - R:103071 IR:108130[0m
+[1;31mE (44963) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (44963) MAX30102: HR: 55 BPM | SpO2: 90% | Raw - R:102981 IR:107987[0m
+[1;31mE (45473) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (45473) MAX30102: HR: 55 BPM | SpO2: 88% | Raw - R:102931 IR:107895[0m
+[1;31mE (45983) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (45983) MAX30102: HR: 55 BPM | SpO2: 91% | Raw - R:102955 IR:107963[0m
+[1;31mE (46493) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (46493) MAX30102: HR: 55 BPM | SpO2: 90% | Raw - R:102883 IR:107838[0m
+[0;32mI (47003) MAX30102: HR: 55 BPM | SpO2: 92% | Raw - R:102843 IR:107785[0m
+[0;32mI (47513) MAX30102: HR: 55 BPM | SpO2: 99% | Raw - R:102878 IR:107860[0m
+[0;32mI (48023) MAX30102: HR: 55 BPM | SpO2: 91% | Raw - R:102762 IR:107720[0m
+[0;32mI (48533) MAX30102: HR: 55 BPM | SpO2: 94% | Raw - R:102740 IR:107668[0m
+[1;31mE (49043) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (49043) MAX30102: HR: 55 BPM | SpO2: 87% | Raw - R:102802 IR:107743[0m
+[0;32mI (49553) MAX30102: HR: 55 BPM | SpO2: 95% | Raw - R:102765 IR:107651[0m
+[0;32mI (50063) MAX30102: HR: 55 BPM | SpO2: 94% | Raw - R:102821 IR:107760[0m
+[1;31mE (50573) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (50573) MAX30102: HR: 55 BPM | SpO2: 94% | Raw - R:102721 IR:107692[0m
+[1;31mE (51083) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (51083) MAX30102: HR: 55 BPM | SpO2: 96% | Raw - R:102718 IR:107576[0m
+[0;32mI (51593) MAX30102: HR: 55 BPM | SpO2: 75% | Raw - R:102471 IR:107605[0m
+[1;31mE (52613) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58293) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58303) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58313) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58323) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58333) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58343) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58353) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58363) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58373) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58383) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58393) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58403) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58413) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58423) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58433) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58443) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58453) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58463) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58473) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58483) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58583) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58593) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58603) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58613) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (58623) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (59133) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (60663) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (62703) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (67293) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (68313) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (68823) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (70353) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (70863) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (71883) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (72393) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (74443) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (74953) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (75973) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (76483) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (77503) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (79033) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (79543) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (80053) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (80563) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (81073) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (81583) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (83123) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (83633) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (83713) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85133) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85143) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85153) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85163) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85173) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85183) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85193) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85203) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85213) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85223) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85233) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85243) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85253) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85263) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85273) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85283) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85293) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85303) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85313) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85323) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85333) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85343) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85353) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85363) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85373) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85383) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85393) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85403) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85413) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (85983) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (87003) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (87513) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (88023) MAX30102: HR: 41 BPM | SpO2: 98% | Raw - R:103310 IR:121069[0m
+[1;31mE (88533) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (88533) MAX30102: HR: 47 BPM | SpO2: 98% | Raw - R:101764 IR:117185[0m
+[1;31mE (89043) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (89043) MAX30102: HR: 47 BPM | SpO2: 96% | Raw - R:101239 IR:116058[0m
+[1;31mE (89553) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (89553) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:99432 IR:111741[0m
+[1;31mE (90063) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (90063) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:99553 IR:111688[0m
+[1;31mE (90573) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (90573) MAX30102: HR: 80 BPM | SpO2: 96% | Raw - R:100225 IR:113078[0m
+[1;31mE (91083) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (91083) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:99805 IR:111955[0m
+[0;32mI (91593) MAX30102: HR: 80 BPM | SpO2: 97% | Raw - R:102504 IR:118188[0m
+[1;31mE (92103) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (92103) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:102848 IR:118960[0m
+[0;32mI (92613) MAX30102: HR: 49 BPM | SpO2: 98% | Raw - R:103702 IR:121111[0m
+[1;31mE (93123) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (93123) MAX30102: HR: 49 BPM | SpO2: 99% | Raw - R:103443 IR:120430[0m
+[0;32mI (93633) MAX30102: HR: 47 BPM | SpO2: 98% | Raw - R:102825 IR:118896[0m
+[0;32mI (94143) MAX30102: HR: 47 BPM | SpO2: 100% | Raw - R:103414 IR:120717[0m
+[0;32mI (94653) MAX30102: HR: 47 BPM | SpO2: 98% | Raw - R:102813 IR:119102[0m
+[1;31mE (95163) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (95163) MAX30102: HR: 47 BPM | SpO2: 98% | Raw - R:102423 IR:118153[0m
+[0;32mI (96193) MAX30102: HR: 63 BPM | SpO2: 98% | Raw - R:99488 IR:110856[0m
+[1;31mE (96693) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (96693) MAX30102: HR: 63 BPM | SpO2: 97% | Raw - R:99410 IR:110345[0m
+[0;32mI (97203) MAX30102: HR: 63 BPM | SpO2: 97% | Raw - R:100580 IR:112860[0m
+[1;31mE (97713) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (97713) MAX30102: HR: 63 BPM | SpO2: 97% | Raw - R:100577 IR:112815[0m
+[1;31mE (98223) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (98223) MAX30102: HR: 63 BPM | SpO2: 97% | Raw - R:100654 IR:112932[0m
+[0;32mI (98743) MAX30102: HR: 63 BPM | SpO2: 97% | Raw - R:100541 IR:112676[0m
+[1;31mE (99243) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (99243) MAX30102: HR: 63 BPM | SpO2: 98% | Raw - R:101452 IR:114802[0m
+[0;32mI (99763) MAX30102: HR: 63 BPM | SpO2: 98% | Raw - R:101121 IR:113947[0m
+[0;32mI (100273) MAX30102: HR: 63 BPM | SpO2: 98% | Raw - R:100785 IR:113049[0m
+[1;31mE (100783) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (100783) MAX30102: HR: 63 BPM | SpO2: 98% | Raw - R:100360 IR:111902[0m
+[0;32mI (101303) MAX30102: HR: 63 BPM | SpO2: 97% | Raw - R:100385 IR:111948[0m
+[0;32mI (101813) MAX30102: HR: 63 BPM | SpO2: 97% | Raw - R:101077 IR:113453[0m
+[0;32mI (102323) MAX30102: HR: 63 BPM | SpO2: 98% | Raw - R:100599 IR:112271[0m
+[1;31mE (106403) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (106913) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (107423) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (107423) MAX30102: HR: 54 BPM | SpO2: 100% | Raw - R:103450 IR:115952[0m
+[0;32mI (107933) MAX30102: HR: 57 BPM | SpO2: 98% | Raw - R:108575 IR:124426[0m
+[1;31mE (108443) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (108443) MAX30102: HR: 92 BPM | SpO2: 100% | Raw - R:109910 IR:129202[0m
+[0;32mI (108953) MAX30102: HR: 92 BPM | SpO2: 95% | Raw - R:108873 IR:127433[0m
+[1;31mE (109463) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (109463) MAX30102: HR: 92 BPM | SpO2: 97% | Raw - R:107974 IR:125598[0m
+[1;31mE (109973) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (109973) MAX30102: HR: 92 BPM | SpO2: 100% | Raw - R:108210 IR:126701[0m
+[0;32mI (110483) MAX30102: HR: 92 BPM | SpO2: 97% | Raw - R:107090 IR:124224[0m
+[1;31mE (110993) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (110993) MAX30102: HR: 92 BPM | SpO2: 98% | Raw - R:105973 IR:121806[0m
+[0;32mI (111503) MAX30102: HR: 92 BPM | SpO2: 100% | Raw - R:106135 IR:122477[0m
+[0;32mI (112013) MAX30102: HR: 92 BPM | SpO2: 98% | Raw - R:105712 IR:121842[0m
+[1;31mE (112523) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (112523) MAX30102: HR: 92 BPM | SpO2: 98% | Raw - R:105212 IR:120692[0m
+[1;31mE (113543) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116433) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116443) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116453) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116463) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116473) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116483) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116493) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116503) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116513) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116523) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116533) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116543) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116553) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116563) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116573) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116583) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116593) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116603) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116613) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116623) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116633) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116643) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (116653) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (118213) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (118723) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (120773) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (121283) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (122303) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (124343) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (127023) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (130653) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (130663) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (130763) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (130773) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (130783) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (130793) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (130803) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (130813) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (130823) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (130833) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (130843) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (130853) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (130863) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131793) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131803) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131813) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131823) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131833) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131843) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131853) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131863) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131873) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131883) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131893) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131903) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131913) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131923) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131933) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131943) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (131953) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (132513) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (134043) MAX30102: HR: 121 BPM | SpO2: 98% | Raw - R:101840 IR:113089[0m
+[0;32mI (134553) MAX30102: HR: 121 BPM | SpO2: 99% | Raw - R:101576 IR:112748[0m
+[1;31mE (135063) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (135063) MAX30102: HR: 121 BPM | SpO2: 98% | Raw - R:100910 IR:111152[0m
+[0;32mI (135573) MAX30102: HR: 121 BPM | SpO2: 98% | Raw - R:100770 IR:110708[0m
+[0;32mI (136083) MAX30102: HR: 77 BPM | SpO2: 91% | Raw - R:70933 IR:70933[0m
+[1;31mE (138123) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (138633) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (141183) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (146283) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[1;31mE (147303) MASSAGE_BLE: Notify failed: ESP_FAIL[0m
+[0;32mI (943) MASSAGE_BLE: GATT server registered, app_id 0000[0m
+[0;33mW (943) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV[0m
+[0;32mI (953) MASSAGE_BLE: BLE GATT Server initialized[0m
+[0;32mI (963) MASSAGE_BLE: Service created, status 0, service_handle 40[0m
+[0;32mI (963) MASSAGE_BLE: Service UUID: 12345678-1234-5678-1234-56789abcdef0[0m
+[0;32mI (963) MASSAGE_BLE: Char UUID: abcdef01-1234-5678-1234-56789abcdef0[0m
+[0;32mI (973) main_task: Returned from app_main()[0m
+[0;32mI (973) MASSAGE_BLE: Advertising started[0m
+[0;32mI (973) MASSAGE_BLE: Characteristic added, status 0, attr_handle 42[0m
+[0;32mI (983) MASSAGE_BLE: Control Char Handle: 42[0m
+[0;32mI (983) MASSAGE_BLE: Characteristic added, status 0, attr_handle 44[0m
+[0;32mI (993) MASSAGE_BLE: SpO2 Char Handle: 44[0m
+[0;32mI (993) MASSAGE_BLE: Characteristic added, status 0, attr_handle 46[0m
+[0;32mI (1003) MASSAGE_BLE: Waveform Char Handle: 46[0m
+[0;32mI (1003) MASSAGE_BLE: Service started with 3 characteristics[0m
+[0;32mI (1613) MAX30102: HR: 122 BPM | SpO2: 98% | Raw - R:103219 IR:116124[0m
+[0;32mI (2123) MAX30102: HR: 116 BPM | SpO2: 98% | Raw - R:107431 IR:126829[0m
+[0;32mI (2633) MAX30102: HR: 116 BPM | SpO2: 98% | Raw - R:106471 IR:124540[0m
+[0;32mI (3143) MAX30102: HR: 116 BPM | SpO2: 98% | Raw - R:105537 IR:122369[0m
+[0;32mI (3653) MAX30102: HR: 116 BPM | SpO2: 99% | Raw - R:106499 IR:125014[0m
+[0;32mI (4163) MAX30102: HR: 116 BPM | SpO2: 98% | Raw - R:106189 IR:124327[0m
+[0;32mI (4673) MAX30102: HR: 116 BPM | SpO2: 98% | Raw - R:105273 IR:122213[0m
+[0;32mI (5183) MAX30102: HR: 116 BPM | SpO2: 99% | Raw - R:104961 IR:121279[0m
+[0;32mI (5693) MAX30102: HR: 116 BPM | SpO2: 99% | Raw - R:105559 IR:123062[0m
+[0;32mI (6203) MAX30102: HR: 116 BPM | SpO2: 98% | Raw - R:105120 IR:121918[0m
+[0;32mI (6713) MAX30102: HR: 116 BPM | SpO2: 99% | Raw - R:105050 IR:121638[0m
+[0;32mI (7223) MAX30102: HR: 116 BPM | SpO2: 99% | Raw - R:105774 IR:123640[0m
+[0;32mI (7733) MAX30102: HR: 116 BPM | SpO2: 99% | Raw - R:105452 IR:122837[0m
+[0;32mI (8243) MAX30102: HR: 116 BPM | SpO2: 98% | Raw - R:105106 IR:121995[0m
+[0;32mI (12993) MASSAGE_BLE: Device connected, conn_id 0[0m
+[0;32mI (13853) MASSAGE_BLE: Authentication complete, status: 1[0m
+[0;32mI (13853) MAX30102: HR: 50 BPM | SpO2: 98% | Raw - R:102776 IR:122013[0m
+[0;32mI (14363) MAX30102: HR: 47 BPM | SpO2: 98% | Raw - R:102623 IR:121585[0m
+[0;32mI (14873) MAX30102: HR: 44 BPM | SpO2: 98% | Raw - R:102384 IR:120876[0m
+[0;32mI (15383) MAX30102: HR: 44 BPM | SpO2: 99% | Raw - R:103422 IR:123829[0m
+[0;32mI (15893) MAX30102: HR: 42 BPM | SpO2: 98% | Raw - R:103319 IR:123373[0m
+[0;32mI (16403) MAX30102: HR: 42 BPM | SpO2: 98% | Raw - R:102989 IR:122594[0m
+[0;32mI (16913) MAX30102: HR: 42 BPM | SpO2: 98% | Raw - R:102586 IR:121553[0m
+[0;32mI (17423) MAX30102: HR: 42 BPM | SpO2: 99% | Raw - R:103654 IR:124486[0m
+[0;32mI (17933) MAX30102: HR: 58 BPM | SpO2: 98% | Raw - R:103083 IR:123029[0m
+[0;32mI (18443) MAX30102: HR: 58 BPM | SpO2: 98% | Raw - R:102885 IR:122509[0m
+[0;32mI (18953) MAX30102: HR: 58 BPM | SpO2: 98% | Raw - R:102808 IR:122430[0m
+[0;32mI (19463) MAX30102: HR: 58 BPM | SpO2: 99% | Raw - R:103138 IR:123426[0m
+[0;32mI (19973) MAX30102: HR: 58 BPM | SpO2: 98% | Raw - R:102607 IR:122040[0m
+[0;32mI (25073) MAX30102: HR: 55 BPM | SpO2: 98% | Raw - R:101391 IR:119568[0m
+[0;32mI (25583) MAX30102: HR: 79 BPM | SpO2: 98% | Raw - R:100586 IR:117511[0m
+[0;32mI (26093) MAX30102: HR: 79 BPM | SpO2: 98% | Raw - R:101768 IR:120501[0m
+[0;32mI (26603) MAX30102: HR: 77 BPM | SpO2: 98% | Raw - R:101574 IR:120054[0m
+[0;32mI (27113) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:100633 IR:117688[0m
+[0;32mI (27623) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:102052 IR:121349[0m
+[0;32mI (28133) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:101291 IR:119344[0m
+[0;32mI (28643) MAX30102: HR: 79 BPM | SpO2: 98% | Raw - R:100199 IR:116771[0m
+[0;32mI (29153) MAX30102: HR: 79 BPM | SpO2: 100% | Raw - R:100693 IR:118267[0m
+[0;32mI (29663) MAX30102: HR: 81 BPM | SpO2: 98% | Raw - R:99518 IR:115408[0m
+[0;32mI (30173) MAX30102: HR: 81 BPM | SpO2: 98% | Raw - R:99291 IR:114706[0m
+[0;32mI (30683) MAX30102: HR: 66 BPM | SpO2: 97% | Raw - R:99444 IR:114884[0m
+[0;32mI (31193) MAX30102: HR: 66 BPM | SpO2: 97% | Raw - R:101046 IR:118587[0m
+[0;32mI (31703) MAX30102: HR: 67 BPM | SpO2: 98% | Raw - R:100441 IR:117124[0m
+[0;32mI (32213) MAX30102: HR: 68 BPM | SpO2: 98% | Raw - R:100352 IR:116848[0m
+[0;32mI (32723) MAX30102: HR: 68 BPM | SpO2: 98% | Raw - R:101236 IR:119074[0m
+[0;32mI (33233) MAX30102: HR: 68 BPM | SpO2: 98% | Raw - R:100912 IR:118316[0m
+[0;32mI (33743) MAX30102: HR: 83 BPM | SpO2: 98% | Raw - R:100957 IR:118227[0m
+[0;32mI (34253) MAX30102: HR: 83 BPM | SpO2: 98% | Raw - R:101065 IR:118416[0m
+[0;32mI (34763) MAX30102: HR: 82 BPM | SpO2: 98% | Raw - R:101714 IR:120150[0m
+[0;32mI (35273) MAX30102: HR: 82 BPM | SpO2: 98% | Raw - R:101148 IR:118686[0m
+[0;32mI (35783) MAX30102: HR: 82 BPM | SpO2: 98% | Raw - R:100555 IR:117464[0m
+[0;32mI (36293) MAX30102: HR: 82 BPM | SpO2: 97% | Raw - R:101320 IR:119254[0m
+[0;32mI (36803) MAX30102: HR: 82 BPM | SpO2: 98% | Raw - R:101106 IR:118694[0m
+[0;32mI (37313) MAX30102: HR: 83 BPM | SpO2: 98% | Raw - R:100832 IR:117968[0m
+[0;32mI (37823) MAX30102: HR: 83 BPM | SpO2: 98% | Raw - R:102303 IR:121626[0m
+[0;32mI (38333) MAX30102: HR: 82 BPM | SpO2: 98% | Raw - R:101681 IR:120132[0m
+[0;32mI (38843) MAX30102: HR: 81 BPM | SpO2: 98% | Raw - R:101279 IR:119111[0m
+[0;32mI (39353) MAX30102: HR: 82 BPM | SpO2: 98% | Raw - R:101062 IR:118601[0m
+[0;32mI (39863) MAX30102: HR: 82 BPM | SpO2: 98% | Raw - R:101804 IR:120523[0m
+[0;32mI (40373) MAX30102: HR: 81 BPM | SpO2: 98% | Raw - R:101294 IR:119171[0m
+[0;32mI (40883) MAX30102: HR: 81 BPM | SpO2: 98% | Raw - R:100765 IR:117933[0m
+[0;32mI (41393) MAX30102: HR: 81 BPM | SpO2: 98% | Raw - R:101781 IR:120456[0m
+[0;32mI (41903) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:101523 IR:119711[0m
+[0;32mI (42413) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:101053 IR:118476[0m
+[0;32mI (42923) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:102086 IR:121182[0m
+[0;32mI (43433) MAX30102: HR: 78 BPM | SpO2: 99% | Raw - R:101691 IR:120118[0m
+[0;32mI (43943) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:101542 IR:119695[0m
+[0;32mI (44453) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:101531 IR:119600[0m
+[0;32mI (44963) MAX30102: HR: 54 BPM | SpO2: 98% | Raw - R:102074 IR:121036[0m
+[0;32mI (45473) MAX30102: HR: 55 BPM | SpO2: 98% | Raw - R:101540 IR:119699[0m
+[0;32mI (45983) MAX30102: HR: 56 BPM | SpO2: 98% | Raw - R:101073 IR:118569[0m
+[0;32mI (46493) MAX30102: HR: 56 BPM | SpO2: 98% | Raw - R:101978 IR:120852[0m
+[0;32mI (47003) MAX30102: HR: 56 BPM | SpO2: 97% | Raw - R:100250 IR:116756[0m
+[0;32mI (47513) MAX30102: HR: 82 BPM | SpO2: 98% | Raw - R:100270 IR:116721[0m
+[0;32mI (48023) MAX30102: HR: 95 BPM | SpO2: 97% | Raw - R:101414 IR:119624[0m
+[0;32mI (48533) MAX30102: HR: 112 BPM | SpO2: 98% | Raw - R:101166 IR:118844[0m
+[0;32mI (49043) MAX30102: HR: 102 BPM | SpO2: 98% | Raw - R:100942 IR:118223[0m
+[0;32mI (49553) MAX30102: HR: 102 BPM | SpO2: 98% | Raw - R:102028 IR:121017[0m
+[0;32mI (50063) MAX30102: HR: 102 BPM | SpO2: 98% | Raw - R:101747 IR:120323[0m
+[0;32mI (50573) MAX30102: HR: 81 BPM | SpO2: 98% | Raw - R:101578 IR:119995[0m
+[0;32mI (51083) MAX30102: HR: 72 BPM | SpO2: 98% | Raw - R:101079 IR:118743[0m
+[0;32mI (51593) MAX30102: HR: 72 BPM | SpO2: 98% | Raw - R:102211 IR:121639[0m
+[0;32mI (52103) MAX30102: HR: 63 BPM | SpO2: 98% | Raw - R:101795 IR:120547[0m
+[0;32mI (52613) MAX30102: HR: 67 BPM | SpO2: 98% | Raw - R:101129 IR:118967[0m
+[0;32mI (53123) MAX30102: HR: 67 BPM | SpO2: 99% | Raw - R:102171 IR:121715[0m
+[0;32mI (53633) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:101633 IR:120366[0m
+[0;32mI (54143) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:100909 IR:118573[0m
+[0;32mI (54653) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:102078 IR:121647[0m
+[0;32mI (55163) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:101383 IR:119920[0m
+[0;32mI (55673) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:100576 IR:117937[0m
+[0;32mI (56183) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:101830 IR:121243[0m
+[0;32mI (56693) MAX30102: HR: 77 BPM | SpO2: 98% | Raw - R:101228 IR:119623[0m
+[0;32mI (57203) MAX30102: HR: 77 BPM | SpO2: 98% | Raw - R:100955 IR:118888[0m
+[0;32mI (57713) MAX30102: HR: 76 BPM | SpO2: 98% | Raw - R:101600 IR:120496[0m
+[0;32mI (58223) MAX30102: HR: 77 BPM | SpO2: 98% | Raw - R:100926 IR:118705[0m
+[0;32mI (58733) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:100447 IR:117370[0m
+[0;32mI (59243) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:101385 IR:119781[0m
+[0;32mI (59753) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:100936 IR:118587[0m
+[0;32mI (60263) MAX30102: HR: 64 BPM | SpO2: 98% | Raw - R:100517 IR:117494[0m
+[0;32mI (60773) MAX30102: HR: 64 BPM | SpO2: 98% | Raw - R:101320 IR:119635[0m
+[0;32mI (61283) MAX30102: HR: 63 BPM | SpO2: 98% | Raw - R:100703 IR:118135[0m
+[0;32mI (61793) MAX30102: HR: 63 BPM | SpO2: 98% | Raw - R:100320 IR:117107[0m
+[0;32mI (62303) MAX30102: HR: 63 BPM | SpO2: 97% | Raw - R:101278 IR:119563[0m
+[0;32mI (62813) MAX30102: HR: 63 BPM | SpO2: 98% | Raw - R:100892 IR:118577[0m
+[0;32mI (63323) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:100427 IR:117389[0m
+[0;32mI (63833) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:101437 IR:120003[0m
+[0;32mI (64343) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:100737 IR:118299[0m
+[0;32mI (64853) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:100670 IR:118131[0m
+[0;32mI (65363) MAX30102: HR: 76 BPM | SpO2: 98% | Raw - R:101356 IR:119965[0m
+[0;32mI (65873) MAX30102: HR: 76 BPM | SpO2: 98% | Raw - R:100792 IR:118632[0m
+[0;32mI (66383) MAX30102: HR: 77 BPM | SpO2: 98% | Raw - R:100162 IR:117080[0m
+[0;32mI (66893) MAX30102: HR: 77 BPM | SpO2: 97% | Raw - R:101197 IR:119672[0m
+[0;32mI (67403) MAX30102: HR: 78 BPM | SpO2: 98% | Raw - R:100581 IR:118199[0m
+[0;32mI (67913) MAX30102: HR: 79 BPM | SpO2: 98% | Raw - R:100006 IR:116857[0m
+[0;32mI (68423) MAX30102: HR: 79 BPM | SpO2: 98% | Raw - R:101089 IR:119625[0m
+[0;32mI (68933) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:100494 IR:118183[0m
+[0;32mI (69443) MAX30102: HR: 79 BPM | SpO2: 98% | Raw - R:100195 IR:117440[0m
+[0;32mI (69953) MAX30102: HR: 79 BPM | SpO2: 97% | Raw - R:101137 IR:119777[0m
+[0;32mI (70463) MAX30102: HR: 79 BPM | SpO2: 98% | Raw - R:100828 IR:118952[0m
+[0;32mI (70973) MAX30102: HR: 65 BPM | SpO2: 97% | Raw - R:100257 IR:117584[0m
+[0;32mI (71483) MAX30102: HR: 66 BPM | SpO2: 98% | Raw - R:100033 IR:117061[0m
+[0;32mI (71993) MAX30102: HR: 66 BPM | SpO2: 98% | Raw - R:100718 IR:118879[0m
+[0;32mI (72503) MAX30102: HR: 65 BPM | SpO2: 98% | Raw - R:100497 IR:118283[0m
+[0;32mI (73013) MAX30102: HR: 65 BPM | SpO2: 97% | Raw - R:99947 IR:116935[0m
+[0;32mI (73523) MAX30102: HR: 65 BPM | SpO2: 97% | Raw - R:101050 IR:119687[0m
+[0;32mI (74033) MAX30102: HR: 81 BPM | SpO2: 98% | Raw - R:100691 IR:118817[0m
+[0;32mI (74543) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:100195 IR:117635[0m
+[0;32mI (75053) MAX30102: HR: 80 BPM | SpO2: 98% | Raw - R:101190 IR:120088[0m
+[0;32mI (75563) MAX30102: HR: 82 BPM | SpO2: 97% | Raw - R:100757 IR:119085[0m
+[0;32mI (76073) MAX30102: HR: 82 BPM | SpO2: 97% | Raw - R:100276 IR:117990[0m
+[0;32mI (76583) MAX30102: HR: 82 BPM | SpO2: 97% | Raw - R:101157 IR:120144[0m
+[0;32mI (77093) MAX30102: HR: 64 BPM | SpO2: 97% | Raw - R:100789 IR:119208[0m
+[0;32mI (77603) MAX30102: HR: 64 BPM | SpO2: 98% | Raw - R:100478 IR:118441[0m
+[0;32mI (78113) MAX30102: HR: 64 BPM | SpO2: 98% | Raw - R:100437 IR:118183[0m
+[0;32mI (78623) MAX30102: HR: 65 BPM | SpO2: 97% | Raw - R:101052 IR:119771[0m
+[0;32mI (79133) MAX30102: HR: 65 BPM | SpO2: 97% | Raw - R:100250 IR:117820[0m

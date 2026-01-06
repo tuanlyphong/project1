@@ -1,3 +1,61 @@
 <resources>
-    <string name="app_name">Massage Control</string>
+    <string name="app_name">Massage Pro X1</string>
+
+    <!-- Assistant Activity -->
+    <string name="assistant_title">AI Massage Assistant</string>
+    <string name="assistant_description">Get personalized massage recommendations</string>
+
+    <string name="your_info">Your Information</string>
+    <string name="age_hint">Age (years)</string>
+    <string name="weight_hint">Weight (kg)</string>
+    <string name="height_hint">Height (cm)</string>
+
+    <string name="health_conditions">Health Conditions</string>
+    <string name="chip_back_pain">Back Pain</string>
+    <string name="chip_neck_pain">Neck Pain</string>
+    <string name="chip_stress">Stress</string>
+    <string name="chip_fatigue">Fatigue</string>
+    <string name="chip_insomnia">Insomnia</string>
+
+    <string name="massage_goals">Massage Goals</string>
+    <string name="goal_relaxation">Relaxation</string>
+    <string name="goal_pain_relief">Pain Relief</string>
+    <string name="goal_recovery">Recovery</string>
+    <string name="goal_energy">Energy Boost</string>
+
+    <string name="get_recommendation">Get AI Recommendation</string>
+    <string name="analyzing">Analyzing your profile…</string>
+
+    <string name="recommendation_title">AI Recommendation</string>
+    <string name="recommended_mode">Mode:</string>
+    <string name="recommended_intensity">Intensity:</string>
+    <string name="recommended_duration">Duration:</string>
+    <string name="recommended_heat">Heat Therapy:</string>
+    <string name="why_recommendation">Why this recommendation?</string>
+
+    <string name="apply_settings">Apply This Setting</string>
+    <string name="settings_applied">Settings applied!</string>
+
+    <!-- Quick Presets -->
+    <string name="quick_presets">Quick Presets</string>
+    <string name="preset_morning">Morning Energy</string>
+    <string name="preset_morning_desc">Level 4 • 10 min • No Heat</string>
+    <string name="preset_evening">Evening Relaxation</string>
+    <string name="preset_evening_desc">Level 2 • 20 min • Heat On</string>
+    <string name="preset_deep">Deep Tissue</string>
+    <string name="preset_deep_desc">Level 5 • 15 min • Heat On</string>
+
+    <!-- Timer -->
+    <string name="session_complete">Session Complete</string>
+    <string name="session_complete_msg">Your massage session is complete. Turn off device?</string>
+    <string name="turn_off">Turn Off</string>
+    <string name="continue_session">Continue</string>
+    <string name="timer_remaining">Time remaining: %d:%02d</string>
+
+    <!-- Errors -->
+    <string name="error_fill_all_fields">Please fill in all fields</string>
+    <string name="error_not_connected">Please connect device first</string>
+    <string name="error_invalid_age">Please enter a valid age (1-120)</string>
+    <string name="error_invalid_weight">Please enter a valid weight (20-300 kg)</string>
+    <string name="error_invalid_height">Please enter a valid height (50-250 cm)</string>
 </resources>
