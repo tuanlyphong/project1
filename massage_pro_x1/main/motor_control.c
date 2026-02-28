@@ -7,7 +7,7 @@
 #include "esp_log.h"
 #include "driver/gpio.h"
 #include "driver/ledc.h"
-
+#include "device_state.h"
 #define TAG "MOTOR"
 
 // PWM Configuration
@@ -197,3 +197,4 @@ esp_err_t motor_stop_all(void) {
     
     return ESP_OK;
 }
+

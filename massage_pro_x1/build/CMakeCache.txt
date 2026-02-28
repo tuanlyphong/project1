@@ -359,7 +359,7 @@ Mbed TLS_IS_TOP_LEVEL:STATIC=OFF
 Mbed TLS_SOURCE_DIR:STATIC=/home/phong/esp-idf/components/mbedtls/mbedtls
 
 //No help, variable specified on the command line.
-PYTHON:UNINITIALIZED=/home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python
+PYTHON:UNINITIALIZED=/home/phong/.espressif/python_env/idf6.0_py3.14_env/bin/python
 
 //No help, variable specified on the command line.
 PYTHON_DEPS_CHECKED:UNINITIALIZED=1
@@ -437,7 +437,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=4
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=2
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/usr/bin/cmake
 //Path to cpack program executable.
@@ -606,9 +606,9 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
 C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS:INTERNAL=1
 //Details about finding Git
-FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.52.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.53.0()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python][found components: Interpreter ][v3.13.11()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/phong/.espressif/python_env/idf6.0_py3.14_env/bin/python][found components: Interpreter ][v3.14.3()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GIT_EXECUTABLE
@@ -619,10 +619,10 @@ _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 _Python3_Compiler_REASON_FAILURE:INTERNAL=
 //Development reason failure
 _Python3_Development_REASON_FAILURE:INTERNAL=
-_Python3_EXECUTABLE:INTERNAL=/home/phong/.espressif/python_env/idf6.0_py3.13_env/bin/python
+_Python3_EXECUTABLE:INTERNAL=/home/phong/.espressif/python_env/idf6.0_py3.14_env/bin/python
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;11;32;64;;;abi3;/usr/lib/python3.13;/home/phong/.espressif/python_env/idf6.0_py3.13_env/lib/python3.13;/home/phong/.espressif/python_env/idf6.0_py3.13_env/lib/python3.13/site-packages;/home/phong/.espressif/python_env/idf6.0_py3.13_env/lib/python3.13/site-packages
-_Python3_INTERPRETER_SIGNATURE:INTERNAL=3ac8eb2453849aa6ecf0011e9871040b
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;14;3;32;64;;;abi3;/usr/lib/python3.14;/home/phong/.espressif/python_env/idf6.0_py3.14_env/lib/python3.14;/home/phong/.espressif/python_env/idf6.0_py3.14_env/lib/python3.14/site-packages;/home/phong/.espressif/python_env/idf6.0_py3.14_env/lib/python3.14/site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=51645432676422225cd21f7fa486a321
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 

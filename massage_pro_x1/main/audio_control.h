@@ -1,3 +1,7 @@
+/*
+ * Audio Control Module
+ */
+
 #ifndef AUDIO_CONTROL_H
 #define AUDIO_CONTROL_H
 
@@ -5,18 +9,28 @@
 #include <stdbool.h>
 #include "esp_err.h"
 
-// I2S Pin Definitions for MAX98357A
-#define I2S_BCLK_PIN    17   // Bit clock
-#define I2S_LRC_PIN     16   // Word select (left/right clock)
-#define I2S_DOUT_PIN    5    // Data out
+//-----------------------------------------------------------------------------
+// I2S Pin Definitions
+//-----------------------------------------------------------------------------
 
-// SD Card SPI Pins
-#define SD_MISO_PIN     19
+#define I2S_BCLK_PIN    17
+#define I2S_LRC_PIN     16
+#define I2S_DOUT_PIN    4
+#define I2S_SD_PIN      2   // SD (Shutdown) control pin for MAX98357A
+
+//-----------------------------------------------------------------------------
+// SD Card Pin Definitions
+//-----------------------------------------------------------------------------
+
 #define SD_MOSI_PIN     23
+#define SD_MISO_PIN     19
 #define SD_SCK_PIN      18
-#define SD_CS_PIN       15
+#define SD_CS_PIN       5
 
-// audio.h - Add new notification types
+//-----------------------------------------------------------------------------
+// Audio Notification Types
+//-----------------------------------------------------------------------------
+
 typedef enum {
     AUDIO_NOTIFY_STARTUP = 0,
     AUDIO_NOTIFY_BLE_CONNECTED,
@@ -29,22 +43,65 @@ typedef enum {
     AUDIO_NOTIFY_LEVEL_3,
     AUDIO_NOTIFY_LEVEL_4,
     AUDIO_NOTIFY_LEVEL_5,
-    AUDIO_NOTIFY_SPO2_LOW,
-    AUDIO_NOTIFY_HR_HIGH,
     AUDIO_NOTIFY_READING_OK,
-    // New assistant mode notifications
+    AUDIO_NOTIFY_ERROR,
+    AUDIO_NOTIFY_SUCCESS,
     AUDIO_NOTIFY_SESSION_START,
     AUDIO_NOTIFY_SESSION_COMPLETE,
     AUDIO_NOTIFY_ONE_MINUTE_WARNING,
-    AUDIO_NOTIFY_PLEASE_STAY_STILL,
-    AUDIO_NOTIFY_MEASURING,
 } audio_notify_type_t;
-// Function declarations
+
+//-----------------------------------------------------------------------------
+// Function Prototypes
+//-----------------------------------------------------------------------------
+
+/**
+ * @brief Initialize audio system
+ * @return ESP_OK on success
+ */
 esp_err_t audio_init(void);
-esp_err_t audio_play_file(const char* filepath);
-esp_err_t audio_play_tone(uint16_t frequency, uint16_t duration_ms);
+
+/**
+ * @brief Play notification sound
+ * @param type Type of notification
+ * @return ESP_OK on success
+ */
 esp_err_t audio_notify(audio_notify_type_t type);
+
+/**
+ * @brief Set audio volume
+ * @param volume Volume level (0-100)
+ */
+void audio_set_volume(uint8_t volume);
+
+/**
+ * @brief Get current volume
+ * @return Volume level (0-100)
+ */
+uint8_t audio_get_volume(void);
+
+/**
+ * @brief Mute/unmute audio
+ * @param mute true to mute
+ */
+void audio_set_mute(bool mute);
+
+/**
+ * @brief Get mute state
+ * @return true if muted
+ */
+bool audio_is_muted(void);
+
+/**
+ * @brief Play WAV file from SD card
+ * @param filename File path (e.g., "/sdcard/sounds/beep.wav")
+ * @return ESP_OK on success
+ */
+esp_err_t audio_play_file(const char *filename);
+
+/**
+ * @brief Stop current audio playback
+ */
 void audio_stop(void);
-void audio_set_volume(uint8_t volume); // 0-21
 
 #endif // AUDIO_CONTROL_H

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "845743845167",
+    "project_id": "fuyukap",
+    "storage_bucket": "fuyukap.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845743845167:android:0abb7953af1824ce9e3bda",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcY5VWMMdjGHe1nNJf72mdqYyXCmVt3Rc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
+

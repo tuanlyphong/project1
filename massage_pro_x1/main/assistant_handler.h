@@ -1,61 +1,79 @@
+/*
+ * Assistant Handler Module
+ * Manages automated massage sessions
+ */
+
 #ifndef ASSISTANT_HANDLER_H
 #define ASSISTANT_HANDLER_H
 
 #include <stdint.h>
 #include <stdbool.h>
 #include "esp_err.h"
-#include "commands.h"
-#include "motor_control.h"
+
+//-----------------------------------------------------------------------------
+// Assistant Configuration Structure
+//-----------------------------------------------------------------------------
+
+typedef struct {
+    uint8_t level;          // Massage level 0-5
+    bool heat_enabled;      // Heat on/off
+    uint16_t duration_min;  // Duration in minutes
+    uint32_t start_time;    // Timestamp when session started
+    bool active;            // Session currently running
+} assistant_config_t;
+
+//-----------------------------------------------------------------------------
+// Function Prototypes
+//-----------------------------------------------------------------------------
 
 /**
- * @brief Start an assistant massage session
- * 
- * @param level Intensity level (1-5)
- * @param heat Enable heat therapy (true/false)
- * @param duration_min Session duration in minutes (1-60)
- * @return esp_err_t ESP_OK on success
+ * @brief Start an automated massage session
+ * @param level Massage intensity level (0-5)
+ * @param heat Enable heating element
+ * @param duration_min Session duration in minutes
+ * @return ESP_OK on success
  */
 esp_err_t assistant_start_session(uint8_t level, bool heat, uint16_t duration_min);
 
 /**
- * @brief Stop the current assistant session
- * 
- * @return esp_err_t ESP_OK on success
+ * @brief Stop the current massage session
  */
-esp_err_t assistant_stop_session(void);
+void assistant_stop_session(void);
 
 /**
- * @brief Get elapsed time in seconds since session start
- * 
- * @return uint32_t Elapsed seconds (0 if no active session)
+ * @brief Get current assistant configuration
+ * @return Pointer to current config
  */
-uint32_t assistant_get_elapsed_seconds(void);
+assistant_config_t* assistant_get_config(void);
 
 /**
- * @brief Get remaining time in seconds
- * 
- * @return uint32_t Remaining seconds (0 if no active session)
- */
-uint32_t assistant_get_remaining_seconds(void);
-
-/**
- * @brief Check if assistant mode is currently active
- * 
- * @return true Assistant is active
- * @return false Assistant is not active
+ * @brief Check if assistant session is active
+ * @return true if session running
  */
 bool assistant_is_active(void);
 
 /**
- * @brief Background task for managing assistant timer
- * 
- * @param arg Task parameter (unused)
+ * @brief Get time remaining in current session
+ * @return Minutes remaining (0 if not active)
  */
-void assistant_timer_task(void *arg);
+uint16_t assistant_get_time_remaining(void);
 
 /**
- * @brief Initialize and start the assistant timer task
+ * @brief Initialize assistant handler
  */
-void assistant_init_timer_task(void);
+void assistant_init(void);
+
+/**
+ * @brief Initialize assistant timer task (legacy compatibility)
+ * This is an alias for assistant_init()
+ */
+static inline void assistant_init_timer_task(void) {
+    assistant_init();
+}
+
+/**
+ * @brief Assistant task (internal use)
+ */
+void assistant_task(void *pvParameters);
 
 #endif // ASSISTANT_HANDLER_H

@@ -9,6 +9,7 @@
 #include "assistant_handler.h"
 #include "audio_control.h"
 #include "commands.h"
+#include "device_state.h"
 
 #define TAG "CMD_PROC"
 
@@ -69,6 +70,33 @@ static void handle_assistant_stop(void) {
     assistant_stop_session();
 }
 
+static void handle_audio_volume(uint8_t volume) {
+    if (volume > 100) {
+        volume = 100;
+    }
+    
+    ESP_LOGI(TAG, "Setting audio volume: %d%%", volume);
+    audio_set_volume(volume);
+    device_state.audio_volume = volume;
+    
+    // Play confirmation beep at new volume
+    audio_notify(AUDIO_NOTIFY_ROTATE);
+}
+
+static void handle_audio_mute(void) {
+    bool new_mute_state = !device_state.audio_muted;
+    
+    ESP_LOGI(TAG, "Audio %s", new_mute_state ? "MUTED" : "UNMUTED");
+    audio_set_mute(new_mute_state);
+    device_state.audio_muted = new_mute_state;
+    
+    // Only play sound if unmuting
+    if (!new_mute_state) {
+        audio_notify(AUDIO_NOTIFY_ROTATE);
+    }
+}
+
+
 //-----------------------------------------------------------------------------
 // Main Command Processor
 //-----------------------------------------------------------------------------
@@ -113,6 +141,20 @@ void process_command(uint8_t *data, uint16_t len) {
         case CMD_ASSISTANT_STOP:
             ESP_LOGI(TAG, "Command: ASSISTANT_STOP");
             handle_assistant_stop();
+            break;
+            
+        case CMD_AUDIO_VOLUME:
+            if (len >= 2) {
+                ESP_LOGI(TAG, "Command: AUDIO_VOLUME %d", data[1]);
+                handle_audio_volume(data[1]);
+            } else {
+                ESP_LOGW(TAG, "AUDIO_VOLUME command missing parameter");
+            }
+            break;
+            
+        case CMD_AUDIO_MUTE:
+            ESP_LOGI(TAG, "Command: AUDIO_MUTE");
+            handle_audio_mute();
             break;
             
         case CMD_ASSISTANT:

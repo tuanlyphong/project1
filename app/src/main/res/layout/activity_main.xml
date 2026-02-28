@@ -1,280 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".ui.main.MainActivity">
 
-    <LinearLayout
+    <!-- App Bar with navigation buttons -->
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="10dp">
+        android:layout_height="wrap_content">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnConnect"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Connect"
-            app:icon="@android:drawable/ic_menu_search"
-            app:iconGravity="textStart" />
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Massage Pro X1"
+            app:titleTextColor="@android:color/white">
+
+            <!-- Right side navigation buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnHistory"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="History"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_history"/>
+
+                <ImageButton
+                    android:id="@+id/btnProfile"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Profile"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_person"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
-            android:id="@+id/deviceInfoLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:visibility="gone"
-            tools:visibility="visible"
-            android:layout_marginTop="8dp">
-
-            <ImageView
-                android:id="@+id/imgDevice"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_launcher_foreground" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingStart="12dp">
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/txtDeviceName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Device Name"
-                    android:textStyle="bold"
-                    android:textSize="16sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/txtBattery"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Battery: --%"
-                    android:textSize="12sp" />
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#E0E0E0"
-        android:layout_marginBottom="10dp"/>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <ScrollView
-            android:id="@+id/layoutControl"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="visible">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/txtLevel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Level: 0"
-                    android:layout_gravity="center"
-                    android:textSize="18sp"
-                    android:layout_marginTop="20dp"/>
-
-                <com.google.android.material.slider.Slider
-                    android:id="@+id/sliderIntensity"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:valueFrom="0"
-                    android:valueTo="5"
-                    android:stepSize="1"
-                    android:enabled="false"/>
-
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:columnCount="2"
-                    android:rowCount="2"
-                    android:layout_marginTop="20dp"
-                    android:alignmentMode="alignMargins">
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnRotate"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:text="Rotate"
-                        android:enabled="false"
-                        android:layout_margin="8dp"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnHeat"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:text="Heat"
-                        android:enabled="false"
-                        app:backgroundTint="#D32F2F"
-                        android:layout_margin="8dp"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnAssistant"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:text="Auto Mode"
-                        android:enabled="false"
-                        app:backgroundTint="#1976D2"
-                        android:layout_margin="8dp"/>
-                </GridLayout>
-            </LinearLayout>
-        </ScrollView>
-
-        <LinearLayout
-            android:id="@+id/layoutHealth"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center"
-            android:visibility="gone">
-            <!-- NEW: Add Waveform at the top -->
+            android:padding="16dp">
+
+            <!-- Connection Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                android:layout_margin="10dp">
+                app:cardElevation="4dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="12dp">
+                    android:padding="16dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnConnect"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="Connect Device"
+                        android:textAllCaps="false"
+                        app:cornerRadius="8dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/deviceInfoLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/imgDevice"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_massage"
+                            android:contentDescription="Device"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="16dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txtDeviceName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                tools:text="Massage Pro X1"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txtBattery"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                tools:text="Battery: 85%"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Control Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PPG WAVEFORM"
-                        android:letterSpacing="0.1"
-                        android:textColor="#757575"
+                        android:text="Điều khiển massage"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Intensity Slider -->
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Level: 0"
+                        android:textSize="14sp"
                         android:layout_marginBottom="8dp"/>
 
-                    <com.example.myapplication.WaveformView
-                        android:id="@+id/waveformView"
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/sliderIntensity"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"/>
+                        android:layout_height="wrap_content"
+                        android:valueFrom="0"
+                        android:valueTo="5"
+                        android:stepSize="1"
+                        android:value="0"
+                        android:enabled="false"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Control Buttons -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnRotate"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:text="🔄 Rotate"
+                            android:textAllCaps="false"
+                            android:enabled="false"
+                            app:cornerRadius="8dp"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnHeat"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:text="🔥 Heat"
+                            android:textAllCaps="false"
+                            android:enabled="false"
+                            app:cornerRadius="8dp"/>
+
+                    </LinearLayout>
+
+                    <!-- AI Assistant Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAssistant"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="🤖 AI Assistant"
+                        android:textAllCaps="false"
+                        android:enabled="false"
+                        app:cornerRadius="8dp"
+                        style="@style/Widget.Material3.Button.TonalButton"/>
+
                 </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Audio Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                android:layout_margin="10dp">
+                app:cardElevation="4dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="20dp"
-                    android:gravity="center">
+                    android:padding="16dp">
 
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="HEART RATE"
-                        android:letterSpacing="0.1"
-                        android:textColor="#757575"/>
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/txtHeartRate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-- BPM"
-                        android:textSize="48sp"
+                        android:text="Âm thanh"
+                        android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="#D32F2F"/>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+                        android:layout_marginBottom="16dp"/>
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                android:layout_margin="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp"
-                    android:gravity="center">
-
+                    <!-- Volume Slider -->
                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtVolume"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="BLOOD OXYGEN (SpO2)"
-                        android:letterSpacing="0.1"
-                        android:textColor="#757575"/>
+                        android:text="Volume: 50%"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp"/>
 
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/txtSpO2"
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/sliderVolume"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="-- %"
-                        android:textSize="48sp"
-                        android:textStyle="bold"
-                        android:textColor="#1976D2"/>
+                        android:valueFrom="0"
+                        android:valueTo="100"
+                        android:stepSize="10"
+                        android:value="50"
+                        android:enabled="false"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Mute Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMute"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="🔊 Mute"
+                        android:textAllCaps="false"
+                        android:enabled="false"
+                        app:cornerRadius="8dp"
+                        style="@style/Widget.Material3.Button.OutlinedButton"/>
+
                 </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
-    </FrameLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#F5F5F5"
-        android:padding="8dp">
+    </androidx.core.widget.NestedScrollView>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/tabControl"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Controls"
-            android:textColor="@color/black" />
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="#CCCCCC"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/tabHealth"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Health"
-            android:textColor="#757575" />
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

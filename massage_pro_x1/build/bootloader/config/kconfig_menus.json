@@ -2645,7 +2645,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "!IDF_TARGET_LINUX && <choice APP_BUILD_TYPE> && <choice APP_BUILD_TYPE>",
+                        "depends_on": "!IDF_TARGET_LINUX && <choice APP_BUILD_TYPE>",
                         "help": null,
                         "id": "APP_BUILD_TYPE_APP_2NDBOOT",
                         "name": "APP_BUILD_TYPE_APP_2NDBOOT",
@@ -2655,7 +2655,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice APP_BUILD_TYPE> && <choice APP_BUILD_TYPE>",
+                        "depends_on": "<choice APP_BUILD_TYPE>",
                         "help": null,
                         "id": "APP_BUILD_TYPE_RAM",
                         "name": "APP_BUILD_TYPE_RAM",
@@ -2924,7 +2924,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice BOOTLOADER_COMPILER_OPTIMIZATION> && <choice BOOTLOADER_COMPILER_OPTIMIZATION>",
+                        "depends_on": "<choice BOOTLOADER_COMPILER_OPTIMIZATION>",
                         "help": null,
                         "id": "BOOTLOADER_COMPILER_OPTIMIZATION_SIZE",
                         "name": "BOOTLOADER_COMPILER_OPTIMIZATION_SIZE",
@@ -2934,7 +2934,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice BOOTLOADER_COMPILER_OPTIMIZATION> && <choice BOOTLOADER_COMPILER_OPTIMIZATION>",
+                        "depends_on": "<choice BOOTLOADER_COMPILER_OPTIMIZATION>",
                         "help": null,
                         "id": "BOOTLOADER_COMPILER_OPTIMIZATION_DEBUG",
                         "name": "BOOTLOADER_COMPILER_OPTIMIZATION_DEBUG",
@@ -2944,7 +2944,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice BOOTLOADER_COMPILER_OPTIMIZATION> && <choice BOOTLOADER_COMPILER_OPTIMIZATION>",
+                        "depends_on": "<choice BOOTLOADER_COMPILER_OPTIMIZATION>",
                         "help": null,
                         "id": "BOOTLOADER_COMPILER_OPTIMIZATION_PERF",
                         "name": "BOOTLOADER_COMPILER_OPTIMIZATION_PERF",
@@ -2966,7 +2966,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice BOOTLOADER_LOG_VERSION> && <choice BOOTLOADER_LOG_VERSION>",
+                                "depends_on": "<choice BOOTLOADER_LOG_VERSION>",
                                 "help": null,
                                 "id": "BOOTLOADER_LOG_VERSION_1",
                                 "name": "BOOTLOADER_LOG_VERSION_1",
@@ -2976,7 +2976,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice BOOTLOADER_LOG_VERSION> && <choice BOOTLOADER_LOG_VERSION>",
+                                "depends_on": "<choice BOOTLOADER_LOG_VERSION>",
                                 "help": null,
                                 "id": "BOOTLOADER_LOG_VERSION_2",
                                 "name": "BOOTLOADER_LOG_VERSION_2",
@@ -3006,7 +3006,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL> && <choice BOOTLOADER_LOG_LEVEL>",
+                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
                                 "help": null,
                                 "id": "BOOTLOADER_LOG_LEVEL_NONE",
                                 "name": "BOOTLOADER_LOG_LEVEL_NONE",
@@ -3016,7 +3016,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL> && <choice BOOTLOADER_LOG_LEVEL>",
+                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
                                 "help": null,
                                 "id": "BOOTLOADER_LOG_LEVEL_ERROR",
                                 "name": "BOOTLOADER_LOG_LEVEL_ERROR",
@@ -3026,7 +3026,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL> && <choice BOOTLOADER_LOG_LEVEL>",
+                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
                                 "help": null,
                                 "id": "BOOTLOADER_LOG_LEVEL_WARN",
                                 "name": "BOOTLOADER_LOG_LEVEL_WARN",
@@ -3036,7 +3036,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL> && <choice BOOTLOADER_LOG_LEVEL>",
+                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
                                 "help": null,
                                 "id": "BOOTLOADER_LOG_LEVEL_INFO",
                                 "name": "BOOTLOADER_LOG_LEVEL_INFO",
@@ -3046,7 +3046,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL> && <choice BOOTLOADER_LOG_LEVEL>",
+                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
                                 "help": null,
                                 "id": "BOOTLOADER_LOG_LEVEL_DEBUG",
                                 "name": "BOOTLOADER_LOG_LEVEL_DEBUG",
@@ -3056,7 +3056,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL> && <choice BOOTLOADER_LOG_LEVEL>",
+                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
                                 "help": null,
                                 "id": "BOOTLOADER_LOG_LEVEL_VERBOSE",
                                 "name": "BOOTLOADER_LOG_LEVEL_VERBOSE",
@@ -3108,7 +3108,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "BOOTLOADER_LOG_VERSION_2 && <choice BOOTLOADER_LOG_TIMESTAMP_SOURCE> && <choice BOOTLOADER_LOG_TIMESTAMP_SOURCE>",
+                                        "depends_on": "BOOTLOADER_LOG_VERSION_2 && <choice BOOTLOADER_LOG_TIMESTAMP_SOURCE>",
                                         "help": null,
                                         "id": "BOOTLOADER_LOG_TIMESTAMP_SOURCE_NONE",
                                         "name": "BOOTLOADER_LOG_TIMESTAMP_SOURCE_NONE",
@@ -3118,7 +3118,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice BOOTLOADER_LOG_TIMESTAMP_SOURCE> && <choice BOOTLOADER_LOG_TIMESTAMP_SOURCE>",
+                                        "depends_on": "<choice BOOTLOADER_LOG_TIMESTAMP_SOURCE>",
                                         "help": null,
                                         "id": "BOOTLOADER_LOG_TIMESTAMP_SOURCE_CPU_TICKS",
                                         "name": "BOOTLOADER_LOG_TIMESTAMP_SOURCE_CPU_TICKS",
@@ -3176,7 +3176,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "<choice BOOTLOADER_LOG_MODE> && <choice BOOTLOADER_LOG_MODE>",
+                                        "depends_on": "<choice BOOTLOADER_LOG_MODE>",
                                         "help": "Enables text-based logging, where log messages are stored in a human-readable format.\nThis mode is useful for development and debugging, as it allows logs to be easily\nread and interpreted without additional processing.",
                                         "id": "BOOTLOADER_LOG_MODE_TEXT",
                                         "name": "BOOTLOADER_LOG_MODE_TEXT",
@@ -3186,7 +3186,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "BOOTLOADER_LOG_VERSION_2 && <choice BOOTLOADER_LOG_MODE> && <choice BOOTLOADER_LOG_MODE>",
+                                        "depends_on": "BOOTLOADER_LOG_VERSION_2 && <choice BOOTLOADER_LOG_MODE>",
                                         "help": "Enables binary logging with host-side format string expansion. In this mode, the\nformat argument of ESP_LOGx, ESP_EARLY_LOG, and ESP_DRAM_LOG macros is stored in a\nNOLOAD section, not included in the final binary file. This reduces flash usage by\napproximately 10% - 35%. The esp_log() function uses the binary log handler to output\nmessages. Instead of sending the full log string, the chip transmits only the\naddresses of these strings (if present in the ELF file). If the format string\ncannot be found in the ELF file, the chip sends the entire string. The host-side\nmonitor tool, which has access to the ELF file, reconstructs the log message using\nthe format string.\nThis reduces firmware size by eliminating format strings from\nflash memory and removing the usage of printf-like functions, potentially freeing up\na few kilobytes of space. To further reduce firmware size, wrap string data with ESP_LOG_ATTR_STR.",
                                         "id": "BOOTLOADER_LOG_MODE_BINARY",
                                         "name": "BOOTLOADER_LOG_MODE_BINARY",
@@ -3326,7 +3326,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "!ESPTOOLPY_FLASHFREQ_80M && <choice BOOTLOADER_VDDSDIO_BOOST> && <choice BOOTLOADER_VDDSDIO_BOOST>",
+                        "depends_on": "!ESPTOOLPY_FLASHFREQ_80M && <choice BOOTLOADER_VDDSDIO_BOOST>",
                         "help": null,
                         "id": "BOOTLOADER_VDDSDIO_BOOST_1_8V",
                         "name": "BOOTLOADER_VDDSDIO_BOOST_1_8V",
@@ -3336,7 +3336,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice BOOTLOADER_VDDSDIO_BOOST> && <choice BOOTLOADER_VDDSDIO_BOOST>",
+                        "depends_on": "<choice BOOTLOADER_VDDSDIO_BOOST>",
                         "help": null,
                         "id": "BOOTLOADER_VDDSDIO_BOOST_1_9V",
                         "name": "BOOTLOADER_VDDSDIO_BOOST_1_9V",
@@ -3731,7 +3731,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "SECURE_BOOT_V1_SUPPORTED && (SECURE_SIGNED_APPS_NO_SECURE_BOOT || SECURE_BOOT_V1_ENABLED) && <choice SECURE_SIGNED_APPS_SCHEME> && <choice SECURE_SIGNED_APPS_SCHEME>",
+                        "depends_on": "SECURE_BOOT_V1_SUPPORTED && (SECURE_SIGNED_APPS_NO_SECURE_BOOT || SECURE_BOOT_V1_ENABLED) && <choice SECURE_SIGNED_APPS_SCHEME>",
                         "help": "Embeds the ECDSA public key in the bootloader and signs the application with an ECDSA key.\nRefer to the documentation before enabling.",
                         "id": "SECURE_SIGNED_APPS_ECDSA_SCHEME",
                         "name": "SECURE_SIGNED_APPS_ECDSA_SCHEME",
@@ -3741,7 +3741,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "SECURE_BOOT_V2_RSA_SUPPORTED && (SECURE_SIGNED_APPS_NO_SECURE_BOOT || SECURE_BOOT_V2_ENABLED) && !(IDF_TARGET_ESP32C5 && ESP32C5_REV_MIN_FULL < 1) && <choice SECURE_SIGNED_APPS_SCHEME> && <choice SECURE_SIGNED_APPS_SCHEME>",
+                        "depends_on": "SECURE_BOOT_V2_RSA_SUPPORTED && (SECURE_SIGNED_APPS_NO_SECURE_BOOT || SECURE_BOOT_V2_ENABLED) && !(IDF_TARGET_ESP32C5 && ESP32C5_REV_MIN_FULL < 1) && <choice SECURE_SIGNED_APPS_SCHEME>",
                         "help": "Appends the RSA-3072 based Signature block to the application.\nRefer to <Secure Boot Version 2 documentation link> before enabling.",
                         "id": "SECURE_SIGNED_APPS_RSA_SCHEME",
                         "name": "SECURE_SIGNED_APPS_RSA_SCHEME",
@@ -3751,7 +3751,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "SECURE_BOOT_V2_ECC_SUPPORTED && (SECURE_SIGNED_APPS_NO_SECURE_BOOT || SECURE_BOOT_V2_ENABLED) && <choice SECURE_SIGNED_APPS_SCHEME> && <choice SECURE_SIGNED_APPS_SCHEME>",
+                        "depends_on": "SECURE_BOOT_V2_ECC_SUPPORTED && (SECURE_SIGNED_APPS_NO_SECURE_BOOT || SECURE_BOOT_V2_ENABLED) && <choice SECURE_SIGNED_APPS_SCHEME>",
                         "help": "For Secure boot V2 (e.g., ESP32-C2 SoC), appends ECDSA based signature block to the application.\nRefer to documentation before enabling.",
                         "id": "SECURE_SIGNED_APPS_ECDSA_V2_SCHEME",
                         "name": "SECURE_SIGNED_APPS_ECDSA_V2_SCHEME",
@@ -3771,7 +3771,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "SECURE_SIGNED_APPS_ECDSA_V2_SCHEME && <choice SECURE_BOOT_ECDSA_KEY_LEN_SIZE> && <choice SECURE_BOOT_ECDSA_KEY_LEN_SIZE>",
+                        "depends_on": "SECURE_SIGNED_APPS_ECDSA_V2_SCHEME && <choice SECURE_BOOT_ECDSA_KEY_LEN_SIZE>",
                         "help": null,
                         "id": "SECURE_BOOT_ECDSA_KEY_LEN_192_BITS",
                         "name": "SECURE_BOOT_ECDSA_KEY_LEN_192_BITS",
@@ -3781,7 +3781,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "SECURE_SIGNED_APPS_ECDSA_V2_SCHEME && <choice SECURE_BOOT_ECDSA_KEY_LEN_SIZE> && <choice SECURE_BOOT_ECDSA_KEY_LEN_SIZE>",
+                        "depends_on": "SECURE_SIGNED_APPS_ECDSA_V2_SCHEME && <choice SECURE_BOOT_ECDSA_KEY_LEN_SIZE>",
                         "help": null,
                         "id": "SECURE_BOOT_ECDSA_KEY_LEN_256_BITS",
                         "name": "SECURE_BOOT_ECDSA_KEY_LEN_256_BITS",
@@ -3791,7 +3791,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "SECURE_SIGNED_APPS_ECDSA_V2_SCHEME && SOC_ECDSA_SUPPORT_CURVE_P384 && <choice SECURE_BOOT_ECDSA_KEY_LEN_SIZE> && <choice SECURE_BOOT_ECDSA_KEY_LEN_SIZE>",
+                        "depends_on": "SECURE_SIGNED_APPS_ECDSA_V2_SCHEME && SOC_ECDSA_SUPPORT_CURVE_P384 && <choice SECURE_BOOT_ECDSA_KEY_LEN_SIZE>",
                         "help": null,
                         "id": "SECURE_BOOT_ECDSA_KEY_LEN_384_BITS",
                         "name": "SECURE_BOOT_ECDSA_KEY_LEN_384_BITS",
@@ -3872,7 +3872,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice SECURE_BOOTLOADER_MODE> && <choice SECURE_BOOTLOADER_MODE>",
+                        "depends_on": "<choice SECURE_BOOTLOADER_MODE>",
                         "help": "On first boot, the bootloader will generate a key which is not readable externally or by software. A\ndigest is generated from the bootloader image itself. This digest will be verified on each subsequent\nboot.\n\nEnabling this option means that the bootloader cannot be changed after the first time it is booted.",
                         "id": "SECURE_BOOTLOADER_ONE_TIME_FLASH",
                         "name": "SECURE_BOOTLOADER_ONE_TIME_FLASH",
@@ -3882,7 +3882,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice SECURE_BOOTLOADER_MODE> && <choice SECURE_BOOTLOADER_MODE>",
+                        "depends_on": "<choice SECURE_BOOTLOADER_MODE>",
                         "help": "Generate a reusable secure bootloader key, derived (via SHA-256) from the secure boot signing key.\n\nThis allows the secure bootloader to be re-flashed by anyone with access to the secure boot signing\nkey.\n\nThis option is less secure than one-time flash, because a leak of the digest key from one device\nallows reflashing of any device that uses it.",
                         "id": "SECURE_BOOTLOADER_REFLASHABLE",
                         "name": "SECURE_BOOTLOADER_REFLASHABLE",
@@ -3963,7 +3963,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice SECURE_BOOTLOADER_KEY_ENCODING> && <choice SECURE_BOOTLOADER_KEY_ENCODING>",
+                        "depends_on": "<choice SECURE_BOOTLOADER_KEY_ENCODING>",
                         "help": null,
                         "id": "SECURE_BOOTLOADER_KEY_ENCODING_256BIT",
                         "name": "SECURE_BOOTLOADER_KEY_ENCODING_256BIT",
@@ -3973,7 +3973,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice SECURE_BOOTLOADER_KEY_ENCODING> && <choice SECURE_BOOTLOADER_KEY_ENCODING>",
+                        "depends_on": "<choice SECURE_BOOTLOADER_KEY_ENCODING>",
                         "help": null,
                         "id": "SECURE_BOOTLOADER_KEY_ENCODING_192BIT",
                         "name": "SECURE_BOOTLOADER_KEY_ENCODING_192BIT",
@@ -4293,7 +4293,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice SECURE_UART_ROM_DL_MODE> && <choice SECURE_UART_ROM_DL_MODE>",
+                        "depends_on": "<choice SECURE_UART_ROM_DL_MODE>",
                         "help": "If set, during startup the app will burn an eFuse bit to permanently disable the UART ROM\nDownload Mode. This prevents any future use of esptool.py, espefuse.py and similar tools.\n\nOnce disabled, if the SoC is booted with strapping pins set for ROM Download Mode\nthen an error is printed instead.\n\nIt is recommended to enable this option in any production application where Flash\nEncryption and/or Secure Boot is enabled and access to Download Mode is not required.\n\nIt is also possible to permanently disable Download Mode by calling\nesp_efuse_disable_rom_download_mode() at runtime.",
                         "id": "SECURE_DISABLE_ROM_DL_MODE",
                         "name": "SECURE_DISABLE_ROM_DL_MODE",
@@ -4303,7 +4303,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "SOC_SUPPORTS_SECURE_DL_MODE && <choice SECURE_UART_ROM_DL_MODE> && <choice SECURE_UART_ROM_DL_MODE>",
+                        "depends_on": "SOC_SUPPORTS_SECURE_DL_MODE && <choice SECURE_UART_ROM_DL_MODE>",
                         "help": "If set, during startup the app will burn an eFuse bit to permanently switch the UART ROM\nDownload Mode into a separate Secure Download mode. This option can only work if\nDownload Mode is not already disabled by eFuse.\n\nSecure Download mode limits the use of Download Mode functions to update SPI config,\nchanging baud rate, basic flash write and a command to return a summary of currently\nenabled security features (`get_security_info`).\n\nSecure Download mode is not compatible with the esptool.py flasher stub feature,\nespefuse.py, read/writing memory or registers, encrypted download, or any other\nfeatures that interact with unsupported Download Mode commands.\n\nSecure Download mode should be enabled in any application where Flash Encryption\nand/or Secure Boot is enabled. Disabling this option does not immediately cancel\nthe benefits of the security features, but it increases the potential \"attack\nsurface\" for an attacker to try and bypass them with a successful physical attack.\n\nIt is also possible to enable secure download mode at runtime by calling\nesp_efuse_enable_rom_secure_download_mode()\n\nNote: Secure Download mode is not available for ESP32.",
                         "id": "SECURE_ENABLE_SECURE_ROM_DL_MODE",
                         "name": "SECURE_ENABLE_SECURE_ROM_DL_MODE",
@@ -4313,7 +4313,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice SECURE_UART_ROM_DL_MODE> && <choice SECURE_UART_ROM_DL_MODE>",
+                        "depends_on": "<choice SECURE_UART_ROM_DL_MODE>",
                         "help": "This is a potentially insecure option.\nEnabling this option will allow the full UART download mode to stay enabled.\nThis option SHOULD NOT BE ENABLED for production use cases.",
                         "id": "SECURE_INSECURE_ALLOW_DL_MODE",
                         "name": "SECURE_INSECURE_ALLOW_DL_MODE",
@@ -4553,7 +4553,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice BOOT_ROM_LOG_SCHEME> && <choice BOOT_ROM_LOG_SCHEME>",
+                        "depends_on": "<choice BOOT_ROM_LOG_SCHEME>",
                         "help": "Always print ROM logs, this is the default behavior.",
                         "id": "BOOT_ROM_LOG_ALWAYS_ON",
                         "name": "BOOT_ROM_LOG_ALWAYS_ON",
@@ -4563,7 +4563,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice BOOT_ROM_LOG_SCHEME> && <choice BOOT_ROM_LOG_SCHEME>",
+                        "depends_on": "<choice BOOT_ROM_LOG_SCHEME>",
                         "help": "Don't print ROM logs.",
                         "id": "BOOT_ROM_LOG_ALWAYS_OFF",
                         "name": "BOOT_ROM_LOG_ALWAYS_OFF",
@@ -4573,7 +4573,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice BOOT_ROM_LOG_SCHEME> && <choice BOOT_ROM_LOG_SCHEME>",
+                        "depends_on": "<choice BOOT_ROM_LOG_SCHEME>",
                         "help": "Print ROM logs when GPIO level is high during start up.\nThe GPIO number is chip dependent,\ne.g. on ESP32-S2, the control GPIO is GPIO46.",
                         "id": "BOOT_ROM_LOG_ON_GPIO_HIGH",
                         "name": "BOOT_ROM_LOG_ON_GPIO_HIGH",
@@ -4583,7 +4583,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice BOOT_ROM_LOG_SCHEME> && <choice BOOT_ROM_LOG_SCHEME>",
+                        "depends_on": "<choice BOOT_ROM_LOG_SCHEME>",
                         "help": "Print ROM logs when GPIO level is low during start up.\nThe GPIO number is chip dependent,\ne.g. on ESP32-S2, the control GPIO is GPIO46.",
                         "id": "BOOT_ROM_LOG_ON_GPIO_LOW",
                         "name": "BOOT_ROM_LOG_ON_GPIO_LOW",
@@ -4609,7 +4609,7 @@
         "children": [
             {
                 "children": [],
-                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": "The flasher tool sends a precompiled download stub first by default. That stub allows things\nlike compressed downloads and more. Usually you should not need to disable that feature",
                 "id": "ESPTOOLPY_NO_STUB",
                 "name": "ESPTOOLPY_NO_STUB",
@@ -4619,7 +4619,7 @@
             },
             {
                 "children": [],
-                "depends_on": "SOC_SPI_MEM_SUPPORT_FLASH_OPI_MODE && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "SOC_SPI_MEM_SUPPORT_FLASH_OPI_MODE && !APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": null,
                 "id": "ESPTOOLPY_OCT_FLASH",
                 "name": "ESPTOOLPY_OCT_FLASH",
@@ -4629,7 +4629,7 @@
             },
             {
                 "children": [],
-                "depends_on": "SOC_SPI_MEM_SUPPORT_FLASH_OPI_MODE && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "SOC_SPI_MEM_SUPPORT_FLASH_OPI_MODE && !APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": "This config option helps decide whether flash is Quad or Octal, but please note some limitations:\n\n1. If the flash chip is an Octal one, even if one of \"QIO\", \"QOUT\", \"DIO\", \"DOUT\" options is\n   selected in `ESPTOOLPY_FLASHMODE`, our code will automatically change the\n   mode to \"OPI\" and the sample mode will be STR.\n2. If the flash chip is a Quad one, even if \"OPI\" is selected in `ESPTOOLPY_FLASHMODE`, our code will\n   automatically change the mode to \"DIO\".\n3. This option is mainly to improve the out-of-box experience of developers. It doesn't guarantee\n   the feature-complete. Some code still rely on `ESPTOOLPY_OCT_FLASH`. Please do not rely on this option\n   when you are pretty sure that you are using Octal flash.\n   In this case, please enable `ESPTOOLPY_OCT_FLASH` option, then you can choose `DTR` sample mode\n   in `ESPTOOLPY_FLASH_SAMPLE_MODE`. Otherwise, only `STR` mode is available.\n4. Enabling this feature reduces available internal RAM size (around 900 bytes).\n   If your IRAM space is insufficient and you're aware of your flash type,\n   disable this option and select corresponding flash type options.",
                 "id": "ESPTOOLPY_FLASH_MODE_AUTO_DETECT",
                 "name": "ESPTOOLPY_FLASH_MODE_AUTO_DETECT",
@@ -4641,7 +4641,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "!ESPTOOLPY_OCT_FLASH && <choice ESPTOOLPY_FLASHMODE> && <choice ESPTOOLPY_FLASHMODE>",
+                        "depends_on": "!ESPTOOLPY_OCT_FLASH && <choice ESPTOOLPY_FLASHMODE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHMODE_QIO",
                         "name": "ESPTOOLPY_FLASHMODE_QIO",
@@ -4651,7 +4651,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "!ESPTOOLPY_OCT_FLASH && <choice ESPTOOLPY_FLASHMODE> && <choice ESPTOOLPY_FLASHMODE>",
+                        "depends_on": "!ESPTOOLPY_OCT_FLASH && <choice ESPTOOLPY_FLASHMODE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHMODE_QOUT",
                         "name": "ESPTOOLPY_FLASHMODE_QOUT",
@@ -4661,7 +4661,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "!ESPTOOLPY_OCT_FLASH && <choice ESPTOOLPY_FLASHMODE> && <choice ESPTOOLPY_FLASHMODE>",
+                        "depends_on": "!ESPTOOLPY_OCT_FLASH && <choice ESPTOOLPY_FLASHMODE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHMODE_DIO",
                         "name": "ESPTOOLPY_FLASHMODE_DIO",
@@ -4671,7 +4671,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "!ESPTOOLPY_OCT_FLASH && <choice ESPTOOLPY_FLASHMODE> && <choice ESPTOOLPY_FLASHMODE>",
+                        "depends_on": "!ESPTOOLPY_OCT_FLASH && <choice ESPTOOLPY_FLASHMODE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHMODE_DOUT",
                         "name": "ESPTOOLPY_FLASHMODE_DOUT",
@@ -4681,7 +4681,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "ESPTOOLPY_OCT_FLASH && <choice ESPTOOLPY_FLASHMODE> && <choice ESPTOOLPY_FLASHMODE>",
+                        "depends_on": "ESPTOOLPY_OCT_FLASH && <choice ESPTOOLPY_FLASHMODE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHMODE_OPI",
                         "name": "ESPTOOLPY_FLASHMODE_OPI",
@@ -4690,7 +4690,7 @@
                         "type": "bool"
                     }
                 ],
-                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": "Mode the flash chip is flashed in, as well as the default mode for the\nbinary to run in.",
                 "id": "serial-flasher-config-flash-spi-mode-home-phong-esp-idf-components-esptool_py-Kconfig.projbuild-39",
                 "name": "ESPTOOLPY_FLASHMODE",
@@ -4701,7 +4701,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_FLASH_SAMPLE_MODE> && <choice ESPTOOLPY_FLASH_SAMPLE_MODE>",
+                        "depends_on": "<choice ESPTOOLPY_FLASH_SAMPLE_MODE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASH_SAMPLE_MODE_STR",
                         "name": "ESPTOOLPY_FLASH_SAMPLE_MODE_STR",
@@ -4711,7 +4711,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "ESPTOOLPY_OCT_FLASH && <choice ESPTOOLPY_FLASH_SAMPLE_MODE> && <choice ESPTOOLPY_FLASH_SAMPLE_MODE>",
+                        "depends_on": "ESPTOOLPY_OCT_FLASH && <choice ESPTOOLPY_FLASH_SAMPLE_MODE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASH_SAMPLE_MODE_DTR",
                         "name": "ESPTOOLPY_FLASH_SAMPLE_MODE_DTR",
@@ -4720,7 +4720,7 @@
                         "type": "bool"
                     }
                 ],
-                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": null,
                 "id": "serial-flasher-config-flash-sampling-mode-home-phong-esp-idf-components-esptool_py-Kconfig.projbuild-64",
                 "name": "ESPTOOLPY_FLASH_SAMPLE_MODE",
@@ -4729,7 +4729,7 @@
             },
             {
                 "children": [],
-                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": null,
                 "id": "ESPTOOLPY_FLASHMODE",
                 "name": "ESPTOOLPY_FLASHMODE",
@@ -4741,7 +4741,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_FLASHFREQ> && <choice ESPTOOLPY_FLASHFREQ>",
+                        "depends_on": "<choice ESPTOOLPY_FLASHFREQ>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHFREQ_80M",
                         "name": "ESPTOOLPY_FLASHFREQ_80M",
@@ -4751,7 +4751,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_FLASHFREQ> && <choice ESPTOOLPY_FLASHFREQ>",
+                        "depends_on": "<choice ESPTOOLPY_FLASHFREQ>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHFREQ_40M",
                         "name": "ESPTOOLPY_FLASHFREQ_40M",
@@ -4761,7 +4761,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_FLASHFREQ> && <choice ESPTOOLPY_FLASHFREQ>",
+                        "depends_on": "<choice ESPTOOLPY_FLASHFREQ>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHFREQ_26M",
                         "name": "ESPTOOLPY_FLASHFREQ_26M",
@@ -4771,7 +4771,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_FLASHFREQ> && <choice ESPTOOLPY_FLASHFREQ>",
+                        "depends_on": "<choice ESPTOOLPY_FLASHFREQ>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHFREQ_20M",
                         "name": "ESPTOOLPY_FLASHFREQ_20M",
@@ -4780,7 +4780,7 @@
                         "type": "bool"
                     }
                 ],
-                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": null,
                 "id": "serial-flasher-config-flash-spi-speed-home-phong-esp-idf-components-esptool_py-..-spi_flash-esp32-Kconfig.flash_freq-1",
                 "name": "ESPTOOLPY_FLASHFREQ",
@@ -4789,7 +4789,7 @@
             },
             {
                 "children": [],
-                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": null,
                 "id": "ESPTOOLPY_FLASHFREQ",
                 "name": "ESPTOOLPY_FLASHFREQ",
@@ -4801,7 +4801,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE> && <choice ESPTOOLPY_FLASHSIZE>",
+                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHSIZE_1MB",
                         "name": "ESPTOOLPY_FLASHSIZE_1MB",
@@ -4811,7 +4811,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE> && <choice ESPTOOLPY_FLASHSIZE>",
+                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHSIZE_2MB",
                         "name": "ESPTOOLPY_FLASHSIZE_2MB",
@@ -4821,7 +4821,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE> && <choice ESPTOOLPY_FLASHSIZE>",
+                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHSIZE_4MB",
                         "name": "ESPTOOLPY_FLASHSIZE_4MB",
@@ -4831,7 +4831,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE> && <choice ESPTOOLPY_FLASHSIZE>",
+                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHSIZE_8MB",
                         "name": "ESPTOOLPY_FLASHSIZE_8MB",
@@ -4841,7 +4841,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE> && <choice ESPTOOLPY_FLASHSIZE>",
+                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHSIZE_16MB",
                         "name": "ESPTOOLPY_FLASHSIZE_16MB",
@@ -4851,7 +4851,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE> && <choice ESPTOOLPY_FLASHSIZE>",
+                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHSIZE_32MB",
                         "name": "ESPTOOLPY_FLASHSIZE_32MB",
@@ -4861,7 +4861,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE> && <choice ESPTOOLPY_FLASHSIZE>",
+                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHSIZE_64MB",
                         "name": "ESPTOOLPY_FLASHSIZE_64MB",
@@ -4871,7 +4871,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE> && <choice ESPTOOLPY_FLASHSIZE>",
+                        "depends_on": "<choice ESPTOOLPY_FLASHSIZE>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHSIZE_128MB",
                         "name": "ESPTOOLPY_FLASHSIZE_128MB",
@@ -4880,7 +4880,7 @@
                         "type": "bool"
                     }
                 ],
-                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": "SPI flash size, in megabytes",
                 "id": "serial-flasher-config-flash-size-home-phong-esp-idf-components-esptool_py-Kconfig.projbuild-112",
                 "name": "ESPTOOLPY_FLASHSIZE",
@@ -4889,7 +4889,7 @@
             },
             {
                 "children": [],
-                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": null,
                 "id": "ESPTOOLPY_FLASHSIZE",
                 "name": "ESPTOOLPY_FLASHSIZE",
@@ -4899,7 +4899,7 @@
             },
             {
                 "children": [],
-                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": "If this option is set, flashing the project will automatically detect\nthe flash size of the target chip and update the bootloader image\nbefore it is flashed.\n\nEnabling this option turns off the image protection against corruption\nby a SHA256 digest. Updating the bootloader image before flashing would\ninvalidate the digest.",
                 "id": "ESPTOOLPY_HEADER_FLASHSIZE_UPDATE",
                 "name": "ESPTOOLPY_HEADER_FLASHSIZE_UPDATE",
@@ -4911,7 +4911,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_BEFORE> && <choice ESPTOOLPY_BEFORE>",
+                        "depends_on": "<choice ESPTOOLPY_BEFORE>",
                         "help": null,
                         "id": "ESPTOOLPY_BEFORE_RESET",
                         "name": "ESPTOOLPY_BEFORE_RESET",
@@ -4921,7 +4921,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_BEFORE> && <choice ESPTOOLPY_BEFORE>",
+                        "depends_on": "<choice ESPTOOLPY_BEFORE>",
                         "help": null,
                         "id": "ESPTOOLPY_BEFORE_NORESET",
                         "name": "ESPTOOLPY_BEFORE_NORESET",
@@ -4930,7 +4930,7 @@
                         "type": "bool"
                     }
                 ],
-                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": "Configure whether esptool.py should reset the ESP32 before flashing.\n\nAutomatic resetting depends on the RTS & DTR signals being\nwired from the serial port to the ESP32. Most USB development\nboards do this internally.",
                 "id": "serial-flasher-config-before-flashing-home-phong-esp-idf-components-esptool_py-Kconfig.projbuild-159",
                 "name": "ESPTOOLPY_BEFORE",
@@ -4939,7 +4939,7 @@
             },
             {
                 "children": [],
-                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": null,
                 "id": "ESPTOOLPY_BEFORE",
                 "name": "ESPTOOLPY_BEFORE",
@@ -4951,7 +4951,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_AFTER> && <choice ESPTOOLPY_AFTER>",
+                        "depends_on": "<choice ESPTOOLPY_AFTER>",
                         "help": null,
                         "id": "ESPTOOLPY_AFTER_RESET",
                         "name": "ESPTOOLPY_AFTER_RESET",
@@ -4961,7 +4961,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice ESPTOOLPY_AFTER> && <choice ESPTOOLPY_AFTER>",
+                        "depends_on": "<choice ESPTOOLPY_AFTER>",
                         "help": null,
                         "id": "ESPTOOLPY_AFTER_NORESET",
                         "name": "ESPTOOLPY_AFTER_NORESET",
@@ -4970,7 +4970,7 @@
                         "type": "bool"
                     }
                 ],
-                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": "Configure whether esptool.py should reset the ESP32 after flashing.\n\nAutomatic resetting depends on the RTS & DTR signals being\nwired from the serial port to the ESP32. Most USB development\nboards do this internally.",
                 "id": "serial-flasher-config-after-flashing-home-phong-esp-idf-components-esptool_py-Kconfig.projbuild-180",
                 "name": "ESPTOOLPY_AFTER",
@@ -4979,7 +4979,7 @@
             },
             {
                 "children": [],
-                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": null,
                 "id": "ESPTOOLPY_AFTER",
                 "name": "ESPTOOLPY_AFTER",
@@ -4989,7 +4989,7 @@
             },
             {
                 "children": [],
-                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                 "help": null,
                 "id": "ESPTOOLPY_MONITOR_BAUD",
                 "name": "ESPTOOLPY_MONITOR_BAUD",
@@ -5009,7 +5009,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice PARTITION_TABLE_TYPE> && <choice PARTITION_TABLE_TYPE>",
+                        "depends_on": "<choice PARTITION_TABLE_TYPE>",
                         "help": "This is the default partition table, designed to fit into a 2MB or\nlarger flash with a single 1MB app partition.\n\nThe corresponding CSV file in the IDF directory is\ncomponents/partition_table/partitions_singleapp.csv\n\nThis partition table is not suitable for an app that needs OTA\n(over the air update) capability.",
                         "id": "PARTITION_TABLE_SINGLE_APP",
                         "name": "PARTITION_TABLE_SINGLE_APP",
@@ -5019,7 +5019,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice PARTITION_TABLE_TYPE> && <choice PARTITION_TABLE_TYPE>",
+                        "depends_on": "<choice PARTITION_TABLE_TYPE>",
                         "help": "This is a variation of the default partition table, that expands\nthe 1MB app partition size to 1.5MB to fit more code.\n\nThe corresponding CSV file in the IDF directory is\ncomponents/partition_table/partitions_singleapp_large.csv\n\nThis partition table is not suitable for an app that needs OTA\n(over the air update) capability.",
                         "id": "PARTITION_TABLE_SINGLE_APP_LARGE",
                         "name": "PARTITION_TABLE_SINGLE_APP_LARGE",
@@ -5029,7 +5029,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice PARTITION_TABLE_TYPE> && <choice PARTITION_TABLE_TYPE>",
+                        "depends_on": "<choice PARTITION_TABLE_TYPE>",
                         "help": "This is a basic OTA-enabled partition table with a factory app\npartition plus two OTA app partitions. All are 1MB, so this\npartition table requires 4MB or larger flash size.\n\nThe corresponding CSV file in the IDF directory is\ncomponents/partition_table/partitions_two_ota.csv",
                         "id": "PARTITION_TABLE_TWO_OTA",
                         "name": "PARTITION_TABLE_TWO_OTA",
@@ -5039,7 +5039,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice PARTITION_TABLE_TYPE> && <choice PARTITION_TABLE_TYPE>",
+                        "depends_on": "<choice PARTITION_TABLE_TYPE>",
                         "help": "This is a basic OTA-enabled partition table with\ntwo OTA app partitions. Both app partition sizes are 1700K,\nso this partition table requires 4MB or larger flash size.\n\nThe corresponding CSV file in the IDF directory is\ncomponents/partition_table/partitions_two_ota_large.csv",
                         "id": "PARTITION_TABLE_TWO_OTA_LARGE",
                         "name": "PARTITION_TABLE_TWO_OTA_LARGE",
@@ -5049,7 +5049,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice PARTITION_TABLE_TYPE> && <choice PARTITION_TABLE_TYPE>",
+                        "depends_on": "<choice PARTITION_TABLE_TYPE>",
                         "help": "Specify the path to the partition table CSV to use for your project.\n\nConsult the Partition Table section in the ESP-IDF Programmers Guide\nfor more information.",
                         "id": "PARTITION_TABLE_CUSTOM",
                         "name": "PARTITION_TABLE_CUSTOM",
@@ -5059,7 +5059,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "!ESP32_COREDUMP_ENABLE_TO_FLASH && NVS_SEC_KEY_PROTECT_USING_FLASH_ENC && <choice PARTITION_TABLE_TYPE> && <choice PARTITION_TABLE_TYPE>",
+                        "depends_on": "!ESP32_COREDUMP_ENABLE_TO_FLASH && NVS_SEC_KEY_PROTECT_USING_FLASH_ENC && <choice PARTITION_TABLE_TYPE>",
                         "help": "This is a variation of the default \"Single factory app, no OTA\" partition table\nthat supports encrypted NVS when using flash encryption. See the Flash Encryption section\nin the ESP-IDF Programmers Guide for more information.\n\nThe corresponding CSV file in the IDF directory is\ncomponents/partition_table/partitions_singleapp_encr_nvs.csv",
                         "id": "PARTITION_TABLE_SINGLE_APP_ENCRYPTED_NVS",
                         "name": "PARTITION_TABLE_SINGLE_APP_ENCRYPTED_NVS",
@@ -5069,7 +5069,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "!ESP32_COREDUMP_ENABLE_TO_FLASH && NVS_SEC_KEY_PROTECT_USING_FLASH_ENC && <choice PARTITION_TABLE_TYPE> && <choice PARTITION_TABLE_TYPE>",
+                        "depends_on": "!ESP32_COREDUMP_ENABLE_TO_FLASH && NVS_SEC_KEY_PROTECT_USING_FLASH_ENC && <choice PARTITION_TABLE_TYPE>",
                         "help": "This is a variation of the \"Single factory app (large), no OTA\" partition table\nthat supports encrypted NVS when using flash encryption. See the Flash Encryption section\nin the ESP-IDF Programmers Guide for more information.\n\nThe corresponding CSV file in the IDF directory is\ncomponents/partition_table/partitions_singleapp_large_encr_nvs.csv",
                         "id": "PARTITION_TABLE_SINGLE_APP_LARGE_ENC_NVS",
                         "name": "PARTITION_TABLE_SINGLE_APP_LARGE_ENC_NVS",
@@ -5079,7 +5079,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "!ESP_COREDUMP_ENABLE_TO_FLASH && NVS_SEC_KEY_PROTECT_USING_FLASH_ENC && <choice PARTITION_TABLE_TYPE> && <choice PARTITION_TABLE_TYPE>",
+                        "depends_on": "!ESP_COREDUMP_ENABLE_TO_FLASH && NVS_SEC_KEY_PROTECT_USING_FLASH_ENC && <choice PARTITION_TABLE_TYPE>",
                         "help": "This is a variation of the \"Factory app, two OTA definitions\" partition table\nthat supports encrypted NVS when using flash encryption. See the Flash Encryption section\nin the ESP-IDF Programmers Guide for more information.\n\nThe corresponding CSV file in the IDF directory is\ncomponents/partition_table/partitions_two_ota_encr_nvs.csv",
                         "id": "PARTITION_TABLE_TWO_OTA_ENCRYPTED_NVS",
                         "name": "PARTITION_TABLE_TWO_OTA_ENCRYPTED_NVS",
@@ -5089,7 +5089,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "SECURE_ENABLE_TEE && <choice PARTITION_TABLE_TYPE> && <choice PARTITION_TABLE_TYPE>",
+                        "depends_on": "SECURE_ENABLE_TEE && <choice PARTITION_TABLE_TYPE>",
                         "help": "This is a variation of the default \"Single factory app, no OTA\" partition table\nthat supports the ESP-TEE framework. See the Trusted Execution Environment (TEE) section\nin the ESP-IDF Programmers Guide for more information.\n\nThe corresponding CSV file in the IDF directory is\ncomponents/partition_table/partitions_singleapp_tee.csv",
                         "id": "PARTITION_TABLE_SINGLE_APP_TEE",
                         "name": "PARTITION_TABLE_SINGLE_APP_TEE",
@@ -5099,7 +5099,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "SECURE_ENABLE_TEE && <choice PARTITION_TABLE_TYPE> && <choice PARTITION_TABLE_TYPE>",
+                        "depends_on": "SECURE_ENABLE_TEE && <choice PARTITION_TABLE_TYPE>",
                         "help": "This is a basic OTA-enabled partition table with two OTA app partitions each\nfor the TEE and the user (REE) application. The user app partition sizes are 1536K,\nso this partition table requires 4MB or larger flash size. See the\nTrusted Execution Environment (TEE) section in the ESP-IDF Programmers Guide\nfor more information.\n\nThe corresponding CSV file in the IDF directory is\ncomponents/partition_table/partitions_two_ota_tee.csv",
                         "id": "PARTITION_TABLE_TWO_OTA_TEE",
                         "name": "PARTITION_TABLE_TWO_OTA_TEE",
@@ -5167,7 +5167,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_OPTIMIZATION> && <choice COMPILER_OPTIMIZATION>",
+                        "depends_on": "<choice COMPILER_OPTIMIZATION>",
                         "help": null,
                         "id": "COMPILER_OPTIMIZATION_DEBUG",
                         "name": "COMPILER_OPTIMIZATION_DEBUG",
@@ -5177,7 +5177,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_OPTIMIZATION> && <choice COMPILER_OPTIMIZATION>",
+                        "depends_on": "<choice COMPILER_OPTIMIZATION>",
                         "help": null,
                         "id": "COMPILER_OPTIMIZATION_SIZE",
                         "name": "COMPILER_OPTIMIZATION_SIZE",
@@ -5187,7 +5187,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_OPTIMIZATION> && <choice COMPILER_OPTIMIZATION>",
+                        "depends_on": "<choice COMPILER_OPTIMIZATION>",
                         "help": null,
                         "id": "COMPILER_OPTIMIZATION_PERF",
                         "name": "COMPILER_OPTIMIZATION_PERF",
@@ -5197,7 +5197,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_OPTIMIZATION> && <choice COMPILER_OPTIMIZATION>",
+                        "depends_on": "<choice COMPILER_OPTIMIZATION>",
                         "help": null,
                         "id": "COMPILER_OPTIMIZATION_NONE",
                         "name": "COMPILER_OPTIMIZATION_NONE",
@@ -5217,7 +5217,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_OPTIMIZATION_ASSERTION_LEVEL> && <choice COMPILER_OPTIMIZATION_ASSERTION_LEVEL>",
+                        "depends_on": "<choice COMPILER_OPTIMIZATION_ASSERTION_LEVEL>",
                         "help": "Enable assertions. Assertion content and line number will be printed on failure.",
                         "id": "COMPILER_OPTIMIZATION_ASSERTIONS_ENABLE",
                         "name": "COMPILER_OPTIMIZATION_ASSERTIONS_ENABLE",
@@ -5227,7 +5227,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_OPTIMIZATION_ASSERTION_LEVEL> && <choice COMPILER_OPTIMIZATION_ASSERTION_LEVEL>",
+                        "depends_on": "<choice COMPILER_OPTIMIZATION_ASSERTION_LEVEL>",
                         "help": "Enable silent assertions. Failed assertions will abort(), user needs to\nuse the aborting address to find the line number with the failed assertion.",
                         "id": "COMPILER_OPTIMIZATION_ASSERTIONS_SILENT",
                         "name": "COMPILER_OPTIMIZATION_ASSERTIONS_SILENT",
@@ -5237,7 +5237,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_OPTIMIZATION_ASSERTION_LEVEL> && <choice COMPILER_OPTIMIZATION_ASSERTION_LEVEL>",
+                        "depends_on": "<choice COMPILER_OPTIMIZATION_ASSERTION_LEVEL>",
                         "help": "If assertions are disabled, -DNDEBUG is added to CPPFLAGS.",
                         "id": "COMPILER_OPTIMIZATION_ASSERTIONS_DISABLE",
                         "name": "COMPILER_OPTIMIZATION_ASSERTIONS_DISABLE",
@@ -5267,7 +5267,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_FLOAT_LIB_FROM> && <choice COMPILER_FLOAT_LIB_FROM>",
+                        "depends_on": "<choice COMPILER_FLOAT_LIB_FROM>",
                         "help": null,
                         "id": "COMPILER_FLOAT_LIB_FROM_GCCLIB",
                         "name": "COMPILER_FLOAT_LIB_FROM_GCCLIB",
@@ -5277,7 +5277,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "ESP_ROM_HAS_RVFPLIB && <choice COMPILER_FLOAT_LIB_FROM> && <choice COMPILER_FLOAT_LIB_FROM>",
+                        "depends_on": "ESP_ROM_HAS_RVFPLIB && <choice COMPILER_FLOAT_LIB_FROM>",
                         "help": null,
                         "id": "COMPILER_FLOAT_LIB_FROM_RVFPLIB",
                         "name": "COMPILER_FLOAT_LIB_FROM_RVFPLIB",
@@ -5360,7 +5360,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_STACK_CHECK_MODE> && <choice COMPILER_STACK_CHECK_MODE>",
+                        "depends_on": "<choice COMPILER_STACK_CHECK_MODE>",
                         "help": null,
                         "id": "COMPILER_STACK_CHECK_MODE_NONE",
                         "name": "COMPILER_STACK_CHECK_MODE_NONE",
@@ -5370,7 +5370,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_STACK_CHECK_MODE> && <choice COMPILER_STACK_CHECK_MODE>",
+                        "depends_on": "<choice COMPILER_STACK_CHECK_MODE>",
                         "help": null,
                         "id": "COMPILER_STACK_CHECK_MODE_NORM",
                         "name": "COMPILER_STACK_CHECK_MODE_NORM",
@@ -5380,7 +5380,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_STACK_CHECK_MODE> && <choice COMPILER_STACK_CHECK_MODE>",
+                        "depends_on": "<choice COMPILER_STACK_CHECK_MODE>",
                         "help": null,
                         "id": "COMPILER_STACK_CHECK_MODE_STRONG",
                         "name": "COMPILER_STACK_CHECK_MODE_STRONG",
@@ -5390,7 +5390,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_STACK_CHECK_MODE> && <choice COMPILER_STACK_CHECK_MODE>",
+                        "depends_on": "<choice COMPILER_STACK_CHECK_MODE>",
                         "help": null,
                         "id": "COMPILER_STACK_CHECK_MODE_ALL",
                         "name": "COMPILER_STACK_CHECK_MODE_ALL",
@@ -5510,7 +5510,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "!IDF_TARGET_LINUX && <choice COMPILER_RT_LIB> && <choice COMPILER_RT_LIB>",
+                        "depends_on": "!IDF_TARGET_LINUX && <choice COMPILER_RT_LIB>",
                         "help": null,
                         "id": "COMPILER_RT_LIB_GCCLIB",
                         "name": "COMPILER_RT_LIB_GCCLIB",
@@ -5520,7 +5520,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TOOLCHAIN_CLANG && !IDF_TARGET_LINUX && <choice COMPILER_RT_LIB> && <choice COMPILER_RT_LIB>",
+                        "depends_on": "IDF_TOOLCHAIN_CLANG && !IDF_TARGET_LINUX && <choice COMPILER_RT_LIB>",
                         "help": null,
                         "id": "COMPILER_RT_LIB_CLANGRT",
                         "name": "COMPILER_RT_LIB_CLANGRT",
@@ -5530,7 +5530,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_LINUX && <choice COMPILER_RT_LIB> && <choice COMPILER_RT_LIB>",
+                        "depends_on": "IDF_TARGET_LINUX && <choice COMPILER_RT_LIB>",
                         "help": null,
                         "id": "COMPILER_RT_LIB_HOST",
                         "name": "COMPILER_RT_LIB_HOST",
@@ -5560,7 +5560,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_ORPHAN_SECTIONS> && <choice COMPILER_ORPHAN_SECTIONS>",
+                        "depends_on": "<choice COMPILER_ORPHAN_SECTIONS>",
                         "help": "Fails the link step with an error if orphan sections are detected.",
                         "id": "COMPILER_ORPHAN_SECTIONS_ERROR",
                         "name": "COMPILER_ORPHAN_SECTIONS_ERROR",
@@ -5570,7 +5570,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_ORPHAN_SECTIONS> && <choice COMPILER_ORPHAN_SECTIONS>",
+                        "depends_on": "<choice COMPILER_ORPHAN_SECTIONS>",
                         "help": "Places orphan sections with a warning message.",
                         "id": "COMPILER_ORPHAN_SECTIONS_WARNING",
                         "name": "COMPILER_ORPHAN_SECTIONS_WARNING",
@@ -5580,7 +5580,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_ORPHAN_SECTIONS> && <choice COMPILER_ORPHAN_SECTIONS>",
+                        "depends_on": "<choice COMPILER_ORPHAN_SECTIONS>",
                         "help": "Places orphan sections without a warning/error message.",
                         "id": "COMPILER_ORPHAN_SECTIONS_PLACE",
                         "name": "COMPILER_ORPHAN_SECTIONS_PLACE",
@@ -5610,7 +5610,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_CXX_GLIBCXX_CONSTEXPR> && <choice COMPILER_CXX_GLIBCXX_CONSTEXPR>",
+                        "depends_on": "<choice COMPILER_CXX_GLIBCXX_CONSTEXPR>",
                         "help": "Use default _GLIBCXX20_CONSTEXPR and _GLIBCXX23_CONSTEXPR defined in libstdc++",
                         "id": "COMPILER_CXX_GLIBCXX_CONSTEXPR_NO_CHANGE",
                         "name": "COMPILER_CXX_GLIBCXX_CONSTEXPR_NO_CHANGE",
@@ -5620,7 +5620,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_CXX_GLIBCXX_CONSTEXPR> && <choice COMPILER_CXX_GLIBCXX_CONSTEXPR>",
+                        "depends_on": "<choice COMPILER_CXX_GLIBCXX_CONSTEXPR>",
                         "help": "Define _GLIBCXX20_CONSTEXPR=__attribute__((cold)) constexpr\nDefine _GLIBCXX23_CONSTEXPR=__attribute__((cold)) constexpr",
                         "id": "COMPILER_CXX_GLIBCXX_CONSTEXPR_COLD_CONSTEXPR",
                         "name": "COMPILER_CXX_GLIBCXX_CONSTEXPR_COLD_CONSTEXPR",
@@ -5630,7 +5630,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice COMPILER_CXX_GLIBCXX_CONSTEXPR> && <choice COMPILER_CXX_GLIBCXX_CONSTEXPR>",
+                        "depends_on": "<choice COMPILER_CXX_GLIBCXX_CONSTEXPR>",
                         "help": "Define _GLIBCXX20_CONSTEXPR=__attribute__((cold)).\nDefine _GLIBCXX23_CONSTEXPR=__attribute__((cold)).",
                         "id": "COMPILER_CXX_GLIBCXX_CONSTEXPR_COLD",
                         "name": "COMPILER_CXX_GLIBCXX_CONSTEXPR_COLD",
@@ -5712,7 +5712,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice EFUSE_CODE_SCHEME_SELECTOR> && <choice EFUSE_CODE_SCHEME_SELECTOR>",
+                                "depends_on": "<choice EFUSE_CODE_SCHEME_SELECTOR>",
                                 "help": null,
                                 "id": "EFUSE_CODE_SCHEME_COMPAT_NONE",
                                 "name": "EFUSE_CODE_SCHEME_COMPAT_NONE",
@@ -5722,7 +5722,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice EFUSE_CODE_SCHEME_SELECTOR> && <choice EFUSE_CODE_SCHEME_SELECTOR>",
+                                "depends_on": "<choice EFUSE_CODE_SCHEME_SELECTOR>",
                                 "help": null,
                                 "id": "EFUSE_CODE_SCHEME_COMPAT_3_4",
                                 "name": "EFUSE_CODE_SCHEME_COMPAT_3_4",
@@ -5732,7 +5732,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice EFUSE_CODE_SCHEME_SELECTOR> && <choice EFUSE_CODE_SCHEME_SELECTOR>",
+                                "depends_on": "<choice EFUSE_CODE_SCHEME_SELECTOR>",
                                 "help": null,
                                 "id": "EFUSE_CODE_SCHEME_COMPAT_REPEAT",
                                 "name": "EFUSE_CODE_SCHEME_COMPAT_REPEAT",
@@ -5800,7 +5800,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "<choice ESP32_REV_MIN> && <choice ESP32_REV_MIN>",
+                                        "depends_on": "<choice ESP32_REV_MIN>",
                                         "help": null,
                                         "id": "ESP32_REV_MIN_0",
                                         "name": "ESP32_REV_MIN_0",
@@ -5810,7 +5810,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice ESP32_REV_MIN> && <choice ESP32_REV_MIN>",
+                                        "depends_on": "<choice ESP32_REV_MIN>",
                                         "help": null,
                                         "id": "ESP32_REV_MIN_1",
                                         "name": "ESP32_REV_MIN_1",
@@ -5820,7 +5820,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice ESP32_REV_MIN> && <choice ESP32_REV_MIN>",
+                                        "depends_on": "<choice ESP32_REV_MIN>",
                                         "help": null,
                                         "id": "ESP32_REV_MIN_1_1",
                                         "name": "ESP32_REV_MIN_1_1",
@@ -5830,7 +5830,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice ESP32_REV_MIN> && <choice ESP32_REV_MIN>",
+                                        "depends_on": "<choice ESP32_REV_MIN>",
                                         "help": null,
                                         "id": "ESP32_REV_MIN_2",
                                         "name": "ESP32_REV_MIN_2",
@@ -5840,7 +5840,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice ESP32_REV_MIN> && <choice ESP32_REV_MIN>",
+                                        "depends_on": "<choice ESP32_REV_MIN>",
                                         "help": null,
                                         "id": "ESP32_REV_MIN_3",
                                         "name": "ESP32_REV_MIN_3",
@@ -5850,7 +5850,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice ESP32_REV_MIN> && <choice ESP32_REV_MIN>",
+                                        "depends_on": "<choice ESP32_REV_MIN>",
                                         "help": null,
                                         "id": "ESP32_REV_MIN_3_1",
                                         "name": "ESP32_REV_MIN_3_1",
@@ -6048,7 +6048,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "<choice ESP32_UNIVERSAL_MAC_ADDRESSES> && <choice ESP32_UNIVERSAL_MAC_ADDRESSES>",
+                                        "depends_on": "<choice ESP32_UNIVERSAL_MAC_ADDRESSES>",
                                         "help": null,
                                         "id": "ESP32_UNIVERSAL_MAC_ADDRESSES_TWO",
                                         "name": "ESP32_UNIVERSAL_MAC_ADDRESSES_TWO",
@@ -6058,7 +6058,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice ESP32_UNIVERSAL_MAC_ADDRESSES> && <choice ESP32_UNIVERSAL_MAC_ADDRESSES>",
+                                        "depends_on": "<choice ESP32_UNIVERSAL_MAC_ADDRESSES>",
                                         "help": null,
                                         "id": "ESP32_UNIVERSAL_MAC_ADDRESSES_FOUR",
                                         "name": "ESP32_UNIVERSAL_MAC_ADDRESSES_FOUR",
@@ -6237,7 +6237,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "<choice RTC_CLK_SRC> && <choice RTC_CLK_SRC>",
+                                        "depends_on": "<choice RTC_CLK_SRC>",
                                         "help": null,
                                         "id": "RTC_CLK_SRC_INT_RC",
                                         "name": "RTC_CLK_SRC_INT_RC",
@@ -6247,7 +6247,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice RTC_CLK_SRC> && <choice RTC_CLK_SRC>",
+                                        "depends_on": "<choice RTC_CLK_SRC>",
                                         "help": null,
                                         "id": "RTC_CLK_SRC_EXT_CRYS",
                                         "name": "RTC_CLK_SRC_EXT_CRYS",
@@ -6257,7 +6257,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice RTC_CLK_SRC> && <choice RTC_CLK_SRC>",
+                                        "depends_on": "<choice RTC_CLK_SRC>",
                                         "help": null,
                                         "id": "RTC_CLK_SRC_EXT_OSC",
                                         "name": "RTC_CLK_SRC_EXT_OSC",
@@ -6267,7 +6267,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice RTC_CLK_SRC> && <choice RTC_CLK_SRC>",
+                                        "depends_on": "<choice RTC_CLK_SRC>",
                                         "help": null,
                                         "id": "RTC_CLK_SRC_INT_8MD256",
                                         "name": "RTC_CLK_SRC_INT_8MD256",
@@ -6287,7 +6287,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "<choice RTC_EXT_CRYST_ADDIT_CURRENT_METHOD> && <choice RTC_EXT_CRYST_ADDIT_CURRENT_METHOD>",
+                                        "depends_on": "<choice RTC_EXT_CRYST_ADDIT_CURRENT_METHOD>",
                                         "help": null,
                                         "id": "RTC_EXT_CRYST_ADDIT_CURRENT_NONE",
                                         "name": "RTC_EXT_CRYST_ADDIT_CURRENT_NONE",
@@ -6297,7 +6297,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice RTC_EXT_CRYST_ADDIT_CURRENT_METHOD> && <choice RTC_EXT_CRYST_ADDIT_CURRENT_METHOD>",
+                                        "depends_on": "<choice RTC_EXT_CRYST_ADDIT_CURRENT_METHOD>",
                                         "help": null,
                                         "id": "RTC_EXT_CRYST_ADDIT_CURRENT",
                                         "name": "RTC_EXT_CRYST_ADDIT_CURRENT",
@@ -6307,7 +6307,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice RTC_EXT_CRYST_ADDIT_CURRENT_METHOD> && <choice RTC_EXT_CRYST_ADDIT_CURRENT_METHOD>",
+                                        "depends_on": "<choice RTC_EXT_CRYST_ADDIT_CURRENT_METHOD>",
                                         "help": null,
                                         "id": "RTC_EXT_CRYST_ADDIT_CURRENT_V2",
                                         "name": "RTC_EXT_CRYST_ADDIT_CURRENT_V2",
@@ -6384,7 +6384,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "SOC_GDMA_SUPPORTED && SOC_GDMA_SUPPORTED",
+                                "depends_on": "SOC_GDMA_SUPPORTED",
                                 "help": "Place GDMA control functions (like start/stop/append/reset) into IRAM,\nso that these functions can be IRAM-safe and able to be called in the other IRAM interrupt context.",
                                 "id": "GDMA_CTRL_FUNC_IN_IRAM",
                                 "name": "GDMA_CTRL_FUNC_IN_IRAM",
@@ -6394,7 +6394,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SOC_GDMA_SUPPORTED && SOC_GDMA_SUPPORTED",
+                                "depends_on": "SOC_GDMA_SUPPORTED",
                                 "help": "Place GDMA ISR handler functions in IRAM to reduce latency caused by cache miss.",
                                 "id": "GDMA_ISR_HANDLER_IN_IRAM",
                                 "name": "GDMA_ISR_HANDLER_IN_IRAM",
@@ -6404,7 +6404,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SOC_GDMA_SUPPORTED && SOC_GDMA_SUPPORTED",
+                                "depends_on": "SOC_GDMA_SUPPORTED",
                                 "help": "This will ensure the GDMA object is DRAM-Safe, allow to avoid external memory\ncache misses, and also be accessible whilst the cache is disabled.",
                                 "id": "GDMA_OBJ_DRAM_SAFE",
                                 "name": "GDMA_OBJ_DRAM_SAFE",
@@ -6414,7 +6414,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SOC_GDMA_SUPPORTED && SOC_GDMA_SUPPORTED",
+                                "depends_on": "SOC_GDMA_SUPPORTED",
                                 "help": "If enabled, GDMA driver component will:\n1. ignore the global logging settings\n2. compile all log messages into the binary\n3. set the runtime log level to VERBOSE\nPlease enable this option by caution, as it will increase the binary size.",
                                 "id": "GDMA_ENABLE_DEBUG_LOG",
                                 "name": "GDMA_ENABLE_DEBUG_LOG",
@@ -6424,7 +6424,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SOC_GDMA_SUPPORT_WEIGHTED_ARBITRATION && IDF_EXPERIMENTAL_FEATURES && SOC_GDMA_SUPPORTED && SOC_GDMA_SUPPORTED",
+                                "depends_on": "SOC_GDMA_SUPPORT_WEIGHTED_ARBITRATION && IDF_EXPERIMENTAL_FEATURES && SOC_GDMA_SUPPORTED",
                                 "help": "Whether to enable the weighted arbitration for GDMA driver.\nThe default weight of each channel is 1. You need to set weight for each channel before transmissions.\nIf this option is enabled, the buffer should be aligned to the burst size.",
                                 "id": "GDMA_ENABLE_WEIGHTED_ARBITRATION",
                                 "name": "GDMA_ENABLE_WEIGHTED_ARBITRATION",
@@ -6442,7 +6442,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "SOC_DW_GDMA_SUPPORTED && SOC_DW_GDMA_SUPPORTED",
+                                "depends_on": "SOC_DW_GDMA_SUPPORTED",
                                 "help": "Place DW_GDMA control functions (e.g. dw_gdma_channel_continue) into IRAM,\nso that these functions can be IRAM-safe and able to be called in the other IRAM interrupt context.",
                                 "id": "DW_GDMA_CTRL_FUNC_IN_IRAM",
                                 "name": "DW_GDMA_CTRL_FUNC_IN_IRAM",
@@ -6452,7 +6452,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SOC_DW_GDMA_SUPPORTED && SOC_DW_GDMA_SUPPORTED",
+                                "depends_on": "SOC_DW_GDMA_SUPPORTED",
                                 "help": "Place DW_GDMA setter functions (e.g. dw_gdma_channel_set_block_markers) into IRAM,\nso that these functions can be IRAM-safe and able to be called in the other IRAM interrupt context.",
                                 "id": "DW_GDMA_SETTER_FUNC_IN_IRAM",
                                 "name": "DW_GDMA_SETTER_FUNC_IN_IRAM",
@@ -6462,7 +6462,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SOC_DW_GDMA_SUPPORTED && SOC_DW_GDMA_SUPPORTED",
+                                "depends_on": "SOC_DW_GDMA_SUPPORTED",
                                 "help": "Place DW_GDMA getter functions (e.g. dw_gdma_link_list_get_item) into IRAM,\nso that these functions can be IRAM-safe and able to be called in the other IRAM interrupt context.",
                                 "id": "DW_GDMA_GETTER_FUNC_IN_IRAM",
                                 "name": "DW_GDMA_GETTER_FUNC_IN_IRAM",
@@ -6472,7 +6472,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SOC_DW_GDMA_SUPPORTED && SOC_DW_GDMA_SUPPORTED",
+                                "depends_on": "SOC_DW_GDMA_SUPPORTED",
                                 "help": "This will ensure the DW_GDMA interrupt handler is IRAM-Safe, allow to avoid flash\ncache misses, and also be able to run whilst the cache is disabled.\n(e.g. SPI Flash write).",
                                 "id": "DW_GDMA_ISR_IRAM_SAFE",
                                 "name": "DW_GDMA_ISR_IRAM_SAFE",
@@ -6482,7 +6482,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SOC_DW_GDMA_SUPPORTED && SOC_DW_GDMA_SUPPORTED",
+                                "depends_on": "SOC_DW_GDMA_SUPPORTED",
                                 "help": "This will ensure the DW_GDMA object is DRAM-Safe, allow to avoid external memory\ncache misses, and also be accessible whilst the cache is disabled.",
                                 "id": "DW_GDMA_OBJ_DRAM_SAFE",
                                 "name": "DW_GDMA_OBJ_DRAM_SAFE",
@@ -6492,7 +6492,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SOC_DW_GDMA_SUPPORTED && SOC_DW_GDMA_SUPPORTED",
+                                "depends_on": "SOC_DW_GDMA_SUPPORTED",
                                 "help": "Whether to enable the debug log message for DW_GDMA driver.\nNote that, this option only controls the DW_GDMA driver log, won't affect other drivers.",
                                 "id": "DW_GDMA_ENABLE_DEBUG_LOG",
                                 "name": "DW_GDMA_ENABLE_DEBUG_LOG",
@@ -6510,7 +6510,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "SOC_DMA2D_SUPPORTED && SOC_DMA2D_SUPPORTED",
+                                "depends_on": "SOC_DMA2D_SUPPORTED",
                                 "help": "Place 2D-DMA all operation functions, including control functions (e.g. start/stop/append/reset) and setter\nfunctions (e.g. connect/strategy/callback registration) into IRAM, so that these functions can be IRAM-safe\nand able to be called in the other IRAM interrupt context. It also helps optimizing the performance.",
                                 "id": "DMA2D_OPERATION_FUNC_IN_IRAM",
                                 "name": "DMA2D_OPERATION_FUNC_IN_IRAM",
@@ -6520,7 +6520,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SOC_DMA2D_SUPPORTED && SOC_DMA2D_SUPPORTED",
+                                "depends_on": "SOC_DMA2D_SUPPORTED",
                                 "help": "This will ensure the 2D-DMA interrupt handler is IRAM-Safe, allow to avoid flash\ncache misses, and also be able to run whilst the cache is disabled.\n(e.g. SPI Flash write).",
                                 "id": "DMA2D_ISR_IRAM_SAFE",
                                 "name": "DMA2D_ISR_IRAM_SAFE",
@@ -6538,7 +6538,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "SOC_ETM_SUPPORTED && SOC_ETM_SUPPORTED",
+                                "depends_on": "SOC_ETM_SUPPORTED",
                                 "help": "If enabled, ETM driver will:\n1. ignore the global logging settings\n2. compile all log messages into the binary\n3. set the runtime log level to VERBOSE\nPlease enable this option by caution, as it will increase the binary size.",
                                 "id": "ETM_ENABLE_DEBUG_LOG",
                                 "name": "ETM_ENABLE_DEBUG_LOG",
@@ -6558,7 +6558,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "<choice XTAL_FREQ> && <choice XTAL_FREQ>",
+                                        "depends_on": "<choice XTAL_FREQ>",
                                         "help": null,
                                         "id": "XTAL_FREQ_26",
                                         "name": "XTAL_FREQ_26",
@@ -6568,7 +6568,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice XTAL_FREQ> && <choice XTAL_FREQ>",
+                                        "depends_on": "<choice XTAL_FREQ>",
                                         "help": null,
                                         "id": "XTAL_FREQ_32",
                                         "name": "XTAL_FREQ_32",
@@ -6578,7 +6578,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice XTAL_FREQ> && <choice XTAL_FREQ>",
+                                        "depends_on": "<choice XTAL_FREQ>",
                                         "help": null,
                                         "id": "XTAL_FREQ_40",
                                         "name": "XTAL_FREQ_40",
@@ -6588,7 +6588,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice XTAL_FREQ> && <choice XTAL_FREQ>",
+                                        "depends_on": "<choice XTAL_FREQ>",
                                         "help": null,
                                         "id": "XTAL_FREQ_AUTO",
                                         "name": "XTAL_FREQ_AUTO",
@@ -6839,7 +6839,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice LIBC> && <choice LIBC>",
+                                "depends_on": "<choice LIBC>",
                                 "help": null,
                                 "id": "LIBC_NEWLIB",
                                 "name": "LIBC_NEWLIB",
@@ -6849,7 +6849,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!IDF_TOOLCHAIN_CLANG && IDF_EXPERIMENTAL_FEATURES && <choice LIBC> && <choice LIBC>",
+                                "depends_on": "!IDF_TOOLCHAIN_CLANG && IDF_EXPERIMENTAL_FEATURES && <choice LIBC>",
                                 "help": null,
                                 "id": "LIBC_PICOLIBC",
                                 "name": "LIBC_PICOLIBC",
@@ -6889,7 +6889,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice LIBC_STDOUT_LINE_ENDING> && <choice LIBC_STDOUT_LINE_ENDING>",
+                                "depends_on": "<choice LIBC_STDOUT_LINE_ENDING>",
                                 "help": null,
                                 "id": "LIBC_STDOUT_LINE_ENDING_CRLF",
                                 "name": "LIBC_STDOUT_LINE_ENDING_CRLF",
@@ -6899,7 +6899,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice LIBC_STDOUT_LINE_ENDING> && <choice LIBC_STDOUT_LINE_ENDING>",
+                                "depends_on": "<choice LIBC_STDOUT_LINE_ENDING>",
                                 "help": null,
                                 "id": "LIBC_STDOUT_LINE_ENDING_LF",
                                 "name": "LIBC_STDOUT_LINE_ENDING_LF",
@@ -6909,7 +6909,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice LIBC_STDOUT_LINE_ENDING> && <choice LIBC_STDOUT_LINE_ENDING>",
+                                "depends_on": "<choice LIBC_STDOUT_LINE_ENDING>",
                                 "help": null,
                                 "id": "LIBC_STDOUT_LINE_ENDING_CR",
                                 "name": "LIBC_STDOUT_LINE_ENDING_CR",
@@ -6929,7 +6929,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice LIBC_STDIN_LINE_ENDING> && <choice LIBC_STDIN_LINE_ENDING>",
+                                "depends_on": "<choice LIBC_STDIN_LINE_ENDING>",
                                 "help": null,
                                 "id": "LIBC_STDIN_LINE_ENDING_CRLF",
                                 "name": "LIBC_STDIN_LINE_ENDING_CRLF",
@@ -6939,7 +6939,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice LIBC_STDIN_LINE_ENDING> && <choice LIBC_STDIN_LINE_ENDING>",
+                                "depends_on": "<choice LIBC_STDIN_LINE_ENDING>",
                                 "help": null,
                                 "id": "LIBC_STDIN_LINE_ENDING_LF",
                                 "name": "LIBC_STDIN_LINE_ENDING_LF",
@@ -6949,7 +6949,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice LIBC_STDIN_LINE_ENDING> && <choice LIBC_STDIN_LINE_ENDING>",
+                                "depends_on": "<choice LIBC_STDIN_LINE_ENDING>",
                                 "help": null,
                                 "id": "LIBC_STDIN_LINE_ENDING_CR",
                                 "name": "LIBC_STDIN_LINE_ENDING_CR",
@@ -6979,7 +6979,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice LIBC_TIME_SYSCALL> && <choice LIBC_TIME_SYSCALL>",
+                                "depends_on": "<choice LIBC_TIME_SYSCALL>",
                                 "help": null,
                                 "id": "LIBC_TIME_SYSCALL_USE_RTC_HRT",
                                 "name": "LIBC_TIME_SYSCALL_USE_RTC_HRT",
@@ -6989,7 +6989,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice LIBC_TIME_SYSCALL> && <choice LIBC_TIME_SYSCALL>",
+                                "depends_on": "<choice LIBC_TIME_SYSCALL>",
                                 "help": null,
                                 "id": "LIBC_TIME_SYSCALL_USE_RTC",
                                 "name": "LIBC_TIME_SYSCALL_USE_RTC",
@@ -6999,7 +6999,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice LIBC_TIME_SYSCALL> && <choice LIBC_TIME_SYSCALL>",
+                                "depends_on": "<choice LIBC_TIME_SYSCALL>",
                                 "help": null,
                                 "id": "LIBC_TIME_SYSCALL_USE_HRT",
                                 "name": "LIBC_TIME_SYSCALL_USE_HRT",
@@ -7009,7 +7009,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice LIBC_TIME_SYSCALL> && <choice LIBC_TIME_SYSCALL>",
+                                "depends_on": "<choice LIBC_TIME_SYSCALL>",
                                 "help": null,
                                 "id": "LIBC_TIME_SYSCALL_USE_NONE",
                                 "name": "LIBC_TIME_SYSCALL_USE_NONE",
@@ -7088,7 +7088,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "IDF_ENV_FPGA && <choice ESP_DEFAULT_CPU_FREQ_MHZ> && <choice ESP_DEFAULT_CPU_FREQ_MHZ>",
+                                "depends_on": "IDF_ENV_FPGA && <choice ESP_DEFAULT_CPU_FREQ_MHZ>",
                                 "help": null,
                                 "id": "ESP_DEFAULT_CPU_FREQ_MHZ_40",
                                 "name": "ESP_DEFAULT_CPU_FREQ_MHZ_40",
@@ -7098,7 +7098,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_DEFAULT_CPU_FREQ_MHZ> && <choice ESP_DEFAULT_CPU_FREQ_MHZ>",
+                                "depends_on": "<choice ESP_DEFAULT_CPU_FREQ_MHZ>",
                                 "help": null,
                                 "id": "ESP_DEFAULT_CPU_FREQ_MHZ_80",
                                 "name": "ESP_DEFAULT_CPU_FREQ_MHZ_80",
@@ -7108,7 +7108,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_DEFAULT_CPU_FREQ_MHZ> && <choice ESP_DEFAULT_CPU_FREQ_MHZ>",
+                                "depends_on": "<choice ESP_DEFAULT_CPU_FREQ_MHZ>",
                                 "help": null,
                                 "id": "ESP_DEFAULT_CPU_FREQ_MHZ_160",
                                 "name": "ESP_DEFAULT_CPU_FREQ_MHZ_160",
@@ -7118,7 +7118,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_DEFAULT_CPU_FREQ_MHZ> && <choice ESP_DEFAULT_CPU_FREQ_MHZ>",
+                                "depends_on": "<choice ESP_DEFAULT_CPU_FREQ_MHZ>",
                                 "help": null,
                                 "id": "ESP_DEFAULT_CPU_FREQ_MHZ_240",
                                 "name": "ESP_DEFAULT_CPU_FREQ_MHZ_240",
@@ -7284,7 +7284,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "!ESP_SYSTEM_GDBSTUB_RUNTIME && <choice ESP_SYSTEM_PANIC> && <choice ESP_SYSTEM_PANIC>",
+                                "depends_on": "!ESP_SYSTEM_GDBSTUB_RUNTIME && <choice ESP_SYSTEM_PANIC>",
                                 "help": "Outputs the relevant registers over the serial port and halt the\nprocessor. Needs a manual reset to restart.",
                                 "id": "ESP_SYSTEM_PANIC_PRINT_HALT",
                                 "name": "ESP_SYSTEM_PANIC_PRINT_HALT",
@@ -7294,7 +7294,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!ESP_SYSTEM_GDBSTUB_RUNTIME && <choice ESP_SYSTEM_PANIC> && <choice ESP_SYSTEM_PANIC>",
+                                "depends_on": "!ESP_SYSTEM_GDBSTUB_RUNTIME && <choice ESP_SYSTEM_PANIC>",
                                 "help": "Outputs the relevant registers over the serial port and immediately\nreset the processor.",
                                 "id": "ESP_SYSTEM_PANIC_PRINT_REBOOT",
                                 "name": "ESP_SYSTEM_PANIC_PRINT_REBOOT",
@@ -7304,7 +7304,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!ESP_SYSTEM_GDBSTUB_RUNTIME && <choice ESP_SYSTEM_PANIC> && <choice ESP_SYSTEM_PANIC>",
+                                "depends_on": "!ESP_SYSTEM_GDBSTUB_RUNTIME && <choice ESP_SYSTEM_PANIC>",
                                 "help": "Just resets the processor without outputting anything",
                                 "id": "ESP_SYSTEM_PANIC_SILENT_REBOOT",
                                 "name": "ESP_SYSTEM_PANIC_SILENT_REBOOT",
@@ -7314,7 +7314,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "ESP_GDBSTUB_ENABLED && <choice ESP_SYSTEM_PANIC> && <choice ESP_SYSTEM_PANIC>",
+                                "depends_on": "ESP_GDBSTUB_ENABLED && <choice ESP_SYSTEM_PANIC>",
                                 "help": "Invoke gdbstub on the serial port, allowing for gdb to attach to it to do a postmortem\nof the crash.",
                                 "id": "ESP_SYSTEM_PANIC_GDBSTUB",
                                 "name": "ESP_SYSTEM_PANIC_GDBSTUB",
@@ -7407,7 +7407,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_BACKTRACING_METHOD> && <choice ESP_BACKTRACING_METHOD>",
+                                "depends_on": "<choice ESP_BACKTRACING_METHOD>",
                                 "help": "When selected, no backtracing will be performed at runtime. By using idf.py monitor, it\nis still possible to get a backtrace when a panic occurs.",
                                 "id": "ESP_SYSTEM_NO_BACKTRACE",
                                 "name": "ESP_SYSTEM_NO_BACKTRACE",
@@ -7417,7 +7417,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_BACKTRACING_METHOD> && <choice ESP_BACKTRACING_METHOD>",
+                                "depends_on": "<choice ESP_BACKTRACING_METHOD>",
                                 "help": "Generate DWARF information for each function of the project. These information will parsed and used to\nperform backtracing when panics occur. Activating this option will activate asynchronous frame\nunwinding and generation of both .eh_frame and .eh_frame_hdr sections, resulting in a bigger binary\nsize (20% to 100% larger). The main purpose of this option is to be able to have a backtrace parsed\nand printed by the program itself, regardless of the serial monitor used.\nThis option is not recommended to be used for production.",
                                 "id": "ESP_SYSTEM_USE_EH_FRAME",
                                 "name": "ESP_SYSTEM_USE_EH_FRAME",
@@ -7427,7 +7427,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_BACKTRACING_METHOD> && <choice ESP_BACKTRACING_METHOD>",
+                                "depends_on": "<choice ESP_BACKTRACING_METHOD>",
                                 "help": "This configuration allows the compiler to allocate CPU register s0 as the frame pointer. The main usage\nof the frame pointer is to be able to generate a backtrace from the panic handler on exception.\nEnabling this option results in bigger and slightly slower code since all functions will have\nto populate this register and won't be able to use it as a general-purpose register anymore.",
                                 "id": "ESP_SYSTEM_USE_FRAME_POINTER",
                                 "name": "ESP_SYSTEM_USE_FRAME_POINTER",
@@ -7548,7 +7548,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_MAIN_TASK_AFFINITY> && <choice ESP_MAIN_TASK_AFFINITY>",
+                                "depends_on": "<choice ESP_MAIN_TASK_AFFINITY>",
                                 "help": null,
                                 "id": "ESP_MAIN_TASK_AFFINITY_CPU0",
                                 "name": "ESP_MAIN_TASK_AFFINITY_CPU0",
@@ -7558,7 +7558,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!FREERTOS_UNICORE && <choice ESP_MAIN_TASK_AFFINITY> && <choice ESP_MAIN_TASK_AFFINITY>",
+                                "depends_on": "!FREERTOS_UNICORE && <choice ESP_MAIN_TASK_AFFINITY>",
                                 "help": null,
                                 "id": "ESP_MAIN_TASK_AFFINITY_CPU1",
                                 "name": "ESP_MAIN_TASK_AFFINITY_CPU1",
@@ -7568,7 +7568,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_MAIN_TASK_AFFINITY> && <choice ESP_MAIN_TASK_AFFINITY>",
+                                "depends_on": "<choice ESP_MAIN_TASK_AFFINITY>",
                                 "help": null,
                                 "id": "ESP_MAIN_TASK_AFFINITY_NO_AFFINITY",
                                 "name": "ESP_MAIN_TASK_AFFINITY_NO_AFFINITY",
@@ -7608,7 +7608,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_CONSOLE_UART> && <choice ESP_CONSOLE_UART>",
+                                "depends_on": "<choice ESP_CONSOLE_UART>",
                                 "help": null,
                                 "id": "ESP_CONSOLE_UART_DEFAULT",
                                 "name": "ESP_CONSOLE_UART_DEFAULT",
@@ -7618,7 +7618,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "(IDF_TARGET_ESP32S2 || IDF_TARGET_ESP32S3) && !TINY_USB && <choice ESP_CONSOLE_UART> && <choice ESP_CONSOLE_UART>",
+                                "depends_on": "(IDF_TARGET_ESP32S2 || IDF_TARGET_ESP32S3) && !TINY_USB && <choice ESP_CONSOLE_UART>",
                                 "help": null,
                                 "id": "ESP_CONSOLE_USB_CDC",
                                 "name": "ESP_CONSOLE_USB_CDC",
@@ -7628,7 +7628,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SOC_USB_SERIAL_JTAG_SUPPORTED && <choice ESP_CONSOLE_UART> && <choice ESP_CONSOLE_UART>",
+                                "depends_on": "SOC_USB_SERIAL_JTAG_SUPPORTED && <choice ESP_CONSOLE_UART>",
                                 "help": null,
                                 "id": "ESP_CONSOLE_USB_SERIAL_JTAG",
                                 "name": "ESP_CONSOLE_USB_SERIAL_JTAG",
@@ -7638,7 +7638,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_CONSOLE_UART> && <choice ESP_CONSOLE_UART>",
+                                "depends_on": "<choice ESP_CONSOLE_UART>",
                                 "help": null,
                                 "id": "ESP_CONSOLE_UART_CUSTOM",
                                 "name": "ESP_CONSOLE_UART_CUSTOM",
@@ -7648,7 +7648,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_CONSOLE_UART> && <choice ESP_CONSOLE_UART>",
+                                "depends_on": "<choice ESP_CONSOLE_UART>",
                                 "help": null,
                                 "id": "ESP_CONSOLE_NONE",
                                 "name": "ESP_CONSOLE_NONE",
@@ -7668,7 +7668,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_CONSOLE_SECONDARY> && <choice ESP_CONSOLE_SECONDARY>",
+                                "depends_on": "<choice ESP_CONSOLE_SECONDARY>",
                                 "help": null,
                                 "id": "ESP_CONSOLE_SECONDARY_NONE",
                                 "name": "ESP_CONSOLE_SECONDARY_NONE",
@@ -7678,7 +7678,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!ESP_CONSOLE_USB_SERIAL_JTAG && <choice ESP_CONSOLE_SECONDARY> && <choice ESP_CONSOLE_SECONDARY>",
+                                "depends_on": "!ESP_CONSOLE_USB_SERIAL_JTAG && <choice ESP_CONSOLE_SECONDARY>",
                                 "help": "This option supports output through USB_SERIAL_JTAG port when the UART0 port is not connected.\nThe output currently only supports non-blocking mode without using the console.\nIf you want to output in blocking mode with REPL or input through USB_SERIAL_JTAG port,\nplease change the primary config to ESP_CONSOLE_USB_SERIAL_JTAG above.",
                                 "id": "ESP_CONSOLE_SECONDARY_USB_SERIAL_JTAG",
                                 "name": "ESP_CONSOLE_SECONDARY_USB_SERIAL_JTAG",
@@ -7718,7 +7718,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_CONSOLE_UART_NUM> && <choice ESP_CONSOLE_UART_NUM>",
+                                "depends_on": "<choice ESP_CONSOLE_UART_NUM>",
                                 "help": null,
                                 "id": "ESP_CONSOLE_UART_CUSTOM_NUM_0",
                                 "name": "ESP_CONSOLE_UART_CUSTOM_NUM_0",
@@ -7728,7 +7728,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice ESP_CONSOLE_UART_NUM> && <choice ESP_CONSOLE_UART_NUM>",
+                                "depends_on": "<choice ESP_CONSOLE_UART_NUM>",
                                 "help": null,
                                 "id": "ESP_CONSOLE_UART_CUSTOM_NUM_1",
                                 "name": "ESP_CONSOLE_UART_CUSTOM_NUM_1",
@@ -8001,7 +8001,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "IDF_TARGET_ESP32 && <choice ESP_SYSTEM_CHECK_INT_LEVEL> && <choice ESP_SYSTEM_CHECK_INT_LEVEL>",
+                                "depends_on": "IDF_TARGET_ESP32 && <choice ESP_SYSTEM_CHECK_INT_LEVEL>",
                                 "help": "Using level 5 interrupt for Interrupt Watchdog, IPC_ISR and other system checks.",
                                 "id": "ESP_SYSTEM_CHECK_INT_LEVEL_5",
                                 "name": "ESP_SYSTEM_CHECK_INT_LEVEL_5",
@@ -8011,7 +8011,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!BTDM_CTRL_HLI && <choice ESP_SYSTEM_CHECK_INT_LEVEL> && <choice ESP_SYSTEM_CHECK_INT_LEVEL>",
+                                "depends_on": "!BTDM_CTRL_HLI && <choice ESP_SYSTEM_CHECK_INT_LEVEL>",
                                 "help": "Using level 4 interrupt for Interrupt Watchdog, IPC_ISR and other system checks.",
                                 "id": "ESP_SYSTEM_CHECK_INT_LEVEL_4",
                                 "name": "ESP_SYSTEM_CHECK_INT_LEVEL_4",
@@ -8185,7 +8185,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "<choice FREERTOS_CHECK_STACKOVERFLOW> && <choice FREERTOS_CHECK_STACKOVERFLOW>",
+                                        "depends_on": "<choice FREERTOS_CHECK_STACKOVERFLOW>",
                                         "help": "Do not check for stack overflows (configCHECK_FOR_STACK_OVERFLOW = 0)",
                                         "id": "FREERTOS_CHECK_STACKOVERFLOW_NONE",
                                         "name": "FREERTOS_CHECK_STACKOVERFLOW_NONE",
@@ -8195,7 +8195,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice FREERTOS_CHECK_STACKOVERFLOW> && <choice FREERTOS_CHECK_STACKOVERFLOW>",
+                                        "depends_on": "<choice FREERTOS_CHECK_STACKOVERFLOW>",
                                         "help": "Check for stack overflows on each context switch by checking if the stack pointer is in a valid\nrange. Quick but does not detect stack overflows that happened between context switches\n(configCHECK_FOR_STACK_OVERFLOW = 1)",
                                         "id": "FREERTOS_CHECK_STACKOVERFLOW_PTRVAL",
                                         "name": "FREERTOS_CHECK_STACKOVERFLOW_PTRVAL",
@@ -8205,7 +8205,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice FREERTOS_CHECK_STACKOVERFLOW> && <choice FREERTOS_CHECK_STACKOVERFLOW>",
+                                        "depends_on": "<choice FREERTOS_CHECK_STACKOVERFLOW>",
                                         "help": "Places some magic bytes at the end of the stack area and on each context switch, check if these\nbytes are still intact. More thorough than just checking the pointer, but also slightly slower.\n(configCHECK_FOR_STACK_OVERFLOW = 2)",
                                         "id": "FREERTOS_CHECK_STACKOVERFLOW_CANARY",
                                         "name": "FREERTOS_CHECK_STACKOVERFLOW_CANARY",
@@ -8664,7 +8664,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "FREERTOS_TICK_SUPPORT_CORETIMER && <choice FREERTOS_CORETIMER> && <choice FREERTOS_CORETIMER>",
+                                        "depends_on": "FREERTOS_TICK_SUPPORT_CORETIMER && <choice FREERTOS_CORETIMER>",
                                         "help": "Select this to use timer 0",
                                         "id": "FREERTOS_CORETIMER_0",
                                         "name": "FREERTOS_CORETIMER_0",
@@ -8674,7 +8674,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "FREERTOS_TICK_SUPPORT_CORETIMER && <choice FREERTOS_CORETIMER> && <choice FREERTOS_CORETIMER>",
+                                        "depends_on": "FREERTOS_TICK_SUPPORT_CORETIMER && <choice FREERTOS_CORETIMER>",
                                         "help": "Select this to use timer 1",
                                         "id": "FREERTOS_CORETIMER_1",
                                         "name": "FREERTOS_CORETIMER_1",
@@ -8684,7 +8684,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "FREERTOS_TICK_SUPPORT_SYSTIMER && <choice FREERTOS_CORETIMER> && <choice FREERTOS_CORETIMER>",
+                                        "depends_on": "FREERTOS_TICK_SUPPORT_SYSTIMER && <choice FREERTOS_CORETIMER>",
                                         "help": "Select this to use systimer with the 1 interrupt priority.",
                                         "id": "FREERTOS_CORETIMER_SYSTIMER_LVL1",
                                         "name": "FREERTOS_CORETIMER_SYSTIMER_LVL1",
@@ -8694,7 +8694,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "FREERTOS_TICK_SUPPORT_SYSTIMER && <choice FREERTOS_CORETIMER> && <choice FREERTOS_CORETIMER>",
+                                        "depends_on": "FREERTOS_TICK_SUPPORT_SYSTIMER && <choice FREERTOS_CORETIMER>",
                                         "help": "Select this to use systimer with the 3 interrupt priority.",
                                         "id": "FREERTOS_CORETIMER_SYSTIMER_LVL3",
                                         "name": "FREERTOS_CORETIMER_SYSTIMER_LVL3",
@@ -8734,7 +8734,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "<choice FREERTOS_RUN_TIME_STATS_CLK> && <choice FREERTOS_RUN_TIME_STATS_CLK>",
+                                        "depends_on": "<choice FREERTOS_RUN_TIME_STATS_CLK>",
                                         "help": "ESP Timer will be used as the clock source for FreeRTOS run time stats. The ESP Timer runs at a\nfrequency of 1MHz regardless of Dynamic Frequency Scaling. Therefore the ESP Timer will overflow in\napproximately 4290 seconds.",
                                         "id": "FREERTOS_RUN_TIME_STATS_USING_ESP_TIMER",
                                         "name": "FREERTOS_RUN_TIME_STATS_USING_ESP_TIMER",
@@ -8744,7 +8744,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "FREERTOS_SYSTICK_USES_CCOUNT && <choice FREERTOS_RUN_TIME_STATS_CLK> && <choice FREERTOS_RUN_TIME_STATS_CLK>",
+                                        "depends_on": "FREERTOS_SYSTICK_USES_CCOUNT && <choice FREERTOS_RUN_TIME_STATS_CLK>",
                                         "help": "CPU Clock will be used as the clock source for the generation of run time stats. The CPU Clock has\na frequency dependent on ESP_DEFAULT_CPU_FREQ_MHZ and Dynamic Frequency Scaling (DFS). Therefore\nthe CPU Clock frequency can fluctuate between 80 to 240MHz. Run time stats generated using the CPU\nClock represents the number of CPU cycles each task is allocated and DOES NOT reflect the amount of\ntime each task runs for (as CPU clock frequency can change). If the CPU clock consistently runs at\nthe maximum frequency of 240MHz, it will overflow in approximately 17 seconds.",
                                         "id": "FREERTOS_RUN_TIME_STATS_USING_CPU_CLK",
                                         "name": "FREERTOS_RUN_TIME_STATS_USING_CPU_CLK",
@@ -8879,7 +8879,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice HAL_DEFAULT_ASSERTION_LEVEL> && <choice HAL_DEFAULT_ASSERTION_LEVEL>",
+                                "depends_on": "<choice HAL_DEFAULT_ASSERTION_LEVEL>",
                                 "help": null,
                                 "id": "HAL_ASSERTION_EQUALS_SYSTEM",
                                 "name": "HAL_ASSERTION_EQUALS_SYSTEM",
@@ -8889,7 +8889,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "COMPILER_OPTIMIZATION_ASSERTION_LEVEL >= 0 && <choice HAL_DEFAULT_ASSERTION_LEVEL> && <choice HAL_DEFAULT_ASSERTION_LEVEL>",
+                                "depends_on": "COMPILER_OPTIMIZATION_ASSERTION_LEVEL >= 0 && <choice HAL_DEFAULT_ASSERTION_LEVEL>",
                                 "help": null,
                                 "id": "HAL_ASSERTION_DISABLE",
                                 "name": "HAL_ASSERTION_DISABLE",
@@ -8899,7 +8899,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "COMPILER_OPTIMIZATION_ASSERTION_LEVEL >= 1 && <choice HAL_DEFAULT_ASSERTION_LEVEL> && <choice HAL_DEFAULT_ASSERTION_LEVEL>",
+                                "depends_on": "COMPILER_OPTIMIZATION_ASSERTION_LEVEL >= 1 && <choice HAL_DEFAULT_ASSERTION_LEVEL>",
                                 "help": null,
                                 "id": "HAL_ASSERTION_SILENT",
                                 "name": "HAL_ASSERTION_SILENT",
@@ -8909,7 +8909,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "COMPILER_OPTIMIZATION_ASSERTION_LEVEL >= 2 && <choice HAL_DEFAULT_ASSERTION_LEVEL> && <choice HAL_DEFAULT_ASSERTION_LEVEL>",
+                                "depends_on": "COMPILER_OPTIMIZATION_ASSERTION_LEVEL >= 2 && <choice HAL_DEFAULT_ASSERTION_LEVEL>",
                                 "help": null,
                                 "id": "HAL_ASSERTION_ENABLE",
                                 "name": "HAL_ASSERTION_ENABLE",
@@ -8939,7 +8939,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice HAL_LOG_LEVEL> && <choice HAL_LOG_LEVEL>",
+                                "depends_on": "<choice HAL_LOG_LEVEL>",
                                 "help": null,
                                 "id": "HAL_LOG_LEVEL_NONE",
                                 "name": "HAL_LOG_LEVEL_NONE",
@@ -8949,7 +8949,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice HAL_LOG_LEVEL> && <choice HAL_LOG_LEVEL>",
+                                "depends_on": "<choice HAL_LOG_LEVEL>",
                                 "help": null,
                                 "id": "HAL_LOG_LEVEL_ERROR",
                                 "name": "HAL_LOG_LEVEL_ERROR",
@@ -8959,7 +8959,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice HAL_LOG_LEVEL> && <choice HAL_LOG_LEVEL>",
+                                "depends_on": "<choice HAL_LOG_LEVEL>",
                                 "help": null,
                                 "id": "HAL_LOG_LEVEL_WARN",
                                 "name": "HAL_LOG_LEVEL_WARN",
@@ -8969,7 +8969,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice HAL_LOG_LEVEL> && <choice HAL_LOG_LEVEL>",
+                                "depends_on": "<choice HAL_LOG_LEVEL>",
                                 "help": null,
                                 "id": "HAL_LOG_LEVEL_INFO",
                                 "name": "HAL_LOG_LEVEL_INFO",
@@ -8979,7 +8979,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice HAL_LOG_LEVEL> && <choice HAL_LOG_LEVEL>",
+                                "depends_on": "<choice HAL_LOG_LEVEL>",
                                 "help": null,
                                 "id": "HAL_LOG_LEVEL_DEBUG",
                                 "name": "HAL_LOG_LEVEL_DEBUG",
@@ -8989,7 +8989,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice HAL_LOG_LEVEL> && <choice HAL_LOG_LEVEL>",
+                                "depends_on": "<choice HAL_LOG_LEVEL>",
                                 "help": null,
                                 "id": "HAL_LOG_LEVEL_VERBOSE",
                                 "name": "HAL_LOG_LEVEL_VERBOSE",
@@ -9067,7 +9067,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice LOG_VERSION> && <choice LOG_VERSION>",
+                                "depends_on": "<choice LOG_VERSION>",
                                 "help": "Select this option to use Log V1. Recommended for projects with strict stack constraints\nor that prioritize performance over flexibility.",
                                 "id": "LOG_VERSION_1",
                                 "name": "LOG_VERSION_1",
@@ -9077,7 +9077,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice LOG_VERSION> && <choice LOG_VERSION>",
+                                "depends_on": "<choice LOG_VERSION>",
                                 "help": "Select this option to use Log V2. Recommended for projects that require smaller binaries,\nruntime log formatting configuration, or advanced logging features.",
                                 "id": "LOG_VERSION_2",
                                 "name": "LOG_VERSION_2",
@@ -9109,7 +9109,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "<choice LOG_DEFAULT_LEVEL> && <choice LOG_DEFAULT_LEVEL>",
+                                        "depends_on": "<choice LOG_DEFAULT_LEVEL>",
                                         "help": null,
                                         "id": "LOG_DEFAULT_LEVEL_NONE",
                                         "name": "LOG_DEFAULT_LEVEL_NONE",
@@ -9119,7 +9119,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice LOG_DEFAULT_LEVEL> && <choice LOG_DEFAULT_LEVEL>",
+                                        "depends_on": "<choice LOG_DEFAULT_LEVEL>",
                                         "help": null,
                                         "id": "LOG_DEFAULT_LEVEL_ERROR",
                                         "name": "LOG_DEFAULT_LEVEL_ERROR",
@@ -9129,7 +9129,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice LOG_DEFAULT_LEVEL> && <choice LOG_DEFAULT_LEVEL>",
+                                        "depends_on": "<choice LOG_DEFAULT_LEVEL>",
                                         "help": null,
                                         "id": "LOG_DEFAULT_LEVEL_WARN",
                                         "name": "LOG_DEFAULT_LEVEL_WARN",
@@ -9139,7 +9139,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice LOG_DEFAULT_LEVEL> && <choice LOG_DEFAULT_LEVEL>",
+                                        "depends_on": "<choice LOG_DEFAULT_LEVEL>",
                                         "help": null,
                                         "id": "LOG_DEFAULT_LEVEL_INFO",
                                         "name": "LOG_DEFAULT_LEVEL_INFO",
@@ -9149,7 +9149,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice LOG_DEFAULT_LEVEL> && <choice LOG_DEFAULT_LEVEL>",
+                                        "depends_on": "<choice LOG_DEFAULT_LEVEL>",
                                         "help": null,
                                         "id": "LOG_DEFAULT_LEVEL_DEBUG",
                                         "name": "LOG_DEFAULT_LEVEL_DEBUG",
@@ -9159,7 +9159,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice LOG_DEFAULT_LEVEL> && <choice LOG_DEFAULT_LEVEL>",
+                                        "depends_on": "<choice LOG_DEFAULT_LEVEL>",
                                         "help": null,
                                         "id": "LOG_DEFAULT_LEVEL_VERBOSE",
                                         "name": "LOG_DEFAULT_LEVEL_VERBOSE",
@@ -9189,7 +9189,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "<choice LOG_MAXIMUM_LEVEL> && <choice LOG_MAXIMUM_LEVEL>",
+                                        "depends_on": "<choice LOG_MAXIMUM_LEVEL>",
                                         "help": null,
                                         "id": "LOG_MAXIMUM_EQUALS_DEFAULT",
                                         "name": "LOG_MAXIMUM_EQUALS_DEFAULT",
@@ -9199,7 +9199,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "LOG_DEFAULT_LEVEL < 1 && <choice LOG_MAXIMUM_LEVEL> && <choice LOG_MAXIMUM_LEVEL>",
+                                        "depends_on": "LOG_DEFAULT_LEVEL < 1 && <choice LOG_MAXIMUM_LEVEL>",
                                         "help": null,
                                         "id": "LOG_MAXIMUM_LEVEL_ERROR",
                                         "name": "LOG_MAXIMUM_LEVEL_ERROR",
@@ -9209,7 +9209,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "LOG_DEFAULT_LEVEL < 2 && <choice LOG_MAXIMUM_LEVEL> && <choice LOG_MAXIMUM_LEVEL>",
+                                        "depends_on": "LOG_DEFAULT_LEVEL < 2 && <choice LOG_MAXIMUM_LEVEL>",
                                         "help": null,
                                         "id": "LOG_MAXIMUM_LEVEL_WARN",
                                         "name": "LOG_MAXIMUM_LEVEL_WARN",
@@ -9219,7 +9219,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "LOG_DEFAULT_LEVEL < 3 && <choice LOG_MAXIMUM_LEVEL> && <choice LOG_MAXIMUM_LEVEL>",
+                                        "depends_on": "LOG_DEFAULT_LEVEL < 3 && <choice LOG_MAXIMUM_LEVEL>",
                                         "help": null,
                                         "id": "LOG_MAXIMUM_LEVEL_INFO",
                                         "name": "LOG_MAXIMUM_LEVEL_INFO",
@@ -9229,7 +9229,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "LOG_DEFAULT_LEVEL < 4 && <choice LOG_MAXIMUM_LEVEL> && <choice LOG_MAXIMUM_LEVEL>",
+                                        "depends_on": "LOG_DEFAULT_LEVEL < 4 && <choice LOG_MAXIMUM_LEVEL>",
                                         "help": null,
                                         "id": "LOG_MAXIMUM_LEVEL_DEBUG",
                                         "name": "LOG_MAXIMUM_LEVEL_DEBUG",
@@ -9239,7 +9239,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "LOG_DEFAULT_LEVEL < 5 && <choice LOG_MAXIMUM_LEVEL> && <choice LOG_MAXIMUM_LEVEL>",
+                                        "depends_on": "LOG_DEFAULT_LEVEL < 5 && <choice LOG_MAXIMUM_LEVEL>",
                                         "help": null,
                                         "id": "LOG_MAXIMUM_LEVEL_VERBOSE",
                                         "name": "LOG_MAXIMUM_LEVEL_VERBOSE",
@@ -9291,7 +9291,7 @@
                                         "children": [
                                             {
                                                 "children": [],
-                                                "depends_on": "<choice LOG_TAG_LEVEL_IMPL> && <choice LOG_TAG_LEVEL_IMPL>",
+                                                "depends_on": "<choice LOG_TAG_LEVEL_IMPL>",
                                                 "help": "This option disables the ability to set the log level per tag.\nThe ability to change the log level at runtime depends on LOG_DYNAMIC_LEVEL_CONTROL.\nIf LOG_DYNAMIC_LEVEL_CONTROL is disabled, then changing the log level at runtime\nusing `esp_log_level_set()` is not possible.\nThis implementation is suitable for highly constrained environments.",
                                                 "id": "LOG_TAG_LEVEL_IMPL_NONE",
                                                 "name": "LOG_TAG_LEVEL_IMPL_NONE",
@@ -9301,7 +9301,7 @@
                                             },
                                             {
                                                 "children": [],
-                                                "depends_on": "<choice LOG_TAG_LEVEL_IMPL> && <choice LOG_TAG_LEVEL_IMPL>",
+                                                "depends_on": "<choice LOG_TAG_LEVEL_IMPL>",
                                                 "help": "Select this option to use the linked list-only implementation (no cache) for log level retrieval.\nThis approach searches the linked list of all tags for the log level, which may be slower\nfor a large number of tags but may have lower memory requirements than the CACHE approach.\nThe linked list approach compares the whole strings of log tags for finding the log level.",
                                                 "id": "LOG_TAG_LEVEL_IMPL_LINKED_LIST",
                                                 "name": "LOG_TAG_LEVEL_IMPL_LINKED_LIST",
@@ -9311,7 +9311,7 @@
                                             },
                                             {
                                                 "children": [],
-                                                "depends_on": "<choice LOG_TAG_LEVEL_IMPL> && <choice LOG_TAG_LEVEL_IMPL>",
+                                                "depends_on": "<choice LOG_TAG_LEVEL_IMPL>",
                                                 "help": "Select this option to use a hybrid mode: cache in combination with the linked list\nfor log tag level checks. This hybrid approach offers a balance between speed and memory usage.\n\nThe cache stores recently accessed log tags and their corresponding log levels, providing\nfaster lookups for frequently used tags. The cache approach compares the tag pointers, which is\nfaster than comparing the whole strings.\n\nFor less frequently used tags, the linked list is used to search for the log level, which may be\nslower for a large number of tags but has lower memory requirements compared to a full cache.\n\nThis hybrid approach aims to improve the efficiency of log level retrieval by combining the benefits\nof both cache and linked list implementations.",
                                                 "id": "LOG_TAG_LEVEL_IMPL_CACHE_AND_LINKED_LIST",
                                                 "name": "LOG_TAG_LEVEL_IMPL_CACHE_AND_LINKED_LIST",
@@ -9331,7 +9331,7 @@
                                         "children": [
                                             {
                                                 "children": [],
-                                                "depends_on": "<choice LOG_TAG_LEVEL_CACHE_IMPL> && <choice LOG_TAG_LEVEL_CACHE_IMPL>",
+                                                "depends_on": "<choice LOG_TAG_LEVEL_CACHE_IMPL>",
                                                 "help": "This option enables the use of a simple array-based cache implementation for storing and\nretrieving log tag levels. There is no additional code that reorders the cache for fast lookups.\nSuitable for projects where memory usage optimization is crucial and the simplicity of implementation\nis preferred.",
                                                 "id": "LOG_TAG_LEVEL_CACHE_ARRAY",
                                                 "name": "LOG_TAG_LEVEL_CACHE_ARRAY",
@@ -9341,7 +9341,7 @@
                                             },
                                             {
                                                 "children": [],
-                                                "depends_on": "<choice LOG_TAG_LEVEL_CACHE_IMPL> && <choice LOG_TAG_LEVEL_CACHE_IMPL>",
+                                                "depends_on": "<choice LOG_TAG_LEVEL_CACHE_IMPL>",
                                                 "help": "This option enables the use of a binary min-heap-based cache implementation for efficient\nstorage and retrieval of log tag levels. It does automatically optimizing cache for fast lookups.\nSuitable for projects where speed of lookup is critical and memory usage can accommodate\nthe overhead of maintaining a binary min-heap structure.",
                                                 "id": "LOG_TAG_LEVEL_CACHE_BINARY_MIN_HEAP",
                                                 "name": "LOG_TAG_LEVEL_CACHE_BINARY_MIN_HEAP",
@@ -9405,7 +9405,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "LOG_VERSION_2 && <choice LOG_TIMESTAMP_SOURCE> && <choice LOG_TIMESTAMP_SOURCE>",
+                                        "depends_on": "LOG_VERSION_2 && <choice LOG_TIMESTAMP_SOURCE>",
                                         "help": null,
                                         "id": "LOG_TIMESTAMP_SOURCE_NONE",
                                         "name": "LOG_TIMESTAMP_SOURCE_NONE",
@@ -9415,7 +9415,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice LOG_TIMESTAMP_SOURCE> && <choice LOG_TIMESTAMP_SOURCE>",
+                                        "depends_on": "<choice LOG_TIMESTAMP_SOURCE>",
                                         "help": null,
                                         "id": "LOG_TIMESTAMP_SOURCE_RTOS",
                                         "name": "LOG_TIMESTAMP_SOURCE_RTOS",
@@ -9425,7 +9425,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice LOG_TIMESTAMP_SOURCE> && <choice LOG_TIMESTAMP_SOURCE>",
+                                        "depends_on": "<choice LOG_TIMESTAMP_SOURCE>",
                                         "help": null,
                                         "id": "LOG_TIMESTAMP_SOURCE_SYSTEM",
                                         "name": "LOG_TIMESTAMP_SOURCE_SYSTEM",
@@ -9435,7 +9435,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "LOG_VERSION_2 && <choice LOG_TIMESTAMP_SOURCE> && <choice LOG_TIMESTAMP_SOURCE>",
+                                        "depends_on": "LOG_VERSION_2 && <choice LOG_TIMESTAMP_SOURCE>",
                                         "help": null,
                                         "id": "LOG_TIMESTAMP_SOURCE_SYSTEM_FULL",
                                         "name": "LOG_TIMESTAMP_SOURCE_SYSTEM_FULL",
@@ -9445,7 +9445,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "LOG_VERSION_2 && <choice LOG_TIMESTAMP_SOURCE> && <choice LOG_TIMESTAMP_SOURCE>",
+                                        "depends_on": "LOG_VERSION_2 && <choice LOG_TIMESTAMP_SOURCE>",
                                         "help": null,
                                         "id": "LOG_TIMESTAMP_SOURCE_UNIX",
                                         "name": "LOG_TIMESTAMP_SOURCE_UNIX",
@@ -9503,7 +9503,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "<choice LOG_MODE> && <choice LOG_MODE>",
+                                        "depends_on": "<choice LOG_MODE>",
                                         "help": "Enables text-based logging, where log messages are stored in a human-readable format.\nThis mode is useful for development and debugging, as it allows logs to be easily\nread and interpreted without additional processing.",
                                         "id": "LOG_MODE_TEXT",
                                         "name": "LOG_MODE_TEXT",
@@ -9513,7 +9513,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "LOG_VERSION_2 && <choice LOG_MODE> && <choice LOG_MODE>",
+                                        "depends_on": "LOG_VERSION_2 && <choice LOG_MODE>",
                                         "help": "Enables binary logging with host-side format string expansion. In this mode, the\nformat argument of ESP_LOGx, ESP_EARLY_LOG, and ESP_DRAM_LOG macros is stored in a\nNOLOAD section, not included in the final binary file. This reduces flash usage by\napproximately 10% - 35%. The esp_log() function uses the binary log handler to output\nmessages. Instead of sending the full log string, the chip transmits only the\naddresses of these strings (if present in the ELF file). If the format string\ncannot be found in the ELF file, the chip sends the entire string. The host-side\nmonitor tool, which has access to the ELF file, reconstructs the log message using\nthe format string.\nThis reduces firmware size by eliminating format strings from\nflash memory and removing the usage of printf-like functions, potentially freeing up\na few kilobytes of space. To further reduce firmware size, wrap string data with ESP_LOG_ATTR_STR.",
                                         "id": "LOG_MODE_BINARY",
                                         "name": "LOG_MODE_BINARY",
@@ -9633,7 +9633,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "When this option is selected, the patch will be enabled for XMC.\nFollow the recommended flow by XMC for better stability.\n\nDO NOT DISABLE UNLESS YOU KNOW WHAT YOU ARE DOING.",
                                 "id": "SPI_FLASH_BROWNOUT_RESET_XMC",
                                 "name": "SPI_FLASH_BROWNOUT_RESET_XMC",
@@ -9643,7 +9643,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "When brownout happens during flash erase/write operations,\nsend reset command to stop the flash operations to improve stability.",
                                 "id": "SPI_FLASH_BROWNOUT_RESET",
                                 "name": "SPI_FLASH_BROWNOUT_RESET",
@@ -9652,7 +9652,7 @@
                                 "type": "bool"
                             }
                         ],
-                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                         "id": "component-config-main-flash-configuration-spi-flash-behavior-when-brownout-home-phong-esp-idf-components-spi_flash-Kconfig-4",
                         "title": "SPI Flash behavior when brownout",
                         "type": "menu"
@@ -9661,7 +9661,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "This is a helper config for HPM. Invisible for users.",
                                 "id": "SPI_FLASH_UNDER_HIGH_FREQ",
                                 "name": "SPI_FLASH_UNDER_HIGH_FREQ",
@@ -9673,7 +9673,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "<choice SPI_FLASH_HPM> && <choice SPI_FLASH_HPM>",
+                                        "depends_on": "<choice SPI_FLASH_HPM>",
                                         "help": null,
                                         "id": "SPI_FLASH_HPM_ENA",
                                         "name": "SPI_FLASH_HPM_ENA",
@@ -9683,7 +9683,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice SPI_FLASH_HPM> && <choice SPI_FLASH_HPM>",
+                                        "depends_on": "<choice SPI_FLASH_HPM>",
                                         "help": null,
                                         "id": "SPI_FLASH_HPM_AUTO",
                                         "name": "SPI_FLASH_HPM_AUTO",
@@ -9693,7 +9693,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice SPI_FLASH_HPM> && <choice SPI_FLASH_HPM>",
+                                        "depends_on": "<choice SPI_FLASH_HPM>",
                                         "help": null,
                                         "id": "SPI_FLASH_HPM_DIS",
                                         "name": "SPI_FLASH_HPM_DIS",
@@ -9702,7 +9702,7 @@
                                         "type": "bool"
                                     }
                                 ],
-                                "depends_on": "(IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4) && !ESPTOOLPY_OCT_FLASH && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "(IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4) && !ESPTOOLPY_OCT_FLASH && !APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "Whether the High Performance Mode of Flash is enabled. As an optional feature, user needs to manually\nenable this option as a confirmation. To be back-compatible with earlier IDF version, this option is\nautomatically enabled with warning when Flash running > 80Mhz.",
                                 "id": "component-config-main-flash-configuration-optional-and-experimental-features-read-docs-first--high-performance-mode-read-docs-first-80mhz--home-phong-esp-idf-components-spi_flash-Kconfig-36",
                                 "name": "SPI_FLASH_HPM",
@@ -9711,7 +9711,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "This option is invisible, and will be selected automatically\nwhen ``ESPTOOLPY_FLASHFREQ_120M`` is selected.",
                                 "id": "SPI_FLASH_HPM_ON",
                                 "name": "SPI_FLASH_HPM_ON",
@@ -9723,7 +9723,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "<choice SPI_FLASH_HPM_DC> && <choice SPI_FLASH_HPM_DC>",
+                                        "depends_on": "<choice SPI_FLASH_HPM_DC>",
                                         "help": null,
                                         "id": "SPI_FLASH_HPM_DC_AUTO",
                                         "name": "SPI_FLASH_HPM_DC_AUTO",
@@ -9733,7 +9733,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "<choice SPI_FLASH_HPM_DC> && <choice SPI_FLASH_HPM_DC>",
+                                        "depends_on": "<choice SPI_FLASH_HPM_DC>",
                                         "help": null,
                                         "id": "SPI_FLASH_HPM_DC_DISABLE",
                                         "name": "SPI_FLASH_HPM_DC_DISABLE",
@@ -9742,7 +9742,7 @@
                                         "type": "bool"
                                     }
                                 ],
-                                "depends_on": "SPI_FLASH_HPM_ON && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "SPI_FLASH_HPM_ON && !APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "This feature needs your bootloader to be compiled DC-aware (BOOTLOADER_FLASH_DC_AWARE=y). Otherwise the\nchip will not be able to boot after a reset.",
                                 "id": "component-config-main-flash-configuration-optional-and-experimental-features-read-docs-first--support-hpm-using-dc-read-docs-first--home-phong-esp-idf-components-spi_flash-Kconfig-65",
                                 "name": "SPI_FLASH_HPM_DC",
@@ -9751,7 +9751,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "This is a helper config for HPM. Whether HPM-DC is enabled is also determined by bootloader.\nInvisible for users.",
                                 "id": "SPI_FLASH_HPM_DC_ON",
                                 "name": "SPI_FLASH_HPM_DC_ON",
@@ -9761,7 +9761,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SOC_SPI_MEM_SUPPORT_AUTO_SUSPEND && !SPI_FLASH_ROM_IMPL && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "SOC_SPI_MEM_SUPPORT_AUTO_SUSPEND && !SPI_FLASH_ROM_IMPL && !APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "This option is disabled by default because it is supported only\nfor specific flash chips and for specific Espressif chips.\nTo evaluate if you can use this feature refer to\n`Optional Features for Flash` > `Auto Suspend & Resume` of the `ESP-IDF Programming Guide`.\n\nCAUTION: If you want to OTA to an app with this feature turned on, please make\nsure the bootloader has the support for it. (later than IDF v4.3)\n\nIf you are using an official Espressif module, please contact Espressif Business support\nto check if the module has the flash that support this feature installed.\nAlso refer to `Concurrency Constraints for Flash on SPI1` > `Flash Auto Suspend Feature`\nbefore enabling this option.",
                                 "id": "SPI_FLASH_AUTO_SUSPEND",
                                 "name": "SPI_FLASH_AUTO_SUSPEND",
@@ -9771,7 +9771,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "This config is used for setting Tsus parameter. Tsus means CS# high to next command after\nsuspend. You can refer to the chapter of AC CHARACTERISTICS of flash datasheet.",
                                 "id": "SPI_FLASH_SUSPEND_TSUS_VAL_US",
                                 "name": "SPI_FLASH_SUSPEND_TSUS_VAL_US",
@@ -9784,7 +9784,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SOC_SPI_MEM_SUPPORT_TSUS_TRES_SEPERATE_CTR && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "SOC_SPI_MEM_SUPPORT_TSUS_TRES_SEPERATE_CTR && !APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "This config is used for setting Trs parameter. Trs means CS Latency Between Resume And Next Suspend.\nYou can refer to the chapter of AC CHARACTERISTICS of flash datasheet.\nFor high-performance scenarios, some flash chips allow this set value to be smaller than the\ngiven value in the datasheet without causing errors in the flash state machine.\nWhen you have any related needs, please contact espressif business team.",
                                 "id": "SPI_FLASH_SUSPEND_TRS_VAL_US",
                                 "name": "SPI_FLASH_SUSPEND_TRS_VAL_US",
@@ -9794,7 +9794,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "XMC-C series is regarded as not qualified for the Suspend feature, since its specification\nhas a tRS >= 1ms restriction. We strongly do not suggest using it for the Suspend feature.\nHowever, if your product in field has enabled this feature, you may still enable this\nconfig option to keep the legacy behavior.\n\nFor new users, DO NOT enable this config.",
                                 "id": "SPI_FLASH_FORCE_ENABLE_XMC_C_SUSPEND",
                                 "name": "SPI_FLASH_FORCE_ENABLE_XMC_C_SUSPEND",
@@ -9804,7 +9804,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "Flash suspend has a defect on ESP32C6 until v0.2 and ESP32H2 until v1.2. If you already use suspend\nfeature for mass production, you can enable this for bypassing check after knowing the risk.\nBut if you are new users, or developing new applications, or producing a new batch,\nplease DO NOT enable this config option.\n\nFor more information, please refer to errata or connect to Espressif business support team.",
                                 "id": "SPI_FLASH_FORCE_ENABLE_C6_H2_SUSPEND",
                                 "name": "SPI_FLASH_FORCE_ENABLE_C6_H2_SUSPEND",
@@ -9814,7 +9814,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SPI_FLASH_AUTO_SUSPEND && FREERTOS_UNICORE && IDF_EXPERIMENTAL_FEATURES && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "SPI_FLASH_AUTO_SUSPEND && FREERTOS_UNICORE && IDF_EXPERIMENTAL_FEATURES && !APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "Enable this config will disable auto-resume from hardware. Thus the software will resume the chip\nafter any higher priority task/interrupt which suspend the chip. The benefit is that the suspend-resume\nwill not disturb the higher priority task and interrupt.\n\nThis currently is only valid on single core chip.",
                                 "id": "SPI_FLASH_SOFTWARE_RESUME",
                                 "name": "SPI_FLASH_SOFTWARE_RESUME",
@@ -9824,7 +9824,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SPI_FLASH_AUTO_SUSPEND && FREERTOS_UNICORE && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "SPI_FLASH_AUTO_SUSPEND && FREERTOS_UNICORE && !APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "Disable freertos task scheduler when CONFIG_SPI_FLASH_AUTO_SUSPEND is enabled.\nThus only interrupt can trigger a suspend. When SPI_FLASH_AUTO_SUSPEND is enabled,\ndefault behavior is not disable the task scheduler, so both interrupt and high priority\ntask can suspend the erase/program operation. When this option is enabled, task\nscheduler is disabled, only interrupt can suspend erase/program operation.",
                                 "id": "SPI_FLASH_DISABLE_SCHEDULER_IN_SUSPEND",
                                 "name": "SPI_FLASH_DISABLE_SCHEDULER_IN_SUSPEND",
@@ -9834,7 +9834,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SPI_FLASH_AUTO_SUSPEND && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "SPI_FLASH_AUTO_SUSPEND && !APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "Majority flash supports to use flash register to judge if flash suspend status is\ndone or not. So enable this config, the behavior would use flash register WIP bit to judge\nwhether suspend is valid instead of waiting for a specific long time, which can save a\nlot of time and benefit for performance improvement.",
                                 "id": "SPI_FLASH_AUTO_CHECK_SUSPEND_STATUS",
                                 "name": "SPI_FLASH_AUTO_CHECK_SUSPEND_STATUS",
@@ -9844,7 +9844,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "When disabled, certain functions in `spi_flash` component will be placed into Flash memory\ninstead of IRAM. Disabling this option will save almost 10KB of IRAM depending on which\nfunctions are used.\n\nWhen enabled, these functions will be placed in internal RAM, with better performance.\n\nFor more information please refer to programming guide.",
                                 "id": "SPI_FLASH_PLACE_FUNCTIONS_IN_IRAM",
                                 "name": "SPI_FLASH_PLACE_FUNCTIONS_IN_IRAM",
@@ -9853,7 +9853,7 @@
                                 "type": "bool"
                             }
                         ],
-                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                         "id": "component-config-main-flash-configuration-optional-and-experimental-features-read-docs-first--home-phong-esp-idf-components-spi_flash-Kconfig-26",
                         "title": "Optional and Experimental Features (READ DOCS FIRST)",
                         "type": "menu"
@@ -9889,7 +9889,7 @@
                                 "type": "bool"
                             }
                         ],
-                        "depends_on": "!SPI_FLASH_ROM_IMPL && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "!SPI_FLASH_ROM_IMPL && !APP_BUILD_TYPE_PURE_RAM_APP",
                         "help": "If this option is enabled, any time SPI flash is written then the data will be read\nback and verified. This can catch hardware problems with SPI flash, or flash which\nwas not erased before verification.\n\nThis will slightly influence the write performance.",
                         "id": "SPI_FLASH_VERIFY_WRITE",
                         "name": "SPI_FLASH_VERIFY_WRITE",
@@ -9899,7 +9899,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                         "help": "This option enables the following APIs:\n\n- esp_flash_reset_counters\n- esp_flash_dump_counters\n- esp_flash_get_counters\n\nThese APIs may be used to collect performance data for spi_flash APIs\nand to help understand behaviour of libraries which use SPI flash.",
                         "id": "SPI_FLASH_ENABLE_COUNTERS",
                         "name": "SPI_FLASH_ENABLE_COUNTERS",
@@ -9909,7 +9909,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                         "help": "Enable this flag to use patched versions of SPI flash ROM driver functions.\nThis option should be enabled, if any one of the following is true: (1) need to write\nto flash on ESP32-D2WD; (2) main SPI flash is connected to non-default pins; (3) main\nSPI flash chip is manufactured by ISSI.",
                         "id": "SPI_FLASH_ROM_DRIVER_PATCH",
                         "name": "SPI_FLASH_ROM_DRIVER_PATCH",
@@ -9919,7 +9919,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "ESP_ROM_HAS_SPI_FLASH && !ESPTOOLPY_OCT_FLASH && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "ESP_ROM_HAS_SPI_FLASH && !ESPTOOLPY_OCT_FLASH && !APP_BUILD_TYPE_PURE_RAM_APP",
                         "help": "Enable this flag to use new SPI flash driver functions from ROM instead of ESP-IDF.\n\nIf keeping this as \"n\" in your project, you will have less free IRAM.\nBut you can use all of our flash features.\n\nIf making this as \"y\" in your project, you will increase free IRAM.\nBut you may miss out on some flash features and support for new flash chips.\n\nCurrently the ROM cannot support the following features:\n\n- SPI_FLASH_AUTO_SUSPEND (C3, S3)",
                         "id": "SPI_FLASH_ROM_IMPL",
                         "name": "SPI_FLASH_ROM_IMPL",
@@ -9931,7 +9931,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "<choice SPI_FLASH_DANGEROUS_WRITE> && <choice SPI_FLASH_DANGEROUS_WRITE>",
+                                "depends_on": "<choice SPI_FLASH_DANGEROUS_WRITE>",
                                 "help": null,
                                 "id": "SPI_FLASH_DANGEROUS_WRITE_ABORTS",
                                 "name": "SPI_FLASH_DANGEROUS_WRITE_ABORTS",
@@ -9941,7 +9941,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice SPI_FLASH_DANGEROUS_WRITE> && <choice SPI_FLASH_DANGEROUS_WRITE>",
+                                "depends_on": "<choice SPI_FLASH_DANGEROUS_WRITE>",
                                 "help": null,
                                 "id": "SPI_FLASH_DANGEROUS_WRITE_FAILS",
                                 "name": "SPI_FLASH_DANGEROUS_WRITE_FAILS",
@@ -9951,7 +9951,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "<choice SPI_FLASH_DANGEROUS_WRITE> && <choice SPI_FLASH_DANGEROUS_WRITE>",
+                                "depends_on": "<choice SPI_FLASH_DANGEROUS_WRITE>",
                                 "help": null,
                                 "id": "SPI_FLASH_DANGEROUS_WRITE_ALLOWED",
                                 "name": "SPI_FLASH_DANGEROUS_WRITE_ALLOWED",
@@ -9960,7 +9960,7 @@
                                 "type": "bool"
                             }
                         ],
-                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                         "help": "SPI flash APIs can optionally abort or return a failure code\nif erasing or writing addresses that fall at the beginning\nof flash (covering the bootloader and partition table) or that\noverlap the app partition that contains the running app.\n\nIt is not recommended to ever write to these regions from an IDF app,\nand this check prevents logic errors or corrupted firmware memory from\ndamaging these regions.\n\nNote that this feature *does not* check calls to the esp_rom_xxx SPI flash\nROM functions. These functions should not be called directly from IDF\napplications.",
                         "id": "component-config-spi-flash-driver-writing-to-dangerous-flash-regions-home-phong-esp-idf-components-spi_flash-Kconfig-271",
                         "name": "SPI_FLASH_DANGEROUS_WRITE",
@@ -9969,7 +9969,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32 && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "IDF_TARGET_ESP32 && !APP_BUILD_TYPE_PURE_RAM_APP",
                         "help": "Each SPI bus needs a lock for arbitration among devices. This allows multiple\ndevices on a same bus, but may reduce the speed of esp_flash driver access to the\nmain flash chip.\n\nIf you only need to use esp_flash driver to access the main flash chip, disable\nthis option, and the lock will be bypassed on SPI1 bus. Otherwise if extra devices\nare needed to attach to SPI1 bus, enable this option.",
                         "id": "SPI_FLASH_SHARE_SPI1_BUS",
                         "name": "SPI_FLASH_SHARE_SPI1_BUS",
@@ -9979,7 +9979,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                         "help": "Some flash chips can have very high \"max\" erase times, especially for block erase (32KB or 64KB).\nThis option allows to bypass \"block erase\" and always do sector erase commands.\nThis will be much slower overall in most cases, but improves latency for other code to run.",
                         "id": "SPI_FLASH_BYPASS_BLOCK_ERASE",
                         "name": "SPI_FLASH_BYPASS_BLOCK_ERASE",
@@ -10010,7 +10010,7 @@
                                 "type": "int"
                             }
                         ],
-                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                         "help": "This allows to yield the CPUs between erase commands.\nPrevents starvation of other tasks.\nPlease use this configuration together with ``SPI_FLASH_ERASE_YIELD_DURATION_MS`` and\n``SPI_FLASH_ERASE_YIELD_TICKS`` after carefully checking flash datasheet to avoid a\nwatchdog timeout.\nFor more information, please check `SPI Flash API` reference documentation\nunder section `OS Function`.",
                         "id": "SPI_FLASH_YIELD_DURING_ERASE",
                         "name": "SPI_FLASH_YIELD_DURING_ERASE",
@@ -10020,7 +10020,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                         "help": "Flash write is broken down in terms of multiple (smaller) write operations.\nThis configuration options helps to set individual write chunk size, smaller\nvalue here ensures that cache (and non-IRAM resident interrupts) remains\ndisabled for shorter duration.",
                         "id": "SPI_FLASH_WRITE_CHUNK_SIZE",
                         "name": "SPI_FLASH_WRITE_CHUNK_SIZE",
@@ -10033,7 +10033,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                         "help": "SPI Flash driver uses the flash size configured in bootloader header by default.\nEnable this option to override flash size with latest ESPTOOLPY_FLASHSIZE value from\nthe app header if the size in the bootloader header is incorrect.",
                         "id": "SPI_FLASH_SIZE_OVERRIDE",
                         "name": "SPI_FLASH_SIZE_OVERRIDE",
@@ -10043,7 +10043,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                         "help": "This option is helpful if you are using a flash chip whose timeout is quite large or unpredictable.",
                         "id": "SPI_FLASH_CHECK_ERASE_TIMEOUT_DISABLED",
                         "name": "SPI_FLASH_CHECK_ERASE_TIMEOUT_DISABLED",
@@ -10053,7 +10053,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                         "help": "This option allows the chip driver list to be customized, instead of using the default list provided by\nESP-IDF.\n\nWhen this option is enabled, the default list is no longer compiled or linked. Instead, the\n`default_registered_chips` structure must be provided by the user.\n\nSee example: custom_chip_driver under examples/storage for more details.",
                         "id": "SPI_FLASH_OVERRIDE_CHIP_DRIVER_LIST",
                         "name": "SPI_FLASH_OVERRIDE_CHIP_DRIVER_LIST",
@@ -10065,7 +10065,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": null,
                                 "id": "SPI_FLASH_VENDOR_XMC_SUPPORT_ENABLED",
                                 "name": "SPI_FLASH_VENDOR_XMC_SUPPORT_ENABLED",
@@ -10075,7 +10075,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": null,
                                 "id": "SPI_FLASH_VENDOR_GD_SUPPORT_ENABLED",
                                 "name": "SPI_FLASH_VENDOR_GD_SUPPORT_ENABLED",
@@ -10085,7 +10085,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": null,
                                 "id": "SPI_FLASH_VENDOR_ISSI_SUPPORT_ENABLED",
                                 "name": "SPI_FLASH_VENDOR_ISSI_SUPPORT_ENABLED",
@@ -10095,7 +10095,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": null,
                                 "id": "SPI_FLASH_VENDOR_MXIC_SUPPORT_ENABLED",
                                 "name": "SPI_FLASH_VENDOR_MXIC_SUPPORT_ENABLED",
@@ -10105,7 +10105,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": null,
                                 "id": "SPI_FLASH_VENDOR_WINBOND_SUPPORT_ENABLED",
                                 "name": "SPI_FLASH_VENDOR_WINBOND_SUPPORT_ENABLED",
@@ -10115,7 +10115,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "Enable this to support auto detection of ISSI chips if chip vendor not directly\ngiven by ``chip_drv`` member of the chip struct. This adds support for variant\nchips, however will extend detecting time.",
                                 "id": "SPI_FLASH_SUPPORT_ISSI_CHIP",
                                 "name": "SPI_FLASH_SUPPORT_ISSI_CHIP",
@@ -10125,7 +10125,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "Enable this to support auto detection of MXIC chips if chip vendor not directly\ngiven by ``chip_drv`` member of the chip struct. This adds support for variant\nchips, however will extend detecting time.",
                                 "id": "SPI_FLASH_SUPPORT_MXIC_CHIP",
                                 "name": "SPI_FLASH_SUPPORT_MXIC_CHIP",
@@ -10135,7 +10135,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "Enable this to support auto detection of GD (GigaDevice) chips if chip vendor not\ndirectly given by ``chip_drv`` member of the chip struct. If you are using Wrover\nmodules, please don't disable this, otherwise your flash may not work in 4-bit\nmode.\n\nThis adds support for variant chips, however will extend detecting time and image\nsize. Note that the default chip driver supports the GD chips with product ID\n60H.",
                                 "id": "SPI_FLASH_SUPPORT_GD_CHIP",
                                 "name": "SPI_FLASH_SUPPORT_GD_CHIP",
@@ -10145,7 +10145,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "Enable this to support auto detection of Winbond chips if chip vendor not directly\ngiven by ``chip_drv`` member of the chip struct. This adds support for variant\nchips, however will extend detecting time.",
                                 "id": "SPI_FLASH_SUPPORT_WINBOND_CHIP",
                                 "name": "SPI_FLASH_SUPPORT_WINBOND_CHIP",
@@ -10155,7 +10155,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "Enable this to support auto detection of BOYA chips if chip vendor not directly\ngiven by ``chip_drv`` member of the chip struct. This adds support for variant\nchips, however will extend detecting time.",
                                 "id": "SPI_FLASH_SUPPORT_BOYA_CHIP",
                                 "name": "SPI_FLASH_SUPPORT_BOYA_CHIP",
@@ -10165,7 +10165,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "Enable this to support auto detection of TH chips if chip vendor not directly\ngiven by ``chip_drv`` member of the chip struct. This adds support for variant\nchips, however will extend detecting time.",
                                 "id": "SPI_FLASH_SUPPORT_TH_CHIP",
                                 "name": "SPI_FLASH_SUPPORT_TH_CHIP",
@@ -10175,7 +10175,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "IDF_TARGET_ESP32S3 && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                                "depends_on": "IDF_TARGET_ESP32S3 && !APP_BUILD_TYPE_PURE_RAM_APP",
                                 "help": "Enable this to support auto detection of Octal MXIC chips if chip vendor not directly\ngiven by ``chip_drv`` member of the chip struct. This adds support for variant\nchips, however will extend detecting time.",
                                 "id": "SPI_FLASH_SUPPORT_MXIC_OPI_CHIP",
                                 "name": "SPI_FLASH_SUPPORT_MXIC_OPI_CHIP",
@@ -10184,14 +10184,14 @@
                                 "type": "bool"
                             }
                         ],
-                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                         "id": "component-config-spi-flash-driver-auto-detect-flash-chips-home-phong-esp-idf-components-spi_flash-Kconfig-382",
                         "title": "Auto-detect flash chips",
                         "type": "menu"
                     },
                     {
                         "children": [],
-                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP && !APP_BUILD_TYPE_PURE_RAM_APP",
+                        "depends_on": "!APP_BUILD_TYPE_PURE_RAM_APP",
                         "help": "This option enables flash read/write operations to encrypted partition/s. This option\nis kept enabled irrespective of state of flash encryption feature. However, in case\napplication is not using flash encryption feature and is in need of some additional\nmemory from IRAM region (~1KB) then this config can be disabled.",
                         "id": "SPI_FLASH_ENABLE_ENCRYPTED_READ_WRITE",
                         "name": "SPI_FLASH_ENABLE_ENCRYPTED_READ_WRITE",

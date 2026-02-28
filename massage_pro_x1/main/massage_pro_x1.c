@@ -11,9 +11,9 @@
 #include "nvs_flash.h"
 
 // Component headers
+#include "device_state.h"
 #include "ble_server.h"
 #include "motor_control.h"
-#include "max30102.h"
 #include "audio_control.h"
 #include "assistant_handler.h"
 #include "commands.h"
@@ -21,9 +21,19 @@
 // Logging tag
 static const char *TAG = "MAIN";
 
-// Global state
-device_state_t device_state = {0};
-assistant_config_t assistant_config = {0};
+// Global device state - DEFINE it here (not just declare)
+device_state_t device_state = {
+    .intensity_level = 0,
+    .heat_on = false,
+    .rotate_on = false,
+    .audio_volume = 70,
+    .audio_muted = false,
+    .assistant_active = false,
+    .assistant_time_remaining = 0,
+    .uptime_seconds = 0,
+    .battery_charging = false,
+    .battery_level = 100,
+};
 
 //-----------------------------------------------------------------------------
 // Initialization Functions
@@ -64,16 +74,7 @@ static esp_err_t init_hardware(void) {
     }
     ESP_LOGI(TAG, "  ✓ Motor control ready");
     
-    // Initialize health monitoring (MAX30102)
-    ESP_LOGI(TAG, "  - Health monitor...");
-    ret = max30102_i2c_init();
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "✗ Health monitor init failed: %s", esp_err_to_name(ret));
-        // Non-critical, continue anyway
-    } else {
-        ESP_LOGI(TAG, "  ✓ Health monitor ready");
-    }
-    
+   
     // Initialize audio system
     ESP_LOGI(TAG, "  - Audio system...");
     ret = audio_init();
@@ -110,7 +111,7 @@ static esp_err_t init_bluetooth(void) {
 static esp_err_t init_assistant(void) {
     ESP_LOGI(TAG, "Initializing AI Assistant...");
     
-    assistant_init_timer_task();
+    assistant_init();
     ESP_LOGI(TAG, "✓ AI Assistant ready");
     
     return ESP_OK;

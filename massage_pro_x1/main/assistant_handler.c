@@ -1,201 +1,172 @@
+/*
+ * Assistant Handler Module
+ * Manages automated massage sessions
+ */
+
 #include "assistant_handler.h"
+#include "motor_control.h"
 #include "audio_control.h"
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "driver/gpio.h"
-#include "driver/ledc.h"
-#include "assistant_handler.h"
-#include "motor_control.h"  // Add this
-#include "esp_log.h"
-#define TAG "ASSISTANT"
 
-// External references (these should be in your main file)
-extern device_state_t device_state;
-extern assistant_config_t assistant_config;
+static const char *TAG = "ASSISTANT";
 
+// Global assistant configuration
+static assistant_config_t assistant_config = {0};
+static TaskHandle_t assistant_task_handle = NULL;
+static bool one_minute_warning_played = false;
 
+//-----------------------------------------------------------------------------
+// Private Functions
+//-----------------------------------------------------------------------------
+
+static void assistant_timer_callback(void) {
+    if (!assistant_config.active) {
+        return;
+    }
+    
+    uint32_t current_time = xTaskGetTickCount() * portTICK_PERIOD_MS / 1000; // seconds
+    uint32_t elapsed_sec = current_time - assistant_config.start_time;
+    uint32_t duration_sec = assistant_config.duration_min * 60;
+    uint32_t remaining_sec = duration_sec - elapsed_sec;
+    
+    // Play one-minute warning
+    if (remaining_sec <= 60 && remaining_sec > 59 && !one_minute_warning_played) {
+        ESP_LOGI(TAG, "One minute remaining");
+        audio_notify(AUDIO_NOTIFY_ONE_MINUTE_WARNING);
+        one_minute_warning_played = true;
+    }
+    
+    // Session complete
+    if (elapsed_sec >= duration_sec) {
+        ESP_LOGI(TAG, "Session completed");
+        audio_notify(AUDIO_NOTIFY_SESSION_COMPLETE);
+        assistant_stop_session();
+    }
+}
+
+//-----------------------------------------------------------------------------
+// Assistant Task
+//-----------------------------------------------------------------------------
+
+void assistant_task(void *pvParameters) {
+    ESP_LOGI(TAG, "Assistant task started");
+    
+    while (assistant_config.active) {
+        // Check if session should end
+        assistant_timer_callback();
+        
+        // Update every second
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+    
+    ESP_LOGI(TAG, "Assistant task stopped");
+    assistant_task_handle = NULL;
+    vTaskDelete(NULL);
+}
+
+//-----------------------------------------------------------------------------
+// Public API
+//-----------------------------------------------------------------------------
+
+void assistant_init(void) {
+    assistant_config.active = false;
+    assistant_config.level = 0;
+    assistant_config.heat_enabled = false;
+    assistant_config.duration_min = 0;
+    assistant_config.start_time = 0;
+    one_minute_warning_played = false;
+    
+    ESP_LOGI(TAG, "Assistant handler initialized");
+}
 
 esp_err_t assistant_start_session(uint8_t level, bool heat, uint16_t duration_min) {
-    ESP_LOGI(TAG, "Starting assistant session: Level=%d, Heat=%s, Duration=%d min",
-             level, heat ? "ON" : "OFF", duration_min);
+    if (assistant_config.active) {
+        ESP_LOGW(TAG, "Session already active, stopping previous session");
+        assistant_stop_session();
+        vTaskDelay(100 / portTICK_PERIOD_MS);
+    }
     
     // Validate parameters
-    if (level < 1 || level > 5) {
-        ESP_LOGE(TAG, "Invalid level: %d", level);
+    if (level > 5) {
+        ESP_LOGE(TAG, "Invalid level: %d (max 5)", level);
         return ESP_ERR_INVALID_ARG;
     }
     
-    if (duration_min < 1 || duration_min > 60) {
-        ESP_LOGE(TAG, "Invalid duration: %d", duration_min);
+    if (duration_min == 0 || duration_min > 120) {
+        ESP_LOGE(TAG, "Invalid duration: %d min (1-120 allowed)", duration_min);
         return ESP_ERR_INVALID_ARG;
     }
     
-    // Stop any existing session
-    if (assistant_config.active) {
-        ESP_LOGW(TAG, "Stopping existing session");
-        assistant_stop_session();
-        vTaskDelay(pdMS_TO_TICKS(500));
-    }
-    
-    // Configure assistant
+    // Configure session
     assistant_config.level = level;
     assistant_config.heat_enabled = heat;
-    assistant_config.duration_minutes = duration_min;
+    assistant_config.duration_min = duration_min;
     assistant_config.start_time = xTaskGetTickCount() * portTICK_PERIOD_MS / 1000;
-    assistant_config.active = 1;
+    assistant_config.active = true;
+    one_minute_warning_played = false; // Reset warning flag
     
-    // Apply settings
-    device_state.intensity_level = level;
-    // Replace apply_motor_level(level) with:
+    // Apply settings to motor
     motor_set_level(level);
-
-    // Replace apply_heat(heat) with:
-    motor_set_heat(heat);   
-    // Audio feedback for level
-    switch (level) {
-        case 1: audio_notify(AUDIO_NOTIFY_LEVEL_1); break;
-        case 2: audio_notify(AUDIO_NOTIFY_LEVEL_2); break;
-        case 3: audio_notify(AUDIO_NOTIFY_LEVEL_3); break;
-        case 4: audio_notify(AUDIO_NOTIFY_LEVEL_4); break;
-        case 5: audio_notify(AUDIO_NOTIFY_LEVEL_5); break;
-    }
+    motor_set_heat(heat);
     
-    vTaskDelay(pdMS_TO_TICKS(300));
+    // Start assistant task
+    xTaskCreate(assistant_task, "assistant_task", 2048, NULL, 4, &assistant_task_handle);
     
-    // Audio feedback for heat
-    if (heat) {
-        audio_notify(AUDIO_NOTIFY_HEAT_ON);
-    }
+    ESP_LOGI(TAG, "Session started: Level %d, Heat %s, Duration %d min",
+             level, heat ? "ON" : "OFF", duration_min);
     
-    // Confirmation beep
-    vTaskDelay(pdMS_TO_TICKS(300));
-    audio_notify(AUDIO_NOTIFY_READING_OK);
+    // Play session start sound (CHANGED from AUDIO_NOTIFY_ROTATE)
+    audio_notify(AUDIO_NOTIFY_SESSION_START);
     
-    ESP_LOGI(TAG, "Assistant session started successfully");
     return ESP_OK;
 }
 
-esp_err_t assistant_stop_session(void) {
+void assistant_stop_session(void) {
     if (!assistant_config.active) {
         ESP_LOGW(TAG, "No active session to stop");
-        return ESP_ERR_INVALID_STATE;
+        return;
     }
     
-    ESP_LOGI(TAG, "Stopping assistant session");
+    ESP_LOGI(TAG, "Stopping session");
     
-    // Deactivate assistant
-    assistant_config.active = 0;
+    // Stop motors and heat
+    motor_set_level(0);
+    motor_set_heat(false);
     
-    // Stop motor
-    device_state.intensity_level = 0;
-    // Replace apply_motor_level(0) with:
-    motor_stop_all();   
-    // Turn off heat if it was on
-    if (device_state.heat_on) {
-        motor_set_heat(false);
-    }
+    // Mark as inactive (task will self-delete)
+    assistant_config.active = false;
     
-    // Audio feedback
-    audio_notify(AUDIO_NOTIFY_ROTATE);
-    
-    ESP_LOGI(TAG, "Assistant session stopped");
-    return ESP_OK;
+    // Reset config
+    assistant_config.level = 0;
+    assistant_config.heat_enabled = false;
+    assistant_config.duration_min = 0;
+    assistant_config.start_time = 0;
+    one_minute_warning_played = false;
 }
 
-uint32_t assistant_get_elapsed_seconds(void) {
-    if (!assistant_config.active) {
-        return 0;
-    }
-    
-    uint32_t current_time = xTaskGetTickCount() * portTICK_PERIOD_MS / 1000;
-    return current_time - assistant_config.start_time;
-}
-
-uint32_t assistant_get_remaining_seconds(void) {
-    if (!assistant_config.active) {
-        return 0;
-    }
-    
-    uint32_t elapsed = assistant_get_elapsed_seconds();
-    uint32_t total = assistant_config.duration_minutes * 60;
-    
-    if (elapsed >= total) {
-        return 0;
-    }
-    
-    return total - elapsed;
+assistant_config_t* assistant_get_config(void) {
+    return &assistant_config;
 }
 
 bool assistant_is_active(void) {
-    return assistant_config.active != 0;
+    return assistant_config.active;
 }
 
-static void assistant_timer_task(void *arg) {
-    static bool one_minute_warning_sent = false;
-    bool session_started_announced = false;
-    
-    ESP_LOGI(TAG, "Assistant timer task started");
-    
-    while (1) {
-        if (assistant_active && assistant_duration > 0) {
-            uint32_t elapsed = (esp_timer_get_time() - assistant_start_time) / 1000000;
-            uint32_t total = assistant_duration * 60;
-            uint32_t remaining = (elapsed < total) ? (total - elapsed) : 0;
-            
-            // Announce session start (only once per session)
-            if (elapsed == 0 && !session_started_announced) {
-                ESP_LOGI(TAG, "Starting therapy session: %lu minutes", assistant_duration);
-                audio_notify(AUDIO_NOTIFY_SESSION_START);
-                session_started_announced = true;
-            }
-            
-            // Check if session completed
-            if (remaining == 0) {
-                ESP_LOGI(TAG, "Session completed!");
-                
-                // Play completion voice instead of double beep
-                audio_notify(AUDIO_NOTIFY_SESSION_COMPLETE);
-                
-                one_minute_warning_sent = false;
-                session_started_announced = false;
-            }
-            // Send warning at 1 minute remaining (only once)
-            else if (remaining <= 60 && !one_minute_warning_sent) {
-                ESP_LOGI(TAG, "1 minute remaining");
-                audio_notify(AUDIO_NOTIFY_ONE_MINUTE_WARNING);
-                one_minute_warning_sent = true;
-            }
-            
-            // Log status every 30 seconds
-            if (elapsed % 30 == 0 && elapsed > 0) {
-                ESP_LOGI(TAG, "Session status: %lu/%lu seconds (%lu remaining)",
-                         elapsed, total, remaining);
-            }
-        } else {
-            // Reset flags when not active
-            one_minute_warning_sent = false;
-            session_started_announced = false;
-        }
-        
-        // Check every second
-        vTaskDelay(pdMS_TO_TICKS(1000));
+uint16_t assistant_get_time_remaining(void) {
+    if (!assistant_config.active) {
+        return 0;
     }
-}
-
-void assistant_init_timer_task(void) {
-    BaseType_t ret = xTaskCreate(
-        assistant_timer_task,
-        "assistant_timer",
-        2048,
-        NULL,
-        5,
-        NULL
-    );
     
-    if (ret != pdPASS) {
-        ESP_LOGE(TAG, "Failed to create assistant timer task");
-    } else {
-        ESP_LOGI(TAG, "Assistant timer task created successfully");
+    uint32_t current_time = xTaskGetTickCount() * portTICK_PERIOD_MS / 1000; // seconds
+    uint32_t elapsed_sec = current_time - assistant_config.start_time;
+    uint32_t duration_sec = assistant_config.duration_min * 60;
+    
+    if (elapsed_sec >= duration_sec) {
+        return 0;
     }
+    
+    uint32_t remaining_sec = duration_sec - elapsed_sec;
+    return (uint16_t)((remaining_sec + 59) / 60); // Round up to minutes
 }
